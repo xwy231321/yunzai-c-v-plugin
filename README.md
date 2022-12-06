@@ -10,6 +10,7 @@
 #### 食用方法
 
 自行下载js文件放入Yunzai/plugins/example文件夹即可，即装即用
+指令：st
 
 #### 反馈
 
