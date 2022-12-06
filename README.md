@@ -11,7 +11,9 @@
 #### 食用方法
 
 自行下载js文件放入Yunzai/plugins/example文件夹即可，即装即用。
+
 精简随机st(V3)触发指令：st
+
 (V3)setuplus触发指令：setuplus
 
 #### 反馈
