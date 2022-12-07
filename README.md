@@ -25,6 +25,8 @@ setuplus：setuplus   #setuplus
 
 推荐使用gitee安装（需要重启）
 
+在云崽目录打开终端，运行
+
 ```
 git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v-plugin/
 
