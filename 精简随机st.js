@@ -11,7 +11,7 @@ let blacklist = [] //黑名单群，多个qq群时用逗号(英文)隔开，例�
 export class biyingsetu extends plugin {
     constructor() {
         super({
-            name: '轻量图',
+            name: '轻凉图',
             dsc: 'st',
             event: 'message',
             priority: 1,//优先级，越低优先度越高
