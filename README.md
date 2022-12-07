@@ -8,13 +8,18 @@
 
 #### 插件功能
 
-精简随机st(V3)：随机获取一张美图（可自行配置图片年龄段，仅两段）可自行配置图片类型和屏蔽群
+精简随机st：随机获取一张美图（可自行配置图片年龄段，仅两段）可自行配置图片类型和屏蔽群
 
-(V3)setuplus:随机一张较为古老的美图（群聊慎用）
+setuplus:随机一张较为古老的美图（群聊慎用）
 
 #### 食用方法
 
-发送#cv帮助  即可查看插件指令
+发送#cv帮助  即可查看插件菜单
+
+精简随机st：st  #st
+
+setuplus：setuplus   #setuplus
+
 
 #### 安装方法
 
@@ -39,4 +44,4 @@ QQ：2060403379（小白，大佬们喷轻点）
 
 [云崽bot](https://gitee.com/Le-niao/Yunzai-Bot)
 
-[Yunzai-Bot插件索引](https://gitee.com/Hikari666/Yunzai-Bot-plugins-index) 
+[Yunzai-Bot插件索引](https://gitee.com/Hikari666/Yunzai-Bot-plugins-index)
