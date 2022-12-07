@@ -22,7 +22,8 @@
 git clone https://gitee.com/xwy231321/yunzai-c-v-plugin
 
 ```
-
+暂时没整单独更新指令
+未适配锅巴
 
 #### 反馈
 
