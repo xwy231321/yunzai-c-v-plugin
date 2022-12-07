@@ -40,7 +40,7 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 
 也可以单独下载setuplus或精简随机st，自行安装至Yunzai/plugins/example目录下
 
-暂时没整单独更新指令，请使用云崽自带的#全部更新 来更新本插件（应该很～久都不会更新）
+暂时没整单独更新指令（应该很～久都不会更新，啥时候会了啥时候加上）
 
 未适配锅巴（应该用不到吧，不会整不会整，诶嘿）
 
