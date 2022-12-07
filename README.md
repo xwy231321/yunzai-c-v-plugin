@@ -8,17 +8,23 @@
 
 #### 插件功能
 
-精简随机st：随机获取一张美图（可自行配置图片年龄段，仅两段）可自行配置图片类型和屏蔽群
+精简随机st：随机一张较新的美图（bushi）
 
-setuplus:随机一张较为古老的美图（群聊慎用）
+setuplus:随机一张较为古老的美图（bushi）
+
+注：默认st为非18（可更改），setuplus为18（不可更改），群聊慎用！！！
+
+60s后撤回（可更改），支持屏蔽群。
+
+（代码片段极其简单，可自行更改）
 
 #### 食用方法
 
 发送#cv帮助  即可查看插件菜单
 
-精简随机st：st          #st
+精简随机st：st、#st
 
-setuplus：setuplus         #setuplus
+setuplus：setuplus、#setuplus
 
 
 #### 安装方法
