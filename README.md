@@ -37,6 +37,12 @@ setuplus：setuplus、#setuplus
 git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v-plugin/
 
 ```
+github安装同gitee
+```
+git clone https://github.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v-plugin/
+
+```
+
 
 也可以单独下载setuplus或精简随机st，自行安装至Yunzai/plugins/example目录下
 
@@ -51,5 +57,9 @@ QQ：2060403379（小白，大佬们喷轻点）
 #### 其他
 
 [云崽bot](https://gitee.com/Le-niao/Yunzai-Bot)
+
+[gitee](https://gitee.com/xwy231321/yunzai-c-v-plugin)|[github](https://github.com/xwy231321/yunzai-c-v-plugin)
+
+
 
 [Yunzai-Bot插件索引](https://gitee.com/Hikari666/Yunzai-Bot-plugins-index)
