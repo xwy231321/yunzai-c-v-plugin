@@ -4,7 +4,7 @@
 
 闲暇时整出的yunzai插件，依赖云崽实现功能。仅适配V3。
 
-感谢渔火佬的帮助
+由衷感谢 渔火 佬的帮助
 
 #### 插件功能
 
@@ -16,9 +16,9 @@ setuplus:随机一张较为古老的美图（群聊慎用）
 
 发送#cv帮助  即可查看插件菜单
 
-精简随机st：st  #st
+精简随机st：st          #st
 
-setuplus：setuplus   #setuplus
+setuplus：setuplus         #setuplus
 
 
 #### 安装方法
@@ -34,9 +34,9 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 
 也可以单独下载setuplus或精简随机st，自行安装至Yunzai/plugins/example目录下
 
-暂时没整单独更新指令，请使用云崽自带的#全部更新 来更新本插件（应该很久都不会更新）
+暂时没整单独更新指令，请使用云崽自带的#全部更新 来更新本插件（应该很～久都不会更新）
 
-未适配锅巴（应该用不到吧，不会整不会整）
+未适配锅巴（应该用不到吧，不会整不会整，诶嘿）
 
 #### 反馈
 
