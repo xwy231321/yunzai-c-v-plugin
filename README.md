@@ -4,6 +4,8 @@
 
 闲暇时整出的yunzai插件，依赖云崽实现功能。仅适配V3。
 
+| [yunzai-c-v-plugin](https://gitee.com/xwy231321/yunzai-c-v-plugin) | [@xwy](https://gitee.com/xwy231321) | V3 | 清凉图精简插件，群聊慎用 |
+
 由衷感谢 渔火 佬的帮助
 
 #### 插件功能
