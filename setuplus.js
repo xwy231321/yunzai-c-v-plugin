@@ -6,6 +6,7 @@
 //V1.1：新增图片撤回（默认开启撤回，时间60s）
 //V1.11：修改提示位置。
 //V1.2:修复bug
+//已上传至gitee（小白，大佬们喷轻点）
 
 import { segment } from "oicq";
 import fetch from "node-fetch";
@@ -36,4 +37,4 @@ export class biyingsetu extends plugin {
     }
 }
 
-
+
