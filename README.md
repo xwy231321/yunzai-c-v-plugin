@@ -56,10 +56,10 @@ QQ：2060403379（小白，大佬们喷轻点）
 
 #### 其他
 
-[云崽bot](https://gitee.com/Le-niao/Yunzai-Bot)
+Yunzai-Bot插件库：[☞Github](https://github.com/yhArcadia/Yunzai-Bot-plugins-index)/[☞Gitee](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
 
-[gitee](https://gitee.com/xwy231321/yunzai-c-v-plugin)|[github](https://github.com/xwy231321/yunzai-c-v-plugin)
+Yunzai-Bot（V3）：[☞Github](https://github.com/Le-niao/Yunzai-Bot)/[☞Gitee](https://gitee.com/Le-niao/Yunzai-Bot) 
 
+Yunzai-Bot（V2）：[☞Github](https://github.com/yoimiya-kokomi/Yunzai-Bot)/[☞Gitee](https://gitee.com/yoimiya-kokomi/Yunzai-Bot) 
 
-
-[Yunzai-Bot插件索引](https://gitee.com/Hikari666/Yunzai-Bot-plugins-index)
+yunzai-c-v-plugin：[☞Github](https://github.com/yhArcadia/Yunzai-Bot-plugins-index)/[☞Gitee](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
