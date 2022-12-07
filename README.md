@@ -63,3 +63,7 @@ Yunzai-Bot（V3）：[☞Github](https://github.com/Le-niao/Yunzai-Bot)/[☞Gite
 Yunzai-Bot（V2）：[☞Github](https://github.com/yoimiya-kokomi/Yunzai-Bot)/[☞Gitee](https://gitee.com/yoimiya-kokomi/Yunzai-Bot) 
 
 yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/[☞Gitee](https://gitee.com/xwy231321/yunzai-c-v-plugin)
+
+已授权溪欣梓倒卖（为什么要对小白下手呢，气鼓鼓.jpg）
+
+插件总大小：60KB（12月7日），占用内存可忽略不计
