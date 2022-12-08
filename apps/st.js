@@ -4,7 +4,7 @@ import plugin from '../../../lib/plugins/plugin.js';
 
 let blacklist = [466185819,311453156] //黑名单群，多个qq群时用逗号(英文)隔开，例：10000,10001
 
-export class biyingsetu extends plugin {
+export class st extends plugin {
     constructor() {
         super({
             name: '清凉图',
