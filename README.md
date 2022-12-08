@@ -6,6 +6,8 @@
 
 由衷感谢 渔火 佬的帮助
 
+如果哪一天全部更新发现有冲突了，删掉插件重新拉一下就好了（理解万岁～）
+
 #### 插件功能
 
 精简随机st：随机一张较新的美图（bushi）
@@ -20,35 +22,31 @@ setuplus:随机一张较为古老的美图（bushi）
 
 #### 食用方法
 
-发送#cv帮助  即可查看插件菜单
+发送#cv帮助  即可查看插件菜单（简陋，后续有时间可能会考虑改成图片样式）
 
-精简随机st：st、#st
+#### 安装方法（安装后需要重启）
 
-setuplus：setuplus、#setuplus
+推荐使用gitee安装
 
-
-#### 安装方法
-
-推荐使用gitee安装（需要重启）
-
-在云崽目录打开终端，运行
+在云崽目录打开终端，运行：
 
 ```
 git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v-plugin/
 
 ```
-github安装同gitee
+github安装
+
+在云崽目录打开终端，运行：
+
 ```
 git clone https://github.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v-plugin/
 
 ```
 
 
-也可以单独下载setuplus或精简随机st，自行安装至Yunzai/plugins/example目录下
+暂时没整单独更新指令（更新不定时，啥时候会了啥时候加上）
 
-暂时没整单独更新指令（应该很～久都不会更新，啥时候会了啥时候加上）
-
-未适配锅巴（应该用不到吧，不会整不会整，诶嘿）
+未适配锅巴（应该用不到吧，主要是不会整，诶嘿）
 
 #### 反馈
 
@@ -63,3 +61,5 @@ Yunzai-Bot（V3）：[☞Github](https://github.com/Le-niao/Yunzai-Bot)/[☞Gite
 Yunzai-Bot（V2）：[☞Github](https://github.com/yoimiya-kokomi/Yunzai-Bot)/[☞Gitee](https://gitee.com/yoimiya-kokomi/Yunzai-Bot) 
 
 yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/[☞Gitee](https://gitee.com/xwy231321/yunzai-c-v-plugin)
+
+插件总大小：68KB（12月8日），占用内存可忽略不计
