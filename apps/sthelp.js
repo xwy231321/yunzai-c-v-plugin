@@ -17,7 +17,7 @@ export class biyingsetu extends plugin {
         })
     }
     async cvhelp(e) {
-    let msg=['发送【#se】获得随机清凉图\n' +
+    let msg=['发送【#st】获得随机清凉图\n' +
   '发送【#setuplus】获得随机se图 \n' +
   '发送【#随机漫画】获得随机B站404漫画 \n' +
   '可自行更改图片年龄段，所需屏蔽群聊以及撤回时间']
