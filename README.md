@@ -36,7 +36,7 @@ setuplus:随机一张较为古老的美图（bushi）
 git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v-plugin/
 
 ```
-github安装
+github安装（目前更新不及时，不推荐）
 
 在云崽目录打开终端，运行：
 
