@@ -1,0 +1,65 @@
+# Yunzai插件
+
+#### 介绍
+
+闲暇时整出的yunzai插件，依赖云崽实现功能。仅适配V3。
+
+如果哪一天全部更新发现有冲突了，删掉插件重新拉一下就好了（理解万岁～）
+
+#### 插件功能 
+
+V1.0.1
+
+comic：B站404随机漫画
+
+精简随机st：随机一张较新的美图（bushi）
+
+setuplus:随机一张较为古老的美图（bushi）
+
+注：默认st为非18（可更改，支持热更新），setuplus为18（不可更改），群聊慎用！！！
+
+60s后撤回（可更改），支持屏蔽群。
+
+（占用系统资源极少，可放心安装）
+
+#### 食用方法
+
+发送#cv帮助  即可查看插件菜单（简陋，后续有时间可能会考虑改成图片样式）
+
+#### 安装方法（安装后需要重启）
+
+推荐使用gitee安装
+
+在云崽目录打开终端，运行：
+
+```
+git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v-plugin/
+
+```
+github安装
+
+在云崽目录打开终端，运行：
+
+```
+git clone https://github.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v-plugin/
+
+```
+
+
+暂时没整单独更新指令（更新不定时，啥时候会了啥时候加上）
+
+未适配锅巴（应该用不到吧，主要是不会整，诶嘿）
+
+#### 反馈
+
+QQ：2060403379（新人小白）
+
+#### 其他
+
+Yunzai-Bot插件库：[☞Github](https://github.com/yhArcadia/Yunzai-Bot-plugins-index)/[☞Gitee](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
+
+Yunzai-Bot（V3）：[☞Github](https://github.com/Le-niao/Yunzai-Bot)/[☞Gitee](https://gitee.com/Le-niao/Yunzai-Bot) 
+
+Yunzai-Bot（V2）：[☞Github](https://github.com/yoimiya-kokomi/Yunzai-Bot)/[☞Gitee](https://gitee.com/yoimiya-kokomi/Yunzai-Bot) 
+
+yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/[☞Gitee](https://gitee.com/xwy231321/yunzai-c-v-plugin)
