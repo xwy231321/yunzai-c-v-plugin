@@ -1,7 +1,7 @@
 import { segment } from "oicq";
 import fetch from "node-fetch";
 import plugin from '../../../lib/plugins/plugin.js';
-export class biyingsetu extends plugin {
+export class sthelp extends plugin {
     constructor() {
         super({
             name: 'cv帮助',
