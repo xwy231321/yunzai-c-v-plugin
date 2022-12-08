@@ -2,7 +2,7 @@ import { segment } from "oicq";
 import fetch from "node-fetch";
 import plugin from '../../../lib/plugins/plugin.js';
 
-export class biyingsetu extends plugin {
+export class comic extends plugin {
     constructor() {
         super({
             name: 'B站404随机小漫画',
