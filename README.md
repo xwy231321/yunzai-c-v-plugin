@@ -1,4 +1,4 @@
-# Yunzai清凉图插件
+# yunzai-c-v-plugin
 
 #### 介绍
 
