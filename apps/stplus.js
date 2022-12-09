@@ -16,7 +16,7 @@ export class stplus extends plugin {
             priority: 4999,//优先级，数越小优先度越高
             rule: [
                 {
-                    reg: '^#?setuplus(.*)$',
+                    reg: '^#?setuplus$',
                     fnc: 'setu'
                 }
             ]
