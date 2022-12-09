@@ -51,6 +51,8 @@ git clone https://github.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-
 
 ```
 
+时雨脚本安装方法：依次打开：插件管理-Git 插件管理-安装插件，划到最下面，选择：自定义，“请输入插件名”填：yunzai-c-v-plugin，“请输入插件URL”填：https://gitee.com/xwy231321/yunzai-c-v-plugin，确认即可安装。
+
 已挖坑：指令更新&指令修改配置
 
 #### 反馈
