@@ -12,7 +12,7 @@ export class comic extends plugin {
             priority: 4999,//优先级，数越小优先度越高
             rule: [
                 {
-                    reg: '^#?随机漫画(.*)$',
+                    reg: '^#?随机漫画$',
                     fnc: 'comic'
                 }
             ]
