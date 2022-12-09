@@ -11,7 +11,7 @@ export class sthelp extends plugin {
             priority: 4000,
             rule: [
                 {
-                    reg: '^#?cv帮助(.*)$',
+                    reg: '^#?cv帮助$',
                     fnc: 'cvhelp'
                 }
             ]
