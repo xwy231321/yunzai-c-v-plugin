@@ -16,7 +16,7 @@ export class st extends plugin {
             priority: 1,//优先级，越低优先度越高
             rule: [
                 {
-                    reg: '^#?st(.*)$',
+                    reg: '^#?st$',
                     fnc: 'setu'
                 }
             ]
