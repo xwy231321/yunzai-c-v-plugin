@@ -1,0 +1,22 @@
+#true为开启，false为关闭
+#更改后请重启
+#st（清凉图）
+ssttoooc: true
+
+#随机盲盒
+yifensuijimanghe: true
+
+#原神盲盒
+yuanmangheshen: true
+
+#stplus（铯图）
+seettuuplus: false
+
+#mc戳一戳
+cchuoyichuom: false
+
+#b站404随机漫画
+asuijimanhua: true
+
+#风控处理
+xiaofeifengkong: false
