@@ -1,5 +1,4 @@
 import fs from 'node:fs'
-
 const files = fs.readdirSync('./plugins/yunzai-c-v-plugin/apps').filter(file => file.endsWith('.js'))
 
 let ret = []
