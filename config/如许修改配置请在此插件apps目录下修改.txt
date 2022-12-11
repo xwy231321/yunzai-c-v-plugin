@@ -1,2 +1,0 @@
-单独已挖坑
-如需修改配置，请在yunzai-c-v-plugin/apps内打开插件修改
