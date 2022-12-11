@@ -1,9 +1,8 @@
-//yunzai-c-v-plugin帮助
-//推荐：云崽插件库：https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index （gitee）   https://github.com/yhArcadia/Yunzai-Bot-plugins-index  （github）
+//插件：帮助
 import { segment } from "oicq";
 import fetch from "node-fetch";
 import plugin from '../../../lib/plugins/plugin.js';
-export class biyingsetu extends plugin {
+export class sthelp extends plugin {
     constructor() {
         super({
             name: 'cv帮助',
@@ -12,14 +11,20 @@ export class biyingsetu extends plugin {
             priority: 4000,
             rule: [
                 {
-                    reg: '^#?cv帮助(.*)$',
+                    reg: '^#?cv帮助$',
                     fnc: 'cvhelp'
                 }
             ]
         })
     }
     async cvhelp(e) {
-       let msg=["欢迎使用yunzai-c-v-plugin，当前版本共两个插件，发送 setuplus 将会返回一张画风相对古老的se图；发送 st 将会返回一张画风相对新颖的se图（可自行配置图片年龄等级），可自行配置撤回间隔以及需要屏蔽的群聊。默认60s后撤回配置"]
+    let msg=['发送【#st】获得随机清凉图 \n' +
+  '发送【#setuplus】获得随机se图 \n' +
+  '发送【#随机漫画】获得随机B站404漫画 \n' +
+  '发送【#盲盒】获得随机图，支持多张(最多四连发),示例：#两份盲盒 \n' +
+  '发送【#原神盲盒】获得原神随机图，支持二连发，示例：#两份原神盲盒 \n' +
+  '以上指令#可以省略 \n' + 
+  '发#yunzai-c-v-plugin更新即可更新本插件']
        e.reply(msg)
        return true
     }
