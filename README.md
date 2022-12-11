@@ -65,6 +65,13 @@ QQ：2060403379（高三小白）
 
 #### 其他
 
+鸣谢
+
+| 名单      | 联系方式         | 主要贡献    |
+|---------|--------------|---------|
+| 小飞   | QQ203017966  | 消息风控处理.js |
+
+
 Yunzai-Bot插件库：[☞Github](https://github.com/yhArcadia/Yunzai-Bot-plugins-index)/[☞Gitee](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
 
 Yunzai-Bot（V3）：[☞Github](https://github.com/Le-niao/Yunzai-Bot)/[☞Gitee](https://gitee.com/Le-niao/Yunzai-Bot) 
