@@ -90,4 +90,4 @@ yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/
 
 指令修改配置已经挖坑，但鉴于修改后需要重启yunzai才生效，估计得呆好久了
 
-在尝试适配锅巴（有会的佬帮忙适配一下，谢谢）
+在尝试适配锅巴（有会的佬帮一下忙，谢谢）
