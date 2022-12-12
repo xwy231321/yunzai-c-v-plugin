@@ -49,11 +49,11 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 
 ```
 
+如果不会或者报错请自行百度或者问其他交流群群友，如果确定是本插件问题请提issue，目前高三没太多精力去回复，谢谢
 
 
 
-
-如果使用的是时雨的脚本：TRSS_Yunzai，则安装方法为：依次打开：插件管理-Git 插件管理-安装插件，划到最下面，选择：自定义，“请输入插件名”填：yunzai-c-v-plugin，“请输入插件URL”填：
+如果您使用的是时雨的脚本：TRSS_Yunzai，则安装方法为：依次打开：脚本的 插件管理-Git插件管理-安装插件，划到最下面，选择：自定义，“请输入插件名”填：yunzai-c-v-plugin，“请输入插件URL”填：
 
 ```
 https://gitee.com/xwy231321/yunzai-c-v-plugin
