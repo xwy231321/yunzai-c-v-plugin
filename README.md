@@ -42,14 +42,18 @@ mc酱戳一戳（默认关闭）
 
 推荐使用gitee安装
 
-在云崽目录打开终端，运行：
+在云崽目录打开终端，运行：（和其他插件一样）
 
 ```
 git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v-plugin/
 
 ```
 
-时雨TRSS_Yunzai脚本安装方法：依次打开：插件管理-Git 插件管理-安装插件，划到最下面，选择：自定义，“请输入插件名”填：yunzai-c-v-plugin，“请输入插件URL”填：
+
+
+
+
+如果使用的是时雨的脚本：TRSS_Yunzai，则安装方法为：依次打开：插件管理-Git 插件管理-安装插件，划到最下面，选择：自定义，“请输入插件名”填：yunzai-c-v-plugin，“请输入插件URL”填：
 
 ```
 https://gitee.com/xwy231321/yunzai-c-v-plugin
