@@ -8,8 +8,6 @@ yunzai插件，依赖云崽实现功能。仅适配V3。
 
 如需修改配置，请打开此插件目录下的config文件夹，在cfg.js里修改即可（改完重启生效）
 
-推荐修改配置用的软件：[Windows](https://xwy2.lanzouf.com/ipg2u0im7ybi)/[Android](https://xwy2.lanzouf.com/iABUt0im7y8f)密码；1234，蓝奏云无法打开自信百度解决办法
-
 如果遇到bug，请提issues，谢谢
 
 [查看版本信息](./CHANGELOG.md)
@@ -79,6 +77,9 @@ QQ：2060403379（高三小白）
 |---------|--------------|---------|
 | 小飞   | QQ203017966  | 消息风控处理.js |
 
+推荐修改配置用的软件：[☞Windows](https://xwy2.lanzouf.com/ipg2u0im7ybi)/[☞Android](https://xwy2.lanzouf.com/iABUt0im7y8f)密码；1234，蓝奏云无法打开自信百度解决办法
+
+软件gitee仓库地址：[☞Windows](https://gitee.com/xwy231321/cv-plugins-in-resources/blob/master/PC%E7%AB%AF%E4%BA%91%E5%B4%BDjs%E6%8F%92%E4%BB%B6%E7%BC%96%E8%BE%91%E5%99%A8.rar)/[☞Android](https://gitee.com/xwy231321/cv-plugins-in-resources/blob/master/NMM_1.12.6.apk)
 
 Yunzai-Bot插件库：[☞Github](https://github.com/yhArcadia/Yunzai-Bot-plugins-index)/[☞Gitee](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
 
