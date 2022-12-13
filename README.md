@@ -10,6 +10,8 @@ yunzai插件，依赖云崽实现功能。仅适配V3。
 
 如需修改配置，请打开此插件目录下的config文件夹，在cfg.js里修改即可（改完重启生效）
 
+推荐修改配置用的软件：[Windows](https://xwy2.lanzouf.com/ipg2u0im7ybi)/[Android](https://xwy2.lanzouf.com/iABUt0im7y8f)密码；1234，蓝奏云无法打开自信百度解决办法
+
 如果遇到bug，请提issues，谢谢
 
 [查看版本信息](./CHANGELOG.md)
