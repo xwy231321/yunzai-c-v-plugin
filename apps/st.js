@@ -42,7 +42,7 @@ export class St extends plugin {
         let response = await fetch(url);
         let obj = await response.json();
         console.log(obj);
-        let abc =  await e.reply([segment.image(obj.data[0].urls.original)],false,{recallMsg:60});//recallmsg后为撤回间隔，单位秒）
+        let abc =  await e.reply([segment.flash(obj.data[0].urls.original)],false,{recallMsg:60});//recallmsg后为撤回间隔，单位秒）
 
         if (!abc) {
             return e.reply('好、好涩(//// ^ ////)……不、不行啦……被、被吞啦o(≧口≦)o',true,{recallMsg:60});
