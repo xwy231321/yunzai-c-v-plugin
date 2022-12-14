@@ -72,7 +72,7 @@ https://gitee.com/xwy231321/yunzai-c-v-plugin
 
 #### 更新
 
-发送#yunzai-c-v-plugin更新  （yunzai自带的插件更新）
+发送#yunzai-c-v-plugin更新  （yunzai自带的插件更新）无法生效时请：#全部更新
 
 #### 反馈
 
