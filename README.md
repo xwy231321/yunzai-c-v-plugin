@@ -28,6 +28,8 @@ V1.0.8
 | 铯图 | 关闭，18 |
 | 消息风控处理 | 开启 |
 
+<details><summary>其他事项</summary>
+
 清凉图（st）和铯图（stplus）私聊将以闪照形式发送，群聊将以聊天记录形式发送（图片尺度较大时会裂图）。
 
 如果需要回归之前纯发图模式，请自行打开此插件目录apps文件夹，编辑st和stplus(工具最下面有链接)将flash改为image（仅一处），保存，重启即可
@@ -41,7 +43,11 @@ V1.0.8
 ```
 属于正常情况。(依然不推荐群聊食用，防内，鬼和t，x检测)
 
+截止22年12月15日晚6时，st修改年龄限制（即把0更换成1或2）以后，无法出图，属图源问题，等待服务提供商解决
+
 （占用系统资源极少，可放心安装）
+
+</details>
 
 #### 食用方法
 
@@ -59,16 +65,6 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 ```
 
 如果不会或者报错请自行百度或者问其他交流群群友，如果确定是本插件问题请提issue，目前高三没太多精力去回复，谢谢
-
-
-
-如果您使用的是时雨的脚本：TRSS_Yunzai，则安装方法为：依次打开：脚本的 插件管理-Git插件管理-安装插件，划到最下面，选择：自定义，“请输入插件名”填：yunzai-c-v-plugin，“请输入插件URL”填：
-
-```
-https://gitee.com/xwy231321/yunzai-c-v-plugin
-
-```
-确认 即可安装本插件
 
 #### 更新
 
@@ -101,8 +97,4 @@ Yunzai-Bot（V2）：[☞Github](https://github.com/yoimiya-kokomi/Yunzai-Bot)/[
 
 yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/[☞Gitee](https://gitee.com/xwy231321/yunzai-c-v-plugin)
 
-注：靠API获取图片，如果接口寄了的话，提个issue
-
-指令修改配置已经挖坑，但鉴于修改后需要重启yunzai才生效，估计得呆好久了
-
-在尝试适配锅巴（有会的佬帮一下忙，谢谢）
+在尝试适配锅巴
