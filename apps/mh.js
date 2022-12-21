@@ -64,7 +64,7 @@ if (url === 1) {
 } else if (url === 2) {
     url = `https://api.ixiaowai.cn/api/api.php`;
 } else {
-    url = `https://app.zichen.zone/api/acg.php`;
+    url = `https://iw233.cn/API/Random.php`;
 }
         let msga=[segment.image(url)]
         e.reply(msga,false)
