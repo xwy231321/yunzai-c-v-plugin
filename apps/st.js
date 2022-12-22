@@ -58,7 +58,7 @@ export class St extends plugin {
         let obj = await response.json();
         console.log(obj);
             image.push(segment.image(obj.data[0].urls.original))
-        let abc =  await e.reply(num = 1 ? await co.makeForwardMsg(e,image,'铯图来啦') : image,false,{recallMsg:0});//群聊撤回间隔
+        let abc =  await e.reply(num = 1 ? await co.makeForwardMsg(e,image,'清凉图来啦') : image,false,{recallMsg:0});//群聊撤回间隔
         if (!abc) {
             return e.reply('好、好涩(//// ^ ////)……不、不行啦……被、被吞啦o(≧口≦)o',true,{recallMsg:60});
         }
@@ -104,7 +104,7 @@ export class St extends plugin {
         console.log('This loop has been executed ' + (i + 1) + ' times.');
         await common.sleep(2000);
          }
-            let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'铯图来啦') : image,false,{recallMsg:0});//群聊撤回间隔
+            let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'清凉图图来啦') : image,false,{recallMsg:0});//群聊撤回间隔
             if (!abc) {
                 return e.reply('好、好涩(//// ^ ////)……不、不行啦……被、被吞啦o(≧口≦)o',true,{recallMsg:60});
             }
