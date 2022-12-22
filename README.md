@@ -41,7 +41,7 @@ V1.1.0
 
 ```
 
-发送消息错误:[{"type":"xml","data":"<?xml version=\"1.0\" encoding=\"utf-8\"?><msg brief=\"[聊天记录]\" m_fileName=\"A607FDD1-9A88-4DF9-A700-7D4D98FE0D69\" action=\"viewMultiMsg\" tSum=\"2\" flag=\"3\" m_resid=\"5CTRaUW/9T8cBpdzxIWjjLkQs4VlLBajokq90F8/j1Oipep6z1/svNMgwuzoX9GH\" serviceID=\"35\" m_fileSize=\"379\"...                                             [YzBot][23:48:01.147][ERRO] ApiRejection { code: -70, message: ' 群消息发送失败，可能被风控' }
+发送消息错误:[{"type":"xml","data":"<?xml version=\"1.0\" encoding=\"utf-8\"?><msg brief=\"[聊天记录]\" m_fileName=\"A607FDD1-9A88-4DF9-A700-7D4D98FE0D69\" action=\"viewMultiMsg\" tSum=\"2\" flag=\"3\" m_resid=\"5CTRaUW/9T8cBpdzxIWjjLkQs4VlLBajokq90F8/j1Oipep6z1/svNMgwuzoX9GH\" serviceID=\"35\" m_fileSize=\"379\"...                                            
 
 [ERRO] ApiRejection { code: -70, message: ' 群消息发送失败，可能被风控' }
 
