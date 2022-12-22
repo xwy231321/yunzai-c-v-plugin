@@ -1,5 +1,6 @@
 # yunzai-c-v-plugin<a href='https://gitee.com/xwy231321/yunzai-c-v-plugin/stargazers'><img src='https://gitee.com/xwy231321/yunzai-c-v-plugin/badge/star.svg?theme=dark' alt='star'></img></a>
 
+[![雷神八重](https://gitee.com/xwy231321/cv-plugins-in-resources/raw/master/%E9%9B%B7%E7%A5%9E%E5%85%AB%E9%87%8D.jpg)](https://pixiv.net/i/96839227)
 
 #### 前言
 
