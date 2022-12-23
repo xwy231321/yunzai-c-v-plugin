@@ -104,4 +104,4 @@ yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/
 
 在尝试适配锅巴
 
-可以的话给个star或者[爱发电](https://afdian.net/a/yunzai-c-v-plugin)
+可以的话给个star或者[爱发电](https://afdian.net/a/yunzai-c-v-plugin)，谢谢～
