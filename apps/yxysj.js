@@ -51,8 +51,10 @@ export class stplus extends plugin {
 
       let url = `http://47.100.2.140/yxy.php`
         await e.reply('正在给你找云溪院的图片啦～',true,{recallMsg:7})
+        let image = []
         let msg = [segment.image(url)]
-        let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
+           image.push(msg)
+        let abc =  await e.reply(num = 1 ? await co.makeForwardMsg(e,image,'云溪图来啦') : image,false,{recallMsg:0});//私聊撤回间隔
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
        return true
     }
@@ -83,7 +85,7 @@ export class stplus extends plugin {
         console.log('This loop has been executed ' + (i + 1) + ' times.');
         await common.sleep(2000);
         }
-        let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'清凉图图来啦') : image,false,{recallMsg:0});//私聊撤回间隔
+        let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'云溪图来啦') : image,false,{recallMsg:0});//私聊撤回间隔
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
        return true
     }
