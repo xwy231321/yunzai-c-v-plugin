@@ -49,7 +49,6 @@ export class stplus extends plugin {
         } else {
             url = `http://ovooa.com/API/meinv/api.php?type=image`;
         }
-        console.log(url)
         await e.reply('正在给你找三次元的图片啦～',true,{recallMsg:7})
         let msg = [segment.image(url)]
         let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
@@ -80,10 +79,8 @@ export class stplus extends plugin {
               } else {
                   url = `http://ovooa.com/API/meinv/api.php?type=image`;
               }
-              console.log(url)
         let msg = [segment.image(url)]
               image.push(msg)
-              console.log(image)
         console.log('This loop has been executed ' + (i + 1) + ' times.');
         await common.sleep(3000);
         }
