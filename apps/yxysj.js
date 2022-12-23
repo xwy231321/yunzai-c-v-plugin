@@ -52,6 +52,7 @@ export class stplus extends plugin {
       let url = `http://47.100.2.140/yxy.php`
         await e.reply('正在给你找云溪院的图片啦～',true,{recallMsg:7})
         let image = []
+        let num = 1
         let msg = [segment.image(url)]
            image.push(msg)
         let abc =  await e.reply(num = 1 ? await co.makeForwardMsg(e,image,'云溪图来啦') : image,false,{recallMsg:0});//私聊撤回间隔
