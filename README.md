@@ -100,3 +100,5 @@ Yunzai-Bot（V2）：[☞Github](https://github.com/yoimiya-kokomi/Yunzai-Bot)/[
 yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/[☞Gitee](https://gitee.com/xwy231321/yunzai-c-v-plugin)
 
 在尝试适配锅巴
+
+如果可以的话，给本项目个star，或者[爱发电](https://afdian.net/a/yunzai-c-v-plugin)来支持本项目，您的支持就是给我的最大的鼓励，谢谢。
