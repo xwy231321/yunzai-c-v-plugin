@@ -5,7 +5,7 @@
 asuijimanhua: true
 
 #mc戳一戳
-cchuoyichuom: true
+cchuoyichuom: false
 
 #随机盲盒
 yifensuijimanghe: true
@@ -14,7 +14,7 @@ yifensuijimanghe: true
 ssttoooc: true
 
 #stplus（铯图）
-seettuuplus: true
+seettuuplus: false
 
 #原神盲盒
 yuanmangheshen: true
