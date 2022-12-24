@@ -41,13 +41,17 @@ export class stplus extends plugin {
         }
 
 
-        let url = Math.floor(Math.random() * 3) + 1;
+        let url = Math.floor(Math.random() * 5) + 1;
         if (url === 1) {
-            url = `http://api.sakura.gold/ksxjjtp`;
+            url = `https://tuapi.eees.cc/api.php?category=meinv&type=302`;
         } else if (url === 2) {
-            url = `http://ovooa.com/API/guang/api?n=1&type=image`;
-        } else {
+            url = `https://cdn.seovx.com/?mom=302`;
+        } else if (url === 3) {
             url = `http://ovooa.com/API/meinv/api.php?type=image`;
+        } else if (url === 4) {
+            url = `http://api.btstu.cn/sjbz/`
+        } else {
+            url = `https://cdn.seovx.com/ha?mom=302`
         }
         await e.reply('正在给你找三次元的图片啦～',true,{recallMsg:7})
         let msg = [segment.image(url)]
@@ -71,18 +75,22 @@ export class stplus extends plugin {
         let num = e.msg.match(/\d+/)
         let image = []
           for (let i = 0; i < [num]; i++) {
-              let url = Math.floor(Math.random() * 3) + 1;
+              let url = Math.floor(Math.random() * 5) + 1;
               if (url === 1) {
-                  url = `http://api.sakura.gold/ksxjjtp`;
+                  url = `https://tuapi.eees.cc/api.php?category=meinv&type=302`;
               } else if (url === 2) {
-                  url = `http://api.sakura.gold/ksxjjtp`;
-              } else {
+                  url = `https://cdn.seovx.com/?mom=302`;
+              } else if (url === 3) {
                   url = `http://ovooa.com/API/meinv/api.php?type=image`;
+              } else if (url === 4) {
+                  url = `http://api.btstu.cn/sjbz/`
+              } else {
+                  url = `https://cdn.seovx.com/ha?mom=302`
               }
         let msg = [segment.image(url)]
               image.push(msg)
         console.log('This loop has been executed ' + (i + 1) + ' times.');
-        await common.sleep(3000);
+        await common.sleep(1500);
         }
         let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'三次元图片来啦') : image,false,{recallMsg:0});//私聊撤回间隔
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
