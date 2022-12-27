@@ -1,29 +1,9 @@
-#true为开启，false为关闭
-#更改后请重启
-
-#b站404随机漫画
 asuijimanhua: true
-
-#mc戳一戳
 cchuoyichuom: false
-
-#随机盲盒
 yifensuijimanghe: true
-
-#st（清凉图）
 ssttoooc: true
-
-#stplus（铯图）
 seettuuplus: false
-
-#原神盲盒
 yuanmangheshen: true
-
-#三元图（三次元图片）
 sanciyuan: true
-
-#云溪院随机图（18和非18混合）
 yunxiyuan: true
-
-#风控处理
 xiaofeifengkong: true
