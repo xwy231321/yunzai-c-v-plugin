@@ -65,8 +65,13 @@ export class St extends plugin {
                     permission: "master",
                 },
                 {
-                    reg: "#?清凉图全部(开启|关闭)$",
+                    reg: "#?清凉图插件全部(开启|关闭)$",
                     fnc: "setall",
+                    permission: "master",
+                },
+                {
+                    reg: "#?清凉图(开启|关闭)(18|混合)",
+                    fnc: "setstlx",
                     permission: "master",
                 },
 
@@ -88,7 +93,8 @@ export class St extends plugin {
         '云溪图 \n' +
         '风控处理 \n' +
         '    \n' +
-        '当然也可以#清凉图全部开启，或#清凉图全部关闭  来快捷开关全部功能']
+        '当然也可以#清凉图插件全部开启，或#清凉图插件全部关闭  来快捷开关全部功能 \n' +
+        '#清凉图开启18 #清凉图开启混合 #清凉图关闭18/混合 可调整#清凉图 发出图片类型']
         e.reply(msg)
         return true
     }
@@ -201,7 +207,7 @@ export class St extends plugin {
 
     async setall(e) {
         let setall
-        if (/全部开启/.test(e.msg)) {
+        if (/清凉图插件全部开启/.test(e.msg)) {
             setall = true
         }else {
             setall = false
@@ -215,6 +221,20 @@ export class St extends plugin {
         settings.yuanmangheshen = setall
         settings.xiaofeifengkong = setall
         settings.yunxiyuan = setall
+        fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
+        e.reply(e.msg + '成功,重启后生效哦')
+    }
+
+    async setstlx(e) {
+        let set
+        if (/清凉图开启18/.test(e.msg)) {
+            set = 1
+        }else if (/清凉图开启混合/.test(e.msg)) {
+            set = 2
+        }else {
+            set = 0
+        }
+        settings.lx = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
         e.reply(e.msg + '成功,重启后生效哦')
     }

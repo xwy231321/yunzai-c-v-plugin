@@ -12,7 +12,7 @@ const cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/conf
 let cdtime = cdset.ssttoooccd//触发CD，单位毫秒，0为无CD
 let isopen = settings.ssttoooc
 let ismaster = masters.ssttooocmaster
-
+let lx = settings.lx
 export class St extends plugin {
     constructor() {
         super({
@@ -35,7 +35,7 @@ export class St extends plugin {
     }
 
     async setu(e) {
-        
+
         if (!isopen) {
             return false
         } else {
@@ -53,7 +53,7 @@ export class St extends plugin {
         await e.reply('正在给你找图片啦～',true,{recallMsg:7});
         let image = []
             let num = 1
-        let url = "https://api.lolicon.app/setu/v2?r18=0";//←此处修改图片类型，0为非18，1为18，2为18非18混合
+        let url = `https://api.lolicon.app/setu/v2?r18=${lx}`;//←此处修改图片类型，0为非18，1为18，2为18非18混合
         let response = await fetch(url);
         let obj = await response.json();
         console.log(obj);
@@ -66,7 +66,7 @@ export class St extends plugin {
       }
       
        await e.reply('正在给你找图片啦～',true,{recallMsg:7});
-        let url = "https://api.lolicon.app/setu/v2?r18=0";//←此处修改图片类型，0为非18，1为18，2为18非18混合
+        let url = `https://api.lolicon.app/setu/v2?r18=${lx}`;//←此处修改图片类型，0为非18，1为18，2为18非18混合
         let response = await fetch(url);
         let obj = await response.json();
         console.log(obj);
@@ -96,7 +96,7 @@ export class St extends plugin {
         let num = e.msg.match(/\d+/)
             let image = []
           for (let i = 0; i < [num]; i++) {
-        let url = "https://api.lolicon.app/setu/v2?r18=0";//←此处修改图片类型，0为非18，1为18，2为18非18混合
+        let url = `https://api.lolicon.app/setu/v2?r18=${lx}`;//←此处修改图片类型，0为非18，1为18，2为18非18混合
         let response = await fetch(url);
         let obj = await response.json();
         console.log(obj);
@@ -114,7 +114,7 @@ export class St extends plugin {
         await e.reply('正在给你找图片啦～',true,{recallMsg:7});
         let num = e.msg.match(/\d+/)
           for (let i = 0; i < [num]; i++) {
-        let url = "https://api.lolicon.app/setu/v2?r18=0";//←此处修改图片类型，0为非18，1为18，2为18非18混合
+        let url = `https://api.lolicon.app/setu/v2?r18=${lx}`;//←此处修改图片类型，0为非18，1为18，2为18非18混合
         let response = await fetch(url);
         let obj = await response.json();
         console.log(obj);
