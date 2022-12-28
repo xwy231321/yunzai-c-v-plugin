@@ -35,6 +35,11 @@ export class St extends plugin {
                     permission: "master",
                 },
                 {
+                    reg: "#?(开启|关闭)戳一戳清理内存$",
+                    fnc: "setqlnc",
+                    permission: "master",
+                },
+                {
                     reg: "#?(开启|关闭)盲盒$",
                     fnc: "setmh",
                     permission: "master",
@@ -92,8 +97,8 @@ export class St extends plugin {
         '原神盲盒 \n' +
         '云溪图 \n' +
         '风控处理 \n' +
-        '    \n' +
-        '当然也可以#清凉图插件全部开启，或#清凉图插件全部关闭  来快捷开关全部功能 \n' +
+        '戳一戳清理内存   \n' +
+        '当然也可以#清凉图插件全部开启，或#清凉图插件全部关闭  来快捷开关全部功能(2个戳一戳仅生效mc戳一戳） \n' +
         '#清凉图开启18 #清凉图开启混合 #清凉图关闭18/混合 可调整#清凉图 发出图片类型']
         e.reply(msg)
         return true
@@ -130,6 +135,18 @@ export class St extends plugin {
             set = false
         }
         settings.cchuoyichuom = set
+        fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
+        e.reply('成功' + e.msg + ',重启后生效哦')
+    }
+
+    async setqlnc(e) {
+        let set
+        if (/开启戳一戳清理内存/.test(e.msg)) {
+            set = true
+        }else {
+            set = false
+        }
+        settings.qlnc = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
         e.reply('成功' + e.msg + ',重启后生效哦')
     }

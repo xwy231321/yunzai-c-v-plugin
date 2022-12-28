@@ -18,7 +18,7 @@ export class mcchuochuo extends plugin {
             name: '戳一戳',
         dsc: '戳一戳机器人触发效果',
         event: 'notice.group.poke',
-        priority: 100,
+        priority: 50,
         rule: [
             {
                 /** 命令正则匹配 */
