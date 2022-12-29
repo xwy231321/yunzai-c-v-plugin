@@ -75,7 +75,7 @@ export const helpList = [{
     },
   ]
 }, {
-  group: '管理命令，仅管理员可用',
+  group: '管理类命令',
   auth: 'master',
   list: [{
     icon: 32,
