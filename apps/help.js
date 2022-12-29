@@ -11,7 +11,7 @@ export class yunzai_c_v_help extends plugin {
             priority: 1000,
             rule: [
                 {
-                    reg: '^#?清凉图帮助$',
+                    reg: '^#?(cv|清凉图)(命令|帮助|菜单|help|说明|功能|指令|使用说明)$',
                     fnc: 'messages'
                 }
             ]
