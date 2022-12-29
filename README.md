@@ -52,7 +52,7 @@ V1.1.7
 
 发送#清凉图帮助
 
-![清凉图帮助](https://gitee.com/xwy231321/cv-plugins-in-resources/blob/master/%E6%B8%85%E5%87%89%E5%9B%BE%E5%B8%AE%E5%8A%A9.jpg)]
+![清凉图帮助](https://gitee.com/xwy231321/cv-plugins-in-resources/blob/master/%E6%B8%85%E5%87%89%E5%9B%BE%E5%B8%AE%E5%8A%A9.jpg)
 
 #### 安装方法（安装后需要重启）
 
