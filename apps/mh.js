@@ -56,6 +56,7 @@ if (!isopen) {
             }, cdtime);
         }
        //let mha = `https://app.zichen.zone/api/acg.php`
+        // https://api.ixiaowai.cn/api/api.php
        await e.reply('盲盒派送中～',true,{recallMsg:7})
        let num = e.msg.match(/\d+/)
           for (let i = 0; i < [num]; i++) {
@@ -65,7 +66,7 @@ if (url === 1) {
 } else if (url === 2) {
     url = `https://api.ixiaowai.cn/api/api.php`;
 } else {
-    url = `https://iw233.cn/API/Random.php`;
+    url = `https://app.zichen.zone/api/acg.php`;
 }
         let msga=[segment.image(url)]
         e.reply(msga,false)
