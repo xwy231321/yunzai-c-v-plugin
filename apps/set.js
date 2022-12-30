@@ -115,7 +115,7 @@ export class St extends plugin {
         }
         settings.seettuuplus = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
-        e.reply('成功' + e.msg + ',重启后生效哦')
+        e.reply('成功' + e.msg + ',已生效啦')
     }
 
     async setcomic(e) {
@@ -127,7 +127,7 @@ export class St extends plugin {
         }
         settings.asuijimanhua = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
-        e.reply('成功' + e.msg + ',重启后生效哦')
+        e.reply('成功' + e.msg + ',已生效啦')
     }
 
     async setmcchuoyichuo(e) {
@@ -139,7 +139,7 @@ export class St extends plugin {
         }
         settings.cchuoyichuom = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
-        e.reply('成功' + e.msg + ',重启后生效哦')
+        e.reply('成功' + e.msg + ',已生效啦')
     }
 
     async setqlnc(e) {
@@ -151,7 +151,7 @@ export class St extends plugin {
         }
         settings.qlnc = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
-        e.reply('成功' + e.msg + ',重启后生效哦')
+        e.reply('成功' + e.msg + ',已生效啦')
     }
 
     async setmh(e) {
@@ -163,7 +163,7 @@ export class St extends plugin {
         }
         settings.yifensuijimanghe = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
-        e.reply('成功' + e.msg + ',重启后生效哦')
+        e.reply('成功' + e.msg + ',已生效啦')
     }
     async setst(e) {
         let set
@@ -174,7 +174,7 @@ export class St extends plugin {
         }
         settings.ssttoooc = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
-        e.reply('成功' + e.msg + ',重启后生效哦')
+        e.reply('成功' + e.msg + ',已生效啦')
     }
 
     async setthreephoto(e) {
@@ -186,7 +186,7 @@ export class St extends plugin {
         }
         settings.sanciyuan = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
-        e.reply('成功' + e.msg + ',重启后生效哦')
+        e.reply('成功' + e.msg + ',已生效啦')
     }
 
     async setysmh(e) {
@@ -198,7 +198,7 @@ export class St extends plugin {
         }
         settings.yuanmangheshen = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
-        e.reply('成功' + e.msg + ',重启后生效哦')
+        e.reply('成功' + e.msg + ',已生效啦')
     }
 
     async setyxysj(e) {
@@ -210,7 +210,7 @@ export class St extends plugin {
         }
         settings.yunxiyuan = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
-        e.reply('成功' + e.msg + ',重启后生效哦')
+        e.reply('成功' + e.msg + ',已生效啦')
     }
 
     async setfk(e) {
@@ -222,7 +222,7 @@ export class St extends plugin {
         }
         settings.xiaofeifengkong = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
-        e.reply('成功' + e.msg + ',重启后生效哦')
+        e.reply('成功' + e.msg + ',已生效啦')
     }
 
     async setall(e) {
@@ -242,7 +242,7 @@ export class St extends plugin {
         settings.xiaofeifengkong = setall
         settings.yunxiyuan = setall
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
-        e.reply(e.msg + '成功,重启后生效哦')
+        e.reply(e.msg + '成功啦')
     }
 
     async setstlx(e) {
@@ -256,7 +256,7 @@ export class St extends plugin {
         }
         settings.lx = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
-        e.reply(e.msg + '成功,重启后生效哦')
+        e.reply(e.msg + '成功啦')
     }
 
     async set(e) {
