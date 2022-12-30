@@ -1,6 +1,4 @@
 //插件：帮助
-import { segment } from "oicq";
-import fetch from "node-fetch";
 import plugin from '../../../lib/plugins/plugin.js';
 export class sthelp extends plugin {
     constructor() {
@@ -8,7 +6,7 @@ export class sthelp extends plugin {
             name: 'cv帮助',
             dsc: 'cvhelp',
             event: 'message',
-            priority: 4000,
+            priority: 5000,
             rule: [
                 {
                     reg: '^#?清凉图文字帮助$',

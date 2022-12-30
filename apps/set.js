@@ -6,7 +6,6 @@ import co from '../../../lib/common/common.js'
 import fs from 'fs'
 import YAML from 'yaml'
 const settings = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
-
 export class St extends plugin {
     constructor() {
         super({
@@ -262,7 +261,6 @@ export class St extends plugin {
 
     async set(e) {
         let msg = [
-
             `铯图状态：${settings.seettuuplus ? '开启' : '关闭'}\n`,
             `盲盒状态：${settings.yifensuijimanghe ? '开启' : '关闭'}\n`,
             `清凉图状态：${settings.ssttoooc ? '开启' : '关闭'}\n`,

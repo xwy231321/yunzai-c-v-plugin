@@ -5,13 +5,7 @@ import cfg from'../../../lib/config/config.js'
 import plugin from '../../../lib/plugins/plugin.js';
 import fs from 'fs'
 import YAML from 'yaml'
-const settings = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
-const cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
 const path=process.cwd()
-
-let cdtime = cdset.mcchuoyichuocd//触发CD，单位毫秒，0为无CD
-let isopen = settings.cchuoyichuom
-
 export class mcchuochuo extends plugin {
     constructor() {
         super({
@@ -28,8 +22,12 @@ export class mcchuochuo extends plugin {
         })
     }
     async chuoyichuo(e) {
+        let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
+        let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
+        let isopen = set.cchuoyichuom
+        let cdtime = cdset.mcchuoyichuocd//触发CD，单位毫秒，0为无CD
         if(e.target_id == cfg.qq){
-if (!isopen) {
+            if (!isopen) {
             return false
         } else {
             isopen = false;

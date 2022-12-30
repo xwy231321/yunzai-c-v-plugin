@@ -1,26 +1,13 @@
 import YAML from 'yaml'
 import chokidar from 'chokidar'
 import fs from 'node:fs'
-//import { _path, pluginResources, pluginRoot } from "./path.js";
 const _path = process.cwd().replace(/\\/g, '/')
-
 class Setting {
   constructor () {
-    /** 默认设置 */
-    //this.configPath = `${_path}/plugins/auto-plugin/config/`
-   //this.config = {}
-
-    /** 用户设置 */
     this.configPath = `${_path}/plugins/yunzai-c-v-plugin/config/`
     this.config = {}
-
-   // this.dataPath = `${_path}/plugins/auto-plugin/data/`
-   // this.data = {}
-
-    /** 监听文件 */
     this.watcher = { config: {} }
   }
-
   merge () {
     let sets = {}
     let appsConfig = fs.readdirSync(this.configPath).filter(file => file.endsWith(".yaml"));
@@ -30,13 +17,11 @@ class Setting {
     }
     return sets
   }
-
   analysis(config) {
     for (let key of Object.keys(config)){
       this.setConfig(key, config[key])
     }
   }
-
   getData (path, filename) {
     path = `${this.dataPath}${path}/`
     try {
@@ -47,7 +32,6 @@ class Setting {
       return false
     }
   }
-
   setData (path, filename, data) {
     path = `${this.dataPath}${path}/`
     try {
@@ -60,19 +44,15 @@ class Setting {
       return false
     }
   }
-
   getconfigSet (app) {
     return this.getYaml(app, 'config')
   }
-
   getConfig (app) {
     return { ...this.getconfigSet(app), ...this.getYaml(app, 'config') }
   }
-
   setConfig (app, Object) {
     return this.setYaml(app, 'config', { ...this.getconfigSet(app), ...Object})
   }
-
   setYaml (app, type, Object){
     let file = this.getFilePath(app, type)
     try {
@@ -82,11 +62,9 @@ class Setting {
       return false
     }
   }
-
   getYaml (app, type) {
     let file = this.getFilePath(app, type)
     if (this[type][app]) return this[type][app]
-
     try {
       this[type][app] = YAML.parse(fs.readFileSync(file, 'utf8'))
     } catch (error) {
@@ -96,7 +74,6 @@ class Setting {
     this.watch(file, app, type)
     return this[type][app]
   }
-
   getFilePath (app, type) {
     if (type === 'config') return `${this.configPath}${app}.yaml`
     else {
@@ -110,8 +87,6 @@ class Setting {
       return `${this.configPath}${app}.yaml`
     }
   }
-
-
   watch (file, app, type = 'config') {
     if (this.watcher[type][app]) return
 
@@ -125,7 +100,5 @@ class Setting {
     })
     this.watcher[type][app] = watcher
   }
-
 }
-
 export default new Setting()

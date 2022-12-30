@@ -5,11 +5,6 @@ import common from'../../../lib/common/common.js'
 import co from "../../../lib/common/common.js";
 import fs from 'fs'
 import YAML from 'yaml'
-const settings = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
-const cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
-
-let cdtime = cdset.sanciyuancd//触发CD，单位毫秒，0为无CD
-let isopen = settings.sanciyuan
 
 export class stplus extends plugin {
     constructor() {
@@ -31,6 +26,10 @@ export class stplus extends plugin {
         })
     }
     async sanyuan(e) {
+        let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
+        let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
+        let cdtime = cdset.sanciyuancd//触发CD，单位毫秒，0为无CD
+        let isopen = set.sanciyuan
         if (!isopen) {
             return false
         } else {
@@ -39,8 +38,6 @@ export class stplus extends plugin {
                isopen = true;
             }, cdtime);
         }
-
-
         let url = Math.floor(Math.random() * 5) + 1;
         if (url === 1) {
             url = `https://tuapi.eees.cc/api.php?category=meinv&type=302`;
@@ -59,8 +56,11 @@ export class stplus extends plugin {
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
        return true
     }
-    
     async moresanciyuan(e) {
+        let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
+        let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
+        let cdtime = cdset.sanciyuancd//触发CD，单位毫秒，0为无CD
+        let isopen = set.sanciyuan
         if (!isopen) {
             return false
         } else {
@@ -69,8 +69,6 @@ export class stplus extends plugin {
                isopen = true;
             }, cdtime);
         }
-
-
         await e.reply('正在给你找三次元的图片啦～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)
         let image = []
@@ -96,5 +94,4 @@ export class stplus extends plugin {
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
        return true
     }
-    
 }

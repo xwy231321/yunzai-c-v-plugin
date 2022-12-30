@@ -5,11 +5,7 @@ import plugin from '../../../lib/plugins/plugin.js';
 import common from'../../../lib/common/common.js'
 import fs from 'fs'
 import YAML from 'yaml'
-const settings = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
-const cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
 
-let cdtime = cdset.comiccd //触发CD，单位毫秒，0为无CD
-let isopen = settings.asuijimanhua
 
 export class comic extends plugin {
     constructor() {
@@ -31,7 +27,11 @@ export class comic extends plugin {
         })
     }
     async comic(e) {
-if (!isopen) {
+        let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
+        let cdtime = cdset.comiccd //触发CD，单位毫秒，0为无CD
+        let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
+        let isopen = set.asuijimanhua
+        if (!isopen) {
             return false
         } else {
             isopen = false;
@@ -46,7 +46,11 @@ if (!isopen) {
         return true                           
     }
     async moreComic(e) {
-if (!isopen) {
+        let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
+        let cdtime = cdset.comiccd //触发CD，单位毫秒，0为无CD
+        let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
+        let isopen = set.asuijimanhua
+        if (!isopen) {
             return false
         } else {
             isopen = false;
@@ -54,7 +58,6 @@ if (!isopen) {
                isopen = true;
             }, cdtime);
         }
-
         let url = `https://www.acy.moe/api/404`
         await e.reply('我去给你找啦，稍等哦～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)

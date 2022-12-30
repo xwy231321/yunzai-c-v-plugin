@@ -4,11 +4,7 @@ import { createRequire } from "module";
 import cfg from "../../../lib/config/config.js";
 import fs from 'fs'
 import YAML from 'yaml'
-const settings = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
 const require = createRequire(import.meta.url);
-
-let isopen = settings.qlnc
-let cdtime = 0
 export class poke extends plugin {
     constructor() {
         super({
@@ -21,10 +17,10 @@ export class poke extends plugin {
             }]
         })
     }
-
-
     async pokeCleanMemory(e) {
-
+        let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
+        let isopen = set.qlnc
+        let cdtime = 0
         if (!isopen) {
             return false
         } else {
@@ -33,7 +29,6 @@ export class poke extends plugin {
                 isopen = true;
             }, cdtime);
         }
-
         if (e.target_id != e.self_id) {
             return false
         }
@@ -69,6 +64,5 @@ export class poke extends plugin {
                 return true
             }
         })
-
     }
 }

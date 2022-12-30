@@ -1,12 +1,8 @@
 import setting from "./components/settings.js";
 import lodash from "lodash";
-
-// 支持锅巴
 export function supportGuoba () {
     return {
-        // 配置项信息
         configInfo: {
-            // 配置项 schemas
             schemas: [{
                 field: 'cfg.ssttoooc',
                 label: '清凉图',
@@ -29,7 +25,7 @@ export function supportGuoba () {
                 component: 'Switch'
             },{
                 field: 'cfg.cchuoyichuom',
-                label: 'mc戳一戳（优先清理内存生效）',
+                label: 'mc戳一戳',
                 bottomHelpMessage: '是否启用该功能',
                 component: 'Switch'
             },{
@@ -58,11 +54,9 @@ export function supportGuoba () {
                 bottomHelpMessage: '是否启用该功能',
                 component: 'Switch'
             }],
-
             getConfigData () {
                 return setting.merge()
             },
-            // 设置配置的方法（前端点确定后调用的方法）
             setConfigData (data, { Result }) {
                 let config = {}
                 for (let [keyPath, value] of Object.entries(data)) {

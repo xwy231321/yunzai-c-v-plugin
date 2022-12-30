@@ -5,12 +5,6 @@ import plugin from '../../../lib/plugins/plugin.js';
 import common from'../../../lib/common/common.js'
 import fs from 'fs'
 import YAML from 'yaml'
-const settings = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
-const cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
-
-let cdtime = cdset.yuanmangheshencd//触发CD，单位毫秒，0为无CD
-let isopen = settings.yuanmangheshen
-
 export class ysmh extends plugin {
     constructor() {
         super({
@@ -31,7 +25,11 @@ export class ysmh extends plugin {
         })
     }
     async ysmh(e) {
-      if (!isopen) {
+        let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
+        let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
+        let cdtime = cdset.yuanmangheshencd//触发CD，单位毫秒，0为无CD
+        let isopen = set.yuanmangheshen
+        if (!isopen) {
             return false
         } else {
             isopen = false;
@@ -43,17 +41,21 @@ export class ysmh extends plugin {
         await e.reply('原神盲盒派送中～',true,{recallMsg:7})
         let msg=[segment.image(url)]
         e.reply(msg,false)
-        
         return true                           
     }
     async moreysmh(e) {
-        if (!isopen) return false
-    else {
-      isopen = false
-      setTimeout(async () => {
-        isopen = true
-      }, cdtime)
-    }
+        let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
+        let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
+        let cdtime = cdset.yuanmangheshencd//触发CD，单位毫秒，0为无CD
+        let isopen = set.yuanmangheshen
+        if (!isopen) {
+            return false
+        } else {
+            isopen = false;
+            setTimeout(async () => {
+                isopen = true;
+            }, cdtime);
+        }
         let url = `https://api.dujin.org/pic/yuanshen`
         await e.reply('原神盲盒派送中～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)

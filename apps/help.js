@@ -8,7 +8,7 @@ export class yunzai_c_v_help extends plugin {
         super({
             name: '清凉图帮助',
             event: 'message',
-            priority: 1000,
+            priority: 1145,
             rule: [
                 {
                     reg: '^#?(cv|清凉图)(命令|帮助|菜单|help|说明|功能|指令|使用说明)$',
@@ -17,30 +17,18 @@ export class yunzai_c_v_help extends plugin {
             ]
         });
     }
-
-    async messages() {
-        return await help(this.e);
-    }
-
+    async messages() {return await help(this.e);}
 }
-
 async function help(e) {
     let custom = {}
     let help = {}
     let { diyCfg, sysCfg } = await Data.importCfg('help')
-
-
     custom = help
-
     let helpConfig = lodash.defaults(diyCfg.helpCfg || {}, custom.helpCfg, sysCfg.helpCfg)
     let helpList = diyCfg.helpList || custom.helpList || sysCfg.helpList
     let helpGroup = []
-
     lodash.forEach(helpList, (group) => {
-        if (group.auth && group.auth === 'master' && !e.isMaster) {
-            return true
-        }
-
+        if (group.auth && group.auth === 'master' && !e.isMaster) {return true}
         lodash.forEach(group.list, (help) => {
             let icon = help.icon * 1
             if (!icon) {
@@ -51,7 +39,6 @@ async function help(e) {
                 help.css = `background-position:-${x * 50}px -${y * 50}px`
             }
         })
-
         helpGroup.push(group)
     })
     let bg = await rodom()
@@ -67,7 +54,6 @@ async function help(e) {
         scale: 2.0
     })
 }
-
 const rodom = async function () {
     var image = fs.readdirSync(`./plugins/yunzai-c-v-plugin/resources/help/theme/`);
     var list_img = [];

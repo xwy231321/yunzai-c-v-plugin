@@ -5,12 +5,10 @@ const Plugin_Path = `${process.cwd()}/plugins/yunzai-c-v-plugin`;
 const README_path = `${Plugin_Path}/README.md`
 const CHANGELOG_path = `${Plugin_Path}/CHANGELOG.md`
 const yunzai_ver = `v${cfg.package.version}`;
-
 let logs = {}
 let changelogs = []
 let currentVersion
 let versionCount = 6
-
 const getLine = function (line) {
   line = line.replace(/(^\s*\*|\r)/g, '')
   line = line.replace(/\s*`([^`]+`)/g, '<span class="cmd">$1')
@@ -20,7 +18,6 @@ const getLine = function (line) {
   line = line.replace(/ⁿᵉʷ/g, '<span class="new"></span>')
   return line
 }
-
 try {
   if (fs.existsSync(CHANGELOG_path)) {
     logs = fs.readFileSync(CHANGELOG_path, 'utf8') || ''
@@ -73,9 +70,7 @@ try {
   }
 } catch (e) {
 	logger.error(e);
-  // do nth
 }
-
 try{
 	if(fs.existsSync(README_path)){
 		let README = fs.readFileSync(README_path, 'utf8') || ''
@@ -85,7 +80,6 @@ try{
 		}
 	}
 }catch(err){}
-
 let Version = {
   get ver () {
     return currentVersion;
