@@ -78,6 +78,10 @@ export class St extends plugin {
                     reg: "#?清凉图(开启|关闭)(18|混合)",
                     fnc: "setstlx",
                     permission: "master",
+                }, {
+                    reg: "#?清凉图设置",
+                    fnc: "set",
+                    permission: "master",
                 },
 
             ],
@@ -254,5 +258,24 @@ export class St extends plugin {
         settings.lx = set
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
         e.reply(e.msg + '成功,重启后生效哦')
+    }
+
+    async set(e) {
+        let msg = [
+
+            `铯图状态：${settings.seettuuplus ? '开启' : '关闭'}\n`,
+            `盲盒状态：${settings.yifensuijimanghe ? '开启' : '关闭'}\n`,
+            `清凉图状态：${settings.ssttoooc ? '开启' : '关闭'}\n`,
+            `三元图状态：${settings.sanciyuan ? '开启' : '关闭'}\n`,
+            `云溪图状态：${settings.yunxiyuan ? '开启' : '关闭'}\n`,
+            `随机漫画状态：${settings.asuijimanhua ? '开启' : '关闭'}\n`,
+            `mc戳一戳状态：${settings.cchuoyichuom ? '开启' : '关闭'}\n`,
+            `原神盲盒状态：${settings.yuanmangheshen ? '开启' : '关闭'}\n`,
+            `消息风控处理状态：${settings.xiaofeifengkong ? '开启' : '关闭'}\n`,
+            `戳一戳清理内存状态：${settings.qlnc ? '开启' : '关闭'}\n`,
+            `清凉图是否开启18+：${settings.lx == 1 ? '已开启' : '未开启'}\n`,
+            `清凉图是否开启混合模式：${settings.lx == 2 ? '已开启' : '未开启'}\n`
+        ]
+      e.reply(msg)
     }
 }

@@ -26,7 +26,7 @@ export const helpCfg = {
   }
 } //plugin
 export const helpList = [{
-  group: "触发指令",
+  group: "触发类指令",
   list: [
     {
       icon: 88,
@@ -36,7 +36,7 @@ export const helpList = [{
     {
       icon: 61,
       title: "#铯图 #3张铯图",
-      desc: "随机漏丶的图片"
+      desc: "随机漏•图片"
     },
     {
       icon: 63,
@@ -61,12 +61,12 @@ export const helpList = [{
     {
       icon: 67,
       title: "#原神盲盒 #3份原神盲盒",
-      desc: "随机一张原神图片（质量一般）"
+      desc: "随机原神图片（质量一般）"
     },
     {
       icon: 62,
-      title: "#清凉图文字帮助",
-      desc: "文字版帮助"
+      title: "#清凉图文字帮助 #清凉图设置",
+      desc: "文字版帮助 当前各功能启用状况"
     },
     {
       icon: 71,
@@ -128,6 +128,3 @@ export const helpList = [{
   }]
 }
 ]
-
-
-export const isSys = true
