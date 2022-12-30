@@ -16,7 +16,7 @@ yunzai插件，依赖云崽实现功能。**仅适配V3。**
 
 #### 插件功能 
 
-V1.1.8
+V1.1.9
 
 | 功能名称             | 默认配置            |
 |------------------|-----------------|
@@ -102,6 +102,6 @@ Yunzai-Bot（V2）：[☞Github](https://github.com/yoimiya-kokomi/Yunzai-Bot)/[
 
 yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/[☞Gitee](https://gitee.com/xwy231321/yunzai-c-v-plugin)
 
-在尝试适配锅巴
+已可通过锅巴修改开关（冷更新，需要重启，在尝试适配热更新）
 
 如果可以的话，给本项目个star，或者[爱发电](https://afdian.net/a/yunzai-c-v-plugin)来支持本项目，您的支持就是给我的最大的鼓励，谢谢。
