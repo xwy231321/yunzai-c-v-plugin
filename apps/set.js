@@ -215,7 +215,7 @@ export class St extends plugin {
 
     async setfk(e) {
         let set
-        if (/开启消息风控/.test(e.msg)) {
+        if (/开启风控处理/.test(e.msg)) {
             set = true
         }else {
             set = false
