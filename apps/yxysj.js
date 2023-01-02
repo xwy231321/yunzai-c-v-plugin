@@ -43,7 +43,7 @@ export class stplus extends plugin {
         if (ismaster) {
         if(!e.isMaster) return false
         }
-        let url = `http://47.100.2.140`
+        let url = `http://47.100.2.140/yxy.php`
         await e.reply('正在给你找云溪院的图片啦～',true,{recallMsg:7})
         let image = []
         let num = 1
@@ -72,7 +72,7 @@ export class stplus extends plugin {
         if(!e.isMaster) 
         return false
         }
-        let url = `http://47.100.2.140`
+        let url = `http://47.100.2.140/yxy.php`
         await e.reply('正在给你找云溪院的图片啦～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)
         let image = []
