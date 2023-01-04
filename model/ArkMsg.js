@@ -306,7 +306,7 @@ export default {
 	Sign,
 	Share
 }
-
+//ark打包方法来源于小飞
 /**
  * 获取[min,max)范围内的随机数(内部方法)
  * @param {*} min 随机数最小值
