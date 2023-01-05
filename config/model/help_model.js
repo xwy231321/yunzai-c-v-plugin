@@ -59,8 +59,8 @@ export const helpList = [{
       desc: "#将图片(回复或消息携带)转为卡片发送"
     },{
       icon: 14,
-      title: '#清凉图体力',
-      desc: '大图卡片体力'
+      title: '#体力',
+      desc: '大图卡片体力（需要开启）'
     }
   ]
 }, {
