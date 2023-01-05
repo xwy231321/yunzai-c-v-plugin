@@ -76,7 +76,7 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 
 QQ：2060403379（高三小白）
 
-Q群(已锁群)：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)
+Q群(不定时锁群)：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)
 
 #### 其他
 
