@@ -46,8 +46,8 @@ export const helpList = [{
     },
     {
       icon: 62,
-      title: "#清凉图文字帮助 #清凉图设置",
-      desc: "文字版帮助 当前各功能启用状况"
+      title: "#清凉图设置",
+      desc: "当前各功能启用状况"
     },
     {
       icon: 71,
@@ -57,7 +57,11 @@ export const helpList = [{
       icon:88,
       title: "#发大图 #转大图",
       desc: "#将图片(回复或消息携带)转为卡片发送"
-    },
+    },{
+      icon: 14,
+      title: '#清凉图体力',
+      desc: '大图卡片体力'
+    }
   ]
 }, {
   group: '管理类命令',
@@ -65,6 +69,14 @@ export const helpList = [{
   list: [{
     icon: 32,
     title: '#开启/关闭铯图',
+    desc: '配置'
+  },{
+    icon: 14,
+    title: '#开启/关闭体力大图',
+    desc: '体力形式：默认/卡片'
+  },{
+    icon: 48,
+    title: '#开启/关闭转大图',
     desc: '配置'
   }, {
     icon: 35,
@@ -110,6 +122,9 @@ export const helpList = [{
     icon: 85,
     title: '#清凉图(开启|关闭)(18|混合)',
     desc: '配置清凉图出图类型'
+  },{
+    title: '补充',
+    desc: '转大图，体力大图，戳一戳清理内存需要单独指令开启'
   }]
 }
 ]

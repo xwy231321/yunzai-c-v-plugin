@@ -6,6 +6,7 @@ import co from '../../../lib/common/common.js'
 import fs from 'fs'
 import YAML from 'yaml'
 const settings = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
+const settobig = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/tobig.yaml','utf8'));
 export class St extends plugin {
     constructor() {
         super({
@@ -15,8 +16,11 @@ export class St extends plugin {
             priority: 5000,
             rule: [
                 {
-                    reg: '^#?清凉图设置帮助$',
-                    fnc: 'sethelp'
+                    reg: '^#?(开启|关闭)转大图$',
+                    fnc: 'settobig'
+                }, {
+                    reg: '^#?(开启|关闭)体力大图$',
+                    fnc: 'setnote'
                 },
                 {
                     reg: "#?(开启|关闭)铯图$",
@@ -86,26 +90,29 @@ export class St extends plugin {
             ],
         });
     }
-
-    async sethelp(e) {
-        let msg=['发送#开启/关闭+功能 来开启/关闭对应功能 \n' +
-        '示例：#开启铯图  #关闭铯图 \n' +
-        '以下为对应功能名称： \n' +
-        '随机漫画 \n' +
-        'mc戳一戳 \n' +
-        '盲盒 \n' +
-        '清凉图 \n' +
-        '铯图 \n' +
-        '三元图 \n' +
-        '原神盲盒 \n' +
-        '云溪图 \n' +
-        '风控处理 \n' +
-        '戳一戳清理内存   \n' +
-        '当然也可以#清凉图插件全部开启，或#清凉图插件全部关闭  来快捷开关全部功能(2个戳一戳仅生效mc戳一戳） \n' +
-        '#清凉图开启18 #清凉图开启混合 #清凉图关闭18/混合 可调整#清凉图 发出图片类型']
-        e.reply(msg)
-        return true
+    async settobig(e) {
+        let set
+        if (/开启转大图/.test(e.msg)) {
+            set = true
+        }else {
+            set = false
+        }
+        settobig.tobigset = set
+        fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/tobig.yaml',YAML.stringify(settobig),'utf8')
+        e.reply('成功' + e.msg + ',已生效啦')
     }
+    async setnote(e) {
+        let set
+        if (/开启体力大图/.test(e.msg)) {
+            set = true
+        }else {
+            set = false
+        }
+        settobig.tobignote = set
+        fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/tobig.yaml',YAML.stringify(settobig),'utf8')
+        e.reply('成功' + e.msg + ',已生效啦')
+    }
+
     async setstplus(e) {
         let set
         if (/开启铯图/.test(e.msg)) {
@@ -261,8 +268,10 @@ export class St extends plugin {
 
     async set(e) {
         let msg = [
+            `体力状态：${settobig.tobignote ? '大图' : '正常'}\n`,
             `铯图状态：${settings.seettuuplus ? '开启' : '关闭'}\n`,
             `盲盒状态：${settings.yifensuijimanghe ? '开启' : '关闭'}\n`,
+            `转大图状态：${settobig.tobigset ? '开启' : '关闭'}\n`,
             `清凉图状态：${settings.ssttoooc ? '开启' : '关闭'}\n`,
             `三元图状态：${settings.sanciyuan ? '开启' : '关闭'}\n`,
             `云溪图状态：${settings.yunxiyuan ? '开启' : '关闭'}\n`,
