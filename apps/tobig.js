@@ -20,7 +20,7 @@ export class tobig extends plugin {
                     reg: '^#?(转|发)大图$',
                     fnc: 'tobig'
                 },{
-                    reg: '^#?(体力|树脂|查询体力)?清凉图体力$',
+                    reg: '^#?(体力|树脂|查询体力)$',
                     fnc: 'notebig'
                 }
 
