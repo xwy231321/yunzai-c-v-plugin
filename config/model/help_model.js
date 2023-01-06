@@ -16,7 +16,7 @@ export const helpList = [{
     },
     {
       icon: 61,
-      title: "#铯图 #3张铯图",
+      title: "#铯图(卡片) #3张铯图",
       desc: "随机漏•图片"
     },
     {
@@ -31,12 +31,12 @@ export const helpList = [{
     },
     {
       icon: 65,
-      title: "#三元图 #3张三元图",
+      title: "#三元图(卡片) #3张三元图",
       desc: "随机三次元图片"
     },
     {
       icon: 64,
-      title: "#云溪图 #3张云溪图",
+      title: "#云溪图(卡片) #3张云溪图",
       desc: "#随机云溪院图片"
     },
     {
