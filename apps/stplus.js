@@ -45,7 +45,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
-        let url = `http://api.xemxem.ml/API/setu.php`
+        let url = `https://www.acy.moe/api/r18`
             let image = []
             let num = 1
         await e.reply('正在给你找涩涩的图片啦～',true,{recallMsg:7})
@@ -55,7 +55,7 @@ export class stplus extends plugin {
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
         return true;
       }
-      let url = `http://api.xemxem.ml/API/setu.php`
+      let url = `https://www.acy.moe/api/r18`
         await e.reply('正在给你找涩涩的图片啦～',true,{recallMsg:7})
         let msg = [segment.image(url)]
         let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
@@ -88,13 +88,13 @@ export class stplus extends plugin {
           for (let i = 0; i < [num]; i++) {
               let url = Math.floor(Math.random() * 5) + 1;
               if (url === 1) {
-                  url = `http://api.xemxem.ml/API/setu.php`;
+                  url = `https://www.acy.moe/api/r18`;
               } else if (url === 2) {
-                  url = `http://api.xemxem.ml/API/setu.php`;
+                  url = `https://www.acy.moe/api/r18`;
               } else if (url === 4) {
                   url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`;
               } else if (url === 3) {
-                  url = `http://api.xemxem.ml/API/setu.php`
+                  url = `https://www.acy.moe/api/r18`
               } else {
                   url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
               }
@@ -113,13 +113,13 @@ export class stplus extends plugin {
           for (let i = 0; i < [num]; i++) {
               let url = Math.floor(Math.random() * 5) + 1;
               if (url === 1) {
-                  url = `http://api.xemxem.ml/API/setu.php`;
+                  url = `https://www.acy.moe/api/r18`;
               } else if (url === 2) {
-                  url = `http://api.xemxem.ml/API/setu.php`;
+                  url = `https://www.acy.moe/api/r18`;
               } else if (url === 3) {
                   url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`;
               } else if (url === 4) {
-                  url = `http://api.xemxem.ml/API/setu.php`
+                  url = `https://www.acy.moe/api/r18`
               } else {
                   url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
               }
