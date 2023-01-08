@@ -24,6 +24,16 @@ export function supportGuoba () {
                 bottomHelpMessage: '是否启用该功能',
                 component: 'Switch'
             },{
+                field: 'cfg.one',
+                label: '三铯图',
+                bottomHelpMessage: '是否启用该功能',
+                component: 'Switch'
+            },{
+                field: 'cfg.two',
+                label: '原神cos图18+',
+                bottomHelpMessage: '是否启用该功能',
+                component: 'Switch'
+            },{
                 field: 'cfg.yunxiyuan',
                 label: '云溪图',
                 bottomHelpMessage: '是否启用该功能',
