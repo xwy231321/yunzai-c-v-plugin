@@ -85,6 +85,8 @@ export class stplus extends plugin {
        return true
     }
     async moresetu(e) {
+        let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
+        let shu = maxshu.seettuuplus
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
@@ -107,6 +109,7 @@ export class stplus extends plugin {
         await e.reply('正在给你找涩涩的图片啦～',true,{recallMsg:7})
         let image = []
             let num = e.msg.match(/\d+/)
+            if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
           for (let i = 0; i < [num]; i++) {
 
               let url = Math.floor(Math.random() * 5) + 1;
@@ -134,6 +137,7 @@ export class stplus extends plugin {
      // let url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
         await e.reply('正在给你找涩涩的图片啦～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)
+        if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
           for (let i = 0; i < [num]; i++) {
 
               let url = Math.floor(Math.random() * 5) + 1;

@@ -44,6 +44,8 @@ export class ysmh extends plugin {
         return true                           
     }
     async moreysmh(e) {
+        let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
+        let shu = maxshu.yuanmangheshen
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
         let cdtime = cdset.yuanmangheshencd//触发CD，单位毫秒，0为无CD
@@ -59,6 +61,7 @@ export class ysmh extends plugin {
         let url = `https://api.dujin.org/pic/yuanshen`
         await e.reply('原神盲盒派送中～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)
+        if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'份哦')}else {num = e.msg.match(/\d+/) }
           for (let i = 0; i < [num]; i++) {
         let msg=[segment.image(url)]
         e.reply(msg,false)

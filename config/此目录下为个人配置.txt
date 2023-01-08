@@ -1,3 +1,10 @@
+cd 触发间隔，单位毫秒
+cfg启用状态
+mastercfg是否开启仅主人生效
+number单次最多数量
+tobig卡片的单独启用开关
+
+
 asuijimanhua  b站随机404漫画
 cchuoyichuom  mc戳一戳
 yifensuijimanghe  盲盒

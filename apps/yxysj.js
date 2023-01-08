@@ -54,6 +54,8 @@ export class stplus extends plugin {
        return true
     }
     async yxy(e) {
+        let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
+        let shu = maxshu.yunxiyuan
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
@@ -75,6 +77,7 @@ export class stplus extends plugin {
         let url = `http://47.100.2.140/yxy.php`
         await e.reply('正在给你找云溪院的图片啦～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)
+        if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
         let image = []
           for (let i = 0; i < [num]; i++) {
         let msg = [segment.image(url)]

@@ -46,6 +46,8 @@ export class comic extends plugin {
         return true                           
     }
     async moreComic(e) {
+        let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
+        let shu = maxshu.asuijimanhua
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
         let cdtime = cdset.comiccd //触发CD，单位毫秒，0为无CD
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
@@ -61,6 +63,7 @@ export class comic extends plugin {
         let url = `https://www.acy.moe/api/404`
         await e.reply('我去给你找啦，稍等哦～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)
+        if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
         for (let i = 0; i < [num]; i++) {
         let msg=[segment.image(url)]
         e.reply(msg,false)

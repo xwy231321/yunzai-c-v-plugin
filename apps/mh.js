@@ -45,6 +45,8 @@ export class mh extends plugin {
     }
     
     async moremh(e) {
+        let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
+        let shu = maxshu.yifensuijimanghe
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
         let cdtime = cdset.mhcd//触发CD，单位毫秒，0为无CD
@@ -61,6 +63,7 @@ export class mh extends plugin {
         // https://api.ixiaowai.cn/api/api.php
        await e.reply('盲盒派送中～',true,{recallMsg:7})
        let num = e.msg.match(/\d+/)
+        if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'份哦')}else {num = e.msg.match(/\d+/) }
           for (let i = 0; i < [num]; i++) {
               let url = Math.floor(Math.random() * 3) + 1;
               if (url === 1) {

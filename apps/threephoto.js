@@ -71,6 +71,8 @@ export class stplus extends plugin {
        return true
     }
     async moresanciyuan(e) {
+        let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
+        let shu = maxshu.sanciyuan
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
         let cdtime = cdset.sanciyuancd//触发CD，单位毫秒，0为无CD
@@ -85,6 +87,7 @@ export class stplus extends plugin {
         }
         await e.reply('正在给你找三次元的图片啦～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)
+        if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
         let image = []
           for (let i = 0; i < [num]; i++) {
               let url = Math.floor(Math.random() * 5) + 1;
@@ -145,6 +148,8 @@ export class stplus extends plugin {
         return true
     }
     async moresanse(e) {
+        let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
+        let shu = maxshu.sanse
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
@@ -166,6 +171,7 @@ export class stplus extends plugin {
             await e.reply('正在找三次元涩涩的图片啦～',true,{recallMsg:7})
             let image = []
             let num = e.msg.match(/\d+/)
+            if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
             for (let i = 0; i < [num]; i++) {
                 let url = `https://ranpic.sesepic.top`
                 let msg = [segment.image(url)]
@@ -179,6 +185,7 @@ export class stplus extends plugin {
         }
         await e.reply('正在找三次元涩涩的图片啦～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)
+        if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
         for (let i = 0; i < [num]; i++) {
             let url = `https://ranpic.sesepic.top`
             let msg = [segment.image(url)]
@@ -226,6 +233,8 @@ export class stplus extends plugin {
         return true
     }
     async moreysse(e) {
+        let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
+        let shu = maxshu.ysse
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
@@ -247,6 +256,7 @@ export class stplus extends plugin {
             await e.reply('正在找涩涩的原神cos图啦～',true,{recallMsg:7})
             let image = []
             let num = e.msg.match(/\d+/)
+            if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
             for (let i = 0; i < [num]; i++) {
                 let url = `https://pann.sesepic.top/`
                 let msg = [segment.image(url)]
@@ -260,6 +270,7 @@ export class stplus extends plugin {
         }
         await e.reply('正在找涩涩的原神cos图啦～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)
+        if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
         for (let i = 0; i < [num]; i++) {
             let url = `https://pann.sesepic.top/`
             let msg = [segment.image(url)]
