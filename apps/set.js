@@ -227,7 +227,7 @@ export class St extends plugin {
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
         e.reply('成功' + e.msg + ',已生效啦')
     }
-    async setyxysj(e) {
+    async setsanse(e) {
         let set
         if (/开启三铯图/.test(e.msg)) {
             set = true
@@ -238,7 +238,7 @@ export class St extends plugin {
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml',YAML.stringify(settings),'utf8')
         e.reply('成功' + e.msg + ',已生效啦')
     }
-    async setyxysj(e) {
+    async setysse(e) {
         let set
         if (/开启原神cos图/.test(e.msg)) {
             set = true
