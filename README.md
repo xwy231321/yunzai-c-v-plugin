@@ -75,13 +75,15 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 
 **发送#清凉图更新**
 
+如果遇到冲突，请删除冲突文件后再次更新即可
+
 #### 反馈
 
 QQ：2060403379（高三小白）
 
-Q群(不定时锁群)：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)
+Q群：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)
 
-#### 其他
+#### 支持与赞助
 
 鸣谢
 
@@ -89,6 +91,14 @@ Q群(不定时锁群)：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)
 |-----|-----|--------------|
 | 小飞  | QQ203017966 | 消息风控处理，ark打包 |
 | 无解  | QQ3146312184  | 清理内存         |
+
+如果可以的话，给本项目个star，或者[爱发电](https://afdian.net/a/yunzai-c-v-plugin)来支持本项目，您的支持就是给我的最大的鼓励，谢谢。
+
+| 名单  | 赞助金额 |
+|-----|-----|
+| 暂无 | 暂无 |
+
+#### 其他
 
 推荐修改配置用的软件：[☞Windows](https://xwy2.lanzouf.com/ipg2u0im7ybi)/[☞Android](https://xwy2.lanzouf.com/iABUt0im7y8f)密码；1234，蓝奏云无法打开自行百度解决办法
 
@@ -105,5 +115,3 @@ Yunzai-Bot（V3）：[☞Github](https://github.com/Le-niao/Yunzai-Bot)/[☞Gite
 Yunzai-Bot（V2）：[☞Github](https://github.com/yoimiya-kokomi/Yunzai-Bot)/[☞Gitee](https://gitee.com/yoimiya-kokomi/Yunzai-Bot) 
 
 yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/[☞Gitee](https://gitee.com/xwy231321/yunzai-c-v-plugin)
-
-如果可以的话，给本项目个star，或者[爱发电](https://afdian.net/a/yunzai-c-v-plugin)来支持本项目，您的支持就是给我的最大的鼓励，谢谢。
