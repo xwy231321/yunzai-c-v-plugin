@@ -45,7 +45,18 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
-        let url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
+            let url = Math.floor(Math.random() * 5) + 1;
+            if (url === 1) {
+                url = `https://image.anosu.top/pixiv/direct?r18=1`;
+            } else if (url === 2) {
+                url = `https://image.anosu.top/pixiv/direct?r18=1&keyword=genshinimpact`;
+            } else if (url === 4) {
+                url = `http://www.ashking.ltd/18.php`;
+            } else if (url === 3) {
+                url = `https://www.acy.moe/api/r18`
+            } else {
+                url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
+            }
             let image = []
             let num = 1
         await e.reply('正在给你找涩涩的图片啦～',true,{recallMsg:7})
@@ -55,7 +66,18 @@ export class stplus extends plugin {
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
         return true;
       }
-      let url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
+        let url = Math.floor(Math.random() * 5) + 1;
+        if (url === 1) {
+            url = `https://image.anosu.top/pixiv/direct?r18=1`;
+        } else if (url === 2) {
+            url = `https://image.anosu.top/pixiv/direct?r18=1&keyword=genshinimpact`;
+        } else if (url === 4) {
+            url = `http://www.ashking.ltd/18.php`;
+        } else if (url === 3) {
+            url = `https://www.acy.moe/api/r18`
+        } else {
+            url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
+        }
         await e.reply('正在给你找涩涩的图片啦～',true,{recallMsg:7})
         let msg = [segment.image(url)]
         let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
@@ -81,25 +103,25 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
-        let url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
+        //let url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
         await e.reply('正在给你找涩涩的图片啦～',true,{recallMsg:7})
         let image = []
             let num = e.msg.match(/\d+/)
           for (let i = 0; i < [num]; i++) {
-              /*
+
               let url = Math.floor(Math.random() * 5) + 1;
               if (url === 1) {
-                  url = `https://www.acy.moe/api/r18`;
+                  url = `https://image.anosu.top/pixiv/direct?r18=1`;
               } else if (url === 2) {
-                  url = `https://www.acy.moe/api/r18`;
+                  url = `https://image.anosu.top/pixiv/direct?r18=1&keyword=genshinimpact`;
               } else if (url === 4) {
-                  url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`;
+                  url = `http://www.ashking.ltd/18.php`;
               } else if (url === 3) {
                   url = `https://www.acy.moe/api/r18`
               } else {
                   url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
               }
-              */
+
         let msg = [segment.image(url)]
         image.push(msg)
         console.log('This loop has been executed ' + (i + 1) + ' times.');
@@ -109,11 +131,11 @@ export class stplus extends plugin {
             if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
           return true;
       }
-      let url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
+     // let url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
         await e.reply('正在给你找涩涩的图片啦～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)
           for (let i = 0; i < [num]; i++) {
-              /*
+
               let url = Math.floor(Math.random() * 5) + 1;
               if (url === 1) {
                   url = `https://www.acy.moe/api/r18`;
@@ -126,7 +148,7 @@ export class stplus extends plugin {
               } else {
                   url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
               }
-              */
+
         let msg = [segment.image(url)]
         let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})

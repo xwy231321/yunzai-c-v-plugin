@@ -1,0 +1,10 @@
+如需自定义清凉图帮助，请将改文件复制一份
+粘贴到上一个目录（即\yunzai-c-v-plugin\config文件夹内）
+并将粘贴过去的文件重命名为help.js
+编辑完后重启云崽即可生效
+
+如需增加帮助背景
+请将图片重命名为2.jpg 3.jpg .......
+放入\yunzai-c-v-plugin\resources\help\theme文件夹内
+帮助面板将随机化
+推荐使用竖屏图片

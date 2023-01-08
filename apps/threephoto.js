@@ -21,6 +21,20 @@ export class stplus extends plugin {
                 {
                     reg: '^#?(\\d+张)三元图$',
                     fnc: 'moresanciyuan'
+                },{
+                    reg: '^#?三铯图$',
+                    fnc: 'sanse'
+                },
+                {
+                    reg: '^#?(\\d+张)三铯图$',
+                    fnc: 'moresanse'
+                },{
+                    reg: '^#?原神cos图$',
+                    fnc: 'ysse'
+                },
+                {
+                    reg: '^#?(\\d+张)原神cos图$',
+                    fnc: 'moreysse'
                 }
             ]
         })
@@ -93,5 +107,167 @@ export class stplus extends plugin {
         let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'三次元图片来啦') : image,false,{recallMsg:0});//私聊撤回间隔
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
        return true
+    }
+    async sanse(e) {
+        let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
+        let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
+        let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
+        let cdtime = 0//触发CD，单位毫秒，0为无CD
+        let isopen = set.one
+        let ismaster = masters.one
+        if (!isopen) {
+            return false
+        } else {
+            isopen = false;
+            setTimeout(async () => {
+                isopen = true;
+            }, cdtime);
+        }
+        if (ismaster) {
+            if(!e.isMaster) return false
+        }
+        if (e.isGroup) {
+            let url = `https://ranpic.sesepic.top`
+            let image = []
+            let num = 1
+            await e.reply('正在找三次元涩涩的图片啦～',true,{recallMsg:7})
+            let msg = [segment.image(url)]
+            image.push(msg)
+            let abc =  await e.reply(num = 1 ? await co.makeForwardMsg(e,image,'三次元铯图来啦') : image,false,{recallMsg:0})//群聊撤回间隔
+            if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
+            return true;
+        }
+        let url = `https://ranpic.sesepic.top`
+        await e.reply('正在找三次元涩涩的图片啦～',true,{recallMsg:7})
+        let msg = [segment.image(url)]
+        let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
+        if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
+        return true
+    }
+    async moresanse(e) {
+        let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
+        let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
+        let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
+        let cdtime = 0//触发CD，单位毫秒，0为无CD
+        let isopen = set.one
+        let ismaster = masters.one
+        if (!isopen) {
+            return false
+        } else {
+            isopen = false;
+            setTimeout(async () => {
+                isopen = true;
+            }, cdtime);
+        }
+        if (ismaster) {
+            if(!e.isMaster) return false
+        }
+        if (e.isGroup) {
+            await e.reply('正在找三次元涩涩的图片啦～',true,{recallMsg:7})
+            let image = []
+            let num = e.msg.match(/\d+/)
+            for (let i = 0; i < [num]; i++) {
+                let url = `https://ranpic.sesepic.top`
+                let msg = [segment.image(url)]
+                image.push(msg)
+                console.log('This loop has been executed ' + (i + 1) + ' times.');
+                await common.sleep(2000);
+            }
+            let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'三次元铯图来啦') : image,false,{recallMsg:0})
+            if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
+            return true;
+        }
+        await e.reply('正在找三次元涩涩的图片啦～',true,{recallMsg:7})
+        let num = e.msg.match(/\d+/)
+        for (let i = 0; i < [num]; i++) {
+            let url = `https://ranpic.sesepic.top`
+            let msg = [segment.image(url)]
+            let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
+            if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
+            console.log('This loop has been executed ' + (i + 1) + ' times.');
+            await common.sleep(2000);
+        }
+        return true
+    }
+    async ysse(e) {
+        let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
+        let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
+        let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
+        let cdtime = 0//触发CD，单位毫秒，0为无CD
+        let isopen = set.two
+        let ismaster = masters.two
+        if (!isopen) {
+            return false
+        } else {
+            isopen = false;
+            setTimeout(async () => {
+                isopen = true;
+            }, cdtime);
+        }
+        if (ismaster) {
+            if(!e.isMaster) return false
+        }
+        if (e.isGroup) {
+            let url = `https://pann.sesepic.top/`
+            let image = []
+            let num = 1
+            await e.reply('正在找涩涩的原神cos图啦～',true,{recallMsg:7})
+            let msg = [segment.image(url)]
+            image.push(msg)
+            let abc =  await e.reply(num = 1 ? await co.makeForwardMsg(e,image,'cos图来啦') : image,false,{recallMsg:0})//群聊撤回间隔
+            if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
+            return true;
+        }
+        let url = `https://pann.sesepic.top/`
+        await e.reply('正在找涩涩的原神cos图啦～',true,{recallMsg:7})
+        let msg = [segment.image(url)]
+        let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
+        if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
+        return true
+    }
+    async moreysse(e) {
+        let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
+        let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
+        let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
+        let cdtime = 0//触发CD，单位毫秒，0为无CD
+        let isopen = set.two
+        let ismaster = masters.two
+        if (!isopen) {
+            return false
+        } else {
+            isopen = false;
+            setTimeout(async () => {
+                isopen = true;
+            }, cdtime);
+        }
+        if (ismaster) {
+            if(!e.isMaster) return false
+        }
+        if (e.isGroup) {
+            await e.reply('正在找涩涩的原神cos图啦～',true,{recallMsg:7})
+            let image = []
+            let num = e.msg.match(/\d+/)
+            for (let i = 0; i < [num]; i++) {
+                let url = `https://pann.sesepic.top/`
+                let msg = [segment.image(url)]
+                image.push(msg)
+                console.log('This loop has been executed ' + (i + 1) + ' times.');
+                await common.sleep(2000);
+            }
+            let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'cos图来啦') : image,false,{recallMsg:0})
+            if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
+            return true;
+        }
+        await e.reply('正在找涩涩的原神cos图啦～',true,{recallMsg:7})
+        let num = e.msg.match(/\d+/)
+        for (let i = 0; i < [num]; i++) {
+            let url = `https://pann.sesepic.top/`
+            let msg = [segment.image(url)]
+            let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
+            if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
+            console.log('This loop has been executed ' + (i + 1) + ' times.');
+            await common.sleep(2000);
+        }
+        return true
     }
 }

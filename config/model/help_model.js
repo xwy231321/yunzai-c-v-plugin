@@ -1,3 +1,4 @@
+//如需自定义清凉图帮助，请将改文件复制一份，粘贴到上一个目录（即此插件config文件夹内），并将粘贴过去的文件重命名为help.js，编辑完后重启云崽即可生效
 export const helpCfg = {
   title: '清凉图帮助',
   subTitle: 'Yunzai-Bot & yunzai-c-v-Plugin',
@@ -16,7 +17,7 @@ export const helpList = [{
     },
     {
       icon: 61,
-      title: "#铯图(卡片) #3张铯图",
+      title: "#铯图(卡片)",
       desc: "随机漏•图片"
     },
     {
@@ -31,8 +32,8 @@ export const helpList = [{
     },
     {
       icon: 65,
-      title: "#三元图(卡片) #3张三元图",
-      desc: "随机三次元图片"
+      title: "#三元图(卡片) #三铯图",
+      desc: "随机三次元图片 随机三次元铯图"
     },
     {
       icon: 64,
@@ -41,8 +42,8 @@ export const helpList = [{
     },
     {
       icon: 67,
-      title: "#原神盲盒 #3份原神盲盒",
-      desc: "随机原神图片（质量一般）"
+      title: "#原神盲盒 #原神cos图",
+      desc: "随机原神图片 随机18原神cos图"
     },
     {
       icon: 62,
@@ -69,7 +70,7 @@ export const helpList = [{
   list: [{
     icon: 32,
     title: '#开启/关闭铯图',
-    desc: '配置'
+    desc: '配置是否启用'
   },{
     icon: 14,
     title: '#开启/关闭体力大图',
@@ -77,15 +78,15 @@ export const helpList = [{
   },{
     icon: 48,
     title: '#开启/关闭转大图',
-    desc: '配置'
+    desc: '配置是否开启转大图'
   }, {
     icon: 35,
     title: '#开启/关闭随机漫画',
-    desc: '配置'
+    desc: '配置是否启用'
   }, {
     icon: 34,
     title: '#开启/关闭mc戳一戳',
-    desc: '配置'
+    desc: '配置是否启用'
   }, {
     icon: 49,
     title: '#开启/关闭戳一戳清理内存',
@@ -93,23 +94,23 @@ export const helpList = [{
   }, {
     icon: 11,
     title: '#开启/关闭盲盒',
-    desc: '配置'
+    desc: '配置是否启用'
   }, {
     icon: 88,
     title: '#开启/关闭清凉图',
-    desc: '配置'
+    desc: '配置是否启用'
   }, {
     icon: 59,
     title: '#开启/关闭三元图',
-    desc: '配置'
+    desc: '配置是否启用'
   }, {
     icon: 57,
     title: '#开启/关闭原神盲盒',
-    desc: '配置'
+    desc: '配置是否启用'
   }, {
     icon: 56,
     title: '#开启/关闭云溪图',
-    desc: '配置'
+    desc: '配置是否启用'
   }, {
     icon: 53,
     title: '#开启/关闭风控处理',
@@ -121,6 +122,14 @@ export const helpList = [{
   }, {
     icon: 85,
     title: '#清凉图(开启|关闭)(18|混合)',
+    desc: '配置清凉图出图类型'
+  }, {
+    icon: 73,
+    title: '#开启/关闭三铯图',
+    desc: '配置是否启用'
+  }, {
+    icon: 71,
+    title: '#开启/关闭原神cos图',
     desc: '配置清凉图出图类型'
   },{
     title: '补充',
