@@ -124,7 +124,7 @@ export const helpList = [{
     title: '#清凉图(开启|关闭)(18|混合)',
     desc: '配置清凉图出图类型'
   }, {
-    icon: 73,
+    icon: 78,
     title: '#开启/关闭三铯图',
     desc: '配置是否启用'
   }, {
