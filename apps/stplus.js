@@ -142,12 +142,12 @@ export class stplus extends plugin {
 
               let url = Math.floor(Math.random() * 5) + 1;
               if (url === 1) {
-                  url = `https://www.acy.moe/api/r18`;
+                  url = `https://image.anosu.top/pixiv/direct?r18=1`;
               } else if (url === 2) {
-                  url = `https://www.acy.moe/api/r18`;
-              } else if (url === 3) {
-                  url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`;
+                  url = `https://image.anosu.top/pixiv/direct?r18=1&keyword=genshinimpact`;
               } else if (url === 4) {
+                  url = `http://www.ashking.ltd/18.php`;
+              } else if (url === 3) {
                   url = `https://www.acy.moe/api/r18`
               } else {
                   url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
