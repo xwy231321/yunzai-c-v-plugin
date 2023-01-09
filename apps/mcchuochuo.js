@@ -5,6 +5,8 @@ import cfg from'../../../lib/config/config.js'
 import plugin from '../../../lib/plugins/plugin.js';
 import fs from 'fs'
 import YAML from 'yaml'
+import { createRequire } from 'module'
+const require = createRequire(import.meta.url)
 const path=process.cwd()
 export class mcchuochuo extends plugin {
     constructor() {
@@ -36,9 +38,33 @@ export class mcchuochuo extends plugin {
             }, cdtime);
         }
         let url = `https://api.ixiaowai.cn/mcapi/mcapi.php`
-        let msg=[segment.image(url)]
-        e.reply(msg)
-        return true  
+        
+        const puppeteer = require('puppeteer');
+
+        const browser = await puppeteer.launch({
+            headless: true,
+            args: [
+                '--disable-gpu',
+                '--disable-dev-shm-usage',
+                '--disable-setuid-sandbox',
+                '--no-first-run',
+                '--no-sandbox',
+                '--no-zygote',
+                '--single-process'
+              ]
+        });
+        const page = await browser.newPage();
+        await page.goto(url);
+        await page.setViewport({
+            width: 1920,
+            height: 1080
+        });
+    
+        await this.reply(segment.image(await page.screenshot({
+            fullPage: true
+        })))
+    
+        await browser.close();
         }
     }
 }
