@@ -1,14 +1,16 @@
 # yunzai-c-v-plugin<a href='https://gitee.com/xwy231321/yunzai-c-v-plugin/stargazers'><img src='https://gitee.com/xwy231321/yunzai-c-v-plugin/badge/star.svg?theme=dark' alt='star'></img></a>
 
 
-[![雷神八重](https://gitee.com/xwy231321/cv-plugins-in-resources/raw/master/%E9%9B%B7%E7%A5%9E%E5%85%AB%E9%87%8D.jpg)](https://pixiv.net/i/96839227)
+[![雷神八重](https://gitee.com/xwy231321/cv-plugins-in-resources/raw/master/%E9%9B%B7%E7%A5%9E%E5%85%AB%E9%87%8D.jpg)](https://gitee.com/xwy231321/cv-plugins-in-resources/raw/master/%E9%9B%B7%E7%A5%9E%E5%85%AB%E9%87%8D.jpg)
 
 
 #### 前言
 
-yunzai插件，依赖云崽实现功能。**仅适配V3。** 已支持锅巴，占储存资源很小（约10mb左右），对性能要求很小。
+**注：为减缓卡片被和谐的速度，其他功能将不再加入卡片，卡片功能仅维护现存功能。**
 
-如果遇到bug，请提issues，谢谢
+yunzai插件，依赖云崽实现功能。**仅适配V3。** 已支持锅巴，占储存资源很小（约11mb左右），对性能要求很小。
+
+如果遇到bug，**请提issues**，谢谢
 
 修改所用工具在**结尾处**有相关跳转链接
 
@@ -60,7 +62,7 @@ V1.2.5
 
 #### 安装方法（安装后需要重启）
 
-推荐使用gitee安装（github已经停止更新）
+推荐使用**gitee**安装（github更新不及时）
 
 在云崽目录打开终端，运行：（和其他插件一样）
 
@@ -79,18 +81,18 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 
 #### 反馈
 
-QQ：2060403379（高三小白）
+QQ：2060403379（高三小白）（有问题提issue）
 
-Q群：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)
+Q群：（已锁群）
 
 #### 支持与赞助
 
 鸣谢
 
-| 名单  | 联系方式 | 主要贡献         |
-|-----|-----|--------------|
-| 小飞  | QQ203017966 | 消息风控处理，ark打包 |
-| 无解  | QQ3146312184  | 清理内存         |
+| 名单  | 主要贡献         |
+|-----|--------------|
+| 小飞  | 消息风控处理，ark打包 |
+| 无解  | 清理内存         |
 
 如果可以的话，给本项目个star，或者[爱发电](https://afdian.net/a/yunzai-c-v-plugin)来支持本项目，您的支持就是给我的最大的鼓励，谢谢。
 
