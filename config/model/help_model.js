@@ -17,7 +17,7 @@ export const helpList = [{
     },
     {
       icon: 61,
-      title: "#铯图(卡片)",
+      title: "#铯图(卡片) #原神铯图",
       desc: "随机漏•图片"
     },
     {
