@@ -38,7 +38,7 @@ body {
   border-radius: 0 0 10px 10px;
   display: table;
   overflow: hidden;
-  width: 150%;
+  width: 100%;
   color: rgb(0, 0, 0);
 }
 .help-table .tr {
