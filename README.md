@@ -83,7 +83,7 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 
 QQ：2060403379（高三小白）（有问题提issue）
 
-Q群：（已锁群）
+Q群：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)
 
 #### 支持与赞助
 
