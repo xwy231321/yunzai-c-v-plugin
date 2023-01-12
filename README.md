@@ -125,6 +125,8 @@ yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/
 
 [爱发电](https://afdian.net/a/yunzai-c-v-plugin)https://afdian.net/a/yunzai-c-v-plugin 
 
+微信和支付宝方式赞助请加作者qq
+
 | 名单  | 赞助金额 |
 |-----|-----|
 | 暂无 | 暂无 |
