@@ -64,7 +64,7 @@ export const helpList = [{
       desc: '大图卡片体力（需要开启）'
     }
   ]
-},, {
+},{
   group: '管理类命令',
   auth: 'master',
   list: [{
