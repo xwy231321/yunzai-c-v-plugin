@@ -126,10 +126,10 @@ yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/
 
 #### 赞助名单
 
-[爱发电](https://afdian.net/a/yunzai-c-v-plugin)https://afdian.net/a/yunzai-c-v-plugin 
+微信和支付宝方式赞助请加作者qq(推荐,自定义赞助备注)
 
-微信和支付宝方式赞助请加作者qq
+[爱发电](https://afdian.net/a/yunzai-c-v-plugin)https://afdian.net/a/yunzai-c-v-plugin (不推荐)
 
-| 名单  | 赞助金额 |
-|-----|-----|
-| 暂无 | 暂无 |
+| 名单  | 赞助金额 | 备注 |
+|-----|-----|-----|
+| 暂无 | 暂无 | 暂无 |
