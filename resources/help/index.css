@@ -1,7 +1,12 @@
 body {
   transform: scale(1);
-  width: 500px;
-  background: url("../common/theme/bg-01.jpg");
+  width: 830px;
+  background: url("../help/theme/1.jpg");
+}
+.container {
+  background: url(../help/theme/1.jpg) top left no-repeat;
+  background-size: 100% auto;
+  width: 830px;
 }
 .head-box {
   margin: 60px 0 0 0;
