@@ -85,6 +85,8 @@ QQ：2060403379（高三小白）（有问题提issue）
 
 Q群：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)
 
+如果可以的话，给本项目个star，来支持本项目，您的支持就是给我的最大的鼓励，谢谢。
+
 #### 支持与赞助
 
 鸣谢
@@ -94,11 +96,6 @@ Q群：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)
 | 小飞  | 消息风控处理等   |
 | 无解  | Linux清理内存 |
 
-如果可以的话，给本项目个star，或者[爱发电](https://afdian.net/a/yunzai-c-v-plugin)来支持本项目，您的支持就是给我的最大的鼓励，谢谢。
-
-| 名单  | 赞助金额 |
-|-----|-----|
-| 暂无 | 暂无 |
 
 #### 其他
 
@@ -123,3 +120,11 @@ yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/
 （2023.1.8 16：30开始统计数据）
 
 [![访问量](https://profile-counter.glitch.me/yunzai-c-v-plugin/count.svg)](https://gitee.com/xwy231321/yunzai-c-v-plugin)
+
+#### 赞助名单
+
+[爱发电](https://afdian.net/a/yunzai-c-v-plugin)https://afdian.net/a/yunzai-c-v-plugin 
+
+| 名单  | 赞助金额 |
+|-----|-----|
+| 暂无 | 暂无 |
