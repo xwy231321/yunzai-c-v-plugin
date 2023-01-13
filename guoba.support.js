@@ -33,12 +33,12 @@ export function supportGuoba () {
                 label: '原神cos图18+',
                 bottomHelpMessage: '是否启用该功能',
                 component: 'Switch'
-            },{
+            },/*{
                 field: 'cfg.yunxiyuan',
                 label: '云溪图',
                 bottomHelpMessage: '是否启用该功能',
                 component: 'Switch'
-            },{
+            },*/{
                 field: 'cfg.sanciyuan',
                 label: '三元图',
                 bottomHelpMessage: '是否启用该功能',

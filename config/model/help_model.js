@@ -36,11 +36,6 @@ export const helpList = [{
       desc: "随机三次元图片 随机三次元铯图"
     },
     {
-      icon: 64,
-      title: "#云溪图(卡片) #3张云溪图",
-      desc: "#随机云溪院图片"
-    },
-    {
       icon: 67,
       title: "#原神盲盒 #原神cos图",
       desc: "随机原神图片 随机18原神cos图"
@@ -106,10 +101,6 @@ export const helpList = [{
   }, {
     icon: 57,
     title: '#开启/关闭原神盲盒',
-    desc: '配置是否启用'
-  }, {
-    icon: 56,
-    title: '#开启/关闭云溪图',
     desc: '配置是否启用'
   }, {
     icon: 53,
