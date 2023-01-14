@@ -123,6 +123,10 @@ export const helpList = [{
     title: '#开启/关闭原神cos图',
     desc: '配置清凉图出图类型'
   },{
+    icon: 49,
+    title: '#清凉图检测',
+    desc: '检测当前网络无法访问的api'
+  },{
     title: '补充',
     desc: '转大图，体力大图，戳一戳清理内存需要单独指令开启'
   }]
