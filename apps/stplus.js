@@ -7,6 +7,7 @@ import common from'../../../lib/common/common.js'
 import fs from 'fs'
 import YAML from 'yaml'
 
+
 export class stplus extends plugin {
     constructor() {
         super({
@@ -34,6 +35,7 @@ export class stplus extends plugin {
         })
     }
     async setu(e) {
+        let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));//黑名单群
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
@@ -52,6 +54,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
+            if (blacklist.includes(e.group_id)) return false
             let url = Math.floor(Math.random() * 5) + 1;
             if (url === 1) {
                 url = `https://image.anosu.top/pixiv/direct?r18=1`;
@@ -92,6 +95,7 @@ export class stplus extends plugin {
        return true
     }
     async moresetu(e) {
+        let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));//黑名单群
         let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
         let shu = maxshu.seettuuplus
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
@@ -112,6 +116,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
+            if (blacklist.includes(e.group_id)) return false
         //let url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
         await e.reply('正在给你找涩涩的图片啦～',true,{recallMsg:7})
         let image = []
@@ -169,6 +174,7 @@ export class stplus extends plugin {
        return true
     }
     async setuys(e) {
+        let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));//黑名单群
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
@@ -187,6 +193,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
+            if (blacklist.includes(e.group_id)) return false
             let url = `https://image.anosu.top/pixiv/direct?r18=1&keyword=genshinimpact`;
             let image = []
             let num = 1
@@ -205,6 +212,7 @@ export class stplus extends plugin {
         return true
     }
     async moresetuys(e) {
+        let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));//黑名单群
         let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
         let shu = maxshu.seettuuplus
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
@@ -225,6 +233,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
+            if (blacklist.includes(e.group_id)) return false
             //let url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
             await e.reply('正在给你找原神涩涩的图片啦～',true,{recallMsg:7})
             let image = []

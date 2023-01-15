@@ -1,8 +1,9 @@
-cd 触发间隔，单位毫秒
-cfg启用状态
-mastercfg是否开启仅主人生效
-number单次最多数量
-tobig卡片的单独启用开关
+cd.yaml 触发间隔，单位毫秒
+cfg.yaml启用状态
+mastercfg.yaml是否开启仅主人生效
+number.yaml单次最多数量
+tobig.yaml卡片的单独启用开关
+blacklist.yaml含18 +图片功能的群聊黑名单
 
 
 asuijimanhua  b站随机404漫画
@@ -10,7 +11,7 @@ cchuoyichuom  mc戳一戳
 yifensuijimanghe  盲盒
 yuanmangheshen  原神盲盒
 ssttoooc  清凉图
-seettuuplus  铯图
+seettuuplus  铯图，原神铯图
 sanciyuan  三元图
 yunxiyuan  未定
 xiaofeifengkong  小飞风控管理

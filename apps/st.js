@@ -26,6 +26,7 @@ export class St extends plugin {
         
     }
     async setu(e) {
+        let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));//黑名单群
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
@@ -45,6 +46,7 @@ export class St extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
+            if (blacklist.includes(e.group_id)) return false
         await e.reply('正在给你找图片啦～',true,{recallMsg:7});
         let image = []
             let num = 1
@@ -71,6 +73,7 @@ export class St extends plugin {
         return true;
     }
     async moresetu(e) {
+        let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));//黑名单群
         let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
         let shu = maxshu.ssttoooc
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
@@ -92,6 +95,7 @@ export class St extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
+            if (blacklist.includes(e.group_id)) return false
         await e.reply('正在给你找图片啦～',true,{recallMsg:7});
         let num = e.msg.match(/\d+/)
             if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }

@@ -112,6 +112,7 @@ export class stplus extends plugin {
        return true
     }
     async sanse(e) {
+        let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
@@ -130,6 +131,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
+            if (blacklist.includes(e.group_id)) return false
             let url = `https://ranpic.sesepic.top`
             let image = []
             let num = 1
@@ -148,6 +150,7 @@ export class stplus extends plugin {
         return true
     }
     async moresanse(e) {
+        let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));
         let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
         let shu = maxshu.sanse
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
@@ -168,6 +171,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
+            if (blacklist.includes(e.group_id)) return false
             await e.reply('正在找三次元涩涩的图片啦～',true,{recallMsg:7})
             let image = []
             let num = e.msg.match(/\d+/)
@@ -197,6 +201,7 @@ export class stplus extends plugin {
         return true
     }
     async ysse(e) {
+        let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
@@ -215,6 +220,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
+            if (blacklist.includes(e.group_id)) return false
             let url = `https://pann.sesepic.top/`
             let image = []
             let num = 1
@@ -233,6 +239,7 @@ export class stplus extends plugin {
         return true
     }
     async moreysse(e) {
+        let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));
         let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
         let shu = maxshu.ysse
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
@@ -253,6 +260,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
+            if (blacklist.includes(e.group_id)) return false
             await e.reply('正在找涩涩的原神cos图啦～',true,{recallMsg:7})
             let image = []
             let num = e.msg.match(/\d+/)
