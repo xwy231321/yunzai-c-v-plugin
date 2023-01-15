@@ -63,7 +63,7 @@ export class St extends plugin {
                     permission: "master",
                 },
                 {
-                    reg: "#?(开启|关闭)未知功能$",
+                    reg: "#?(开启|关闭)云溪图$",
                     fnc: "setyxysj",
                     permission: "master",
                 },
@@ -218,7 +218,7 @@ export class St extends plugin {
 
     async setyxysj(e) {
         let set
-        if (/开启未知功能/.test(e.msg)) {
+        if (/开启云溪图/.test(e.msg)) {
             set = true
         }else {
             set = false
