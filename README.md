@@ -137,3 +137,4 @@ yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/
 |-----|-----|-----|
 | 维拉 | 100 | 无 |
 | 倾听 | 20 | 无 |
+| 青骢 | 8.88 | 我好喜欢xwy |
