@@ -71,7 +71,7 @@ export class gitupdate extends plugin{
                 return true
             }
         await redis.set('key',key)
-        this.reply('成功添加清凉图仓库地址,请使用【查看推送列表】查看当前已添加地址列表,插件索引:https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index')
+        this.reply('成功添加清凉图仓库地址,请使用【查看仓库列表】查看当前已添加地址列表,插件索引:https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index')
         this.finish('addcv')
         return true
     }
@@ -104,7 +104,7 @@ export class gitupdate extends plugin{
             }
         }
         if(!await redis.get('de')){
-            this.reply("成功删除,请输入【查看推送列表】查看")
+            this.reply("成功删除,请输入【查看仓库列表】查看")
         }else{
             this.reply("删除失败了,请确认是否有这个仓库,或是否为正确的仓库地址")
         }
@@ -159,7 +159,7 @@ export class gitupdate extends plugin{
         }
         }
         await redis.set('key',key)
-        this.reply('成功添加仓库地址,请使用【查看推送列表】查看')
+        this.reply('成功添加仓库地址,请使用【查看仓库列表】查看')
         this.finish('addgit')
         return true
     }
