@@ -53,6 +53,7 @@ export class gitupdate extends plugin{
             await this.reply("请发送要删除的仓库地址")
         }
     }
+
     async addcv (){
         if(!this.e.isMaster){
             return true
@@ -66,14 +67,15 @@ export class gitupdate extends plugin{
             await redis.set(`gitee.com`,`xwy231321`,`yunzai-c-v-plugin`,res[0].sha)
         }catch (e){
                 this.reply("出错了，请联系作者")
-                this.finish('add2')
+                this.finish('addcv')
                 return true
             }
         await redis.set('key',key)
         this.reply('成功添加清凉图仓库地址,请使用【查看推送列表】查看当前已添加地址列表,插件索引:https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index')
-        this.finish('add1')
+        this.finish('addcv')
         return true
     }
+    
     async delgit () {
         let key=JSON.parse(await redis.get('key'))
         if(key === null){
@@ -84,7 +86,7 @@ export class gitupdate extends plugin{
         }
         if(!this.e.msg.includes('gitee.com')&&!this.e.msg.includes('github.com')){
             this.reply("请输入正确的仓库地址")
-            this.finish('del1')
+            this.finish('delgit')
             return true
         }
         let list =this.e.msg.split('/')
@@ -106,7 +108,7 @@ export class gitupdate extends plugin{
         }else{
             this.reply("删除失败了,请确认是否有这个仓库,或是否为正确的仓库地址")
         }
-        this.finish('del1')
+        this.finish('delgit')
     }
     async addgit () {
         let key=JSON.parse(await redis.get('key'))
@@ -115,7 +117,7 @@ export class gitupdate extends plugin{
         }
         if(!this.e.msg.includes('gitee.com')&&!this.e.msg.includes('github.com')){
             this.reply("请输入正确的仓库地址")
-            this.finish('add1')
+            this.finish('addgit')
             return true
         }
         let list =this.e.msg.split('/')
@@ -127,7 +129,7 @@ export class gitupdate extends plugin{
             if(key[i].infor.toString()===list.toString()){
 
                 this.reply("已经添加过此仓库了")
-                this.finish('add1')
+                this.finish('addgit')
                 return true
             }
         }
@@ -141,7 +143,7 @@ export class gitupdate extends plugin{
             await redis.set(`${list[0]}${list[1]}${list[2]}`,res[0].sha)
         }catch (e){
                 this.reply("出错了,请确认你的仓库地址是否正确")
-                this.finish('add1')
+                this.finish('addgit')
                 return true
             }
         }else{
@@ -152,13 +154,13 @@ export class gitupdate extends plugin{
             await redis.set(`${list[0]}${list[1]}${list[2]}`,res[0].sha)
         }catch (e){
             this.reply("出错了,请确认你的仓库地址是否正确")
-            this.finish('add1')
+            this.finish('addgit')
             return true
         }
         }
         await redis.set('key',key)
         this.reply('成功添加仓库地址,请使用【查看推送列表】查看')
-        this.finish('add1')
+        this.finish('addgit')
         return true
     }
     async set (){
