@@ -135,4 +135,5 @@ yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/
 
 | 名单  | 赞助金额 | 备注 |
 |-----|-----|-----|
+| 维拉 | 100 | 无 |
 | 倾听 | 20 | 无 |
