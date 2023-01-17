@@ -53,7 +53,7 @@ export class stplus extends plugin {
                isopen = true;
             }, cdtime);
         }
-        let url = Math.floor(Math.random() * 5) + 1;
+        let url = Math.floor(Math.random() * 6) + 1;
         if (url === 1) {
             url = `https://tuapi.eees.cc/api.php?category=meinv&type=302`;
         } else if (url === 2) {
@@ -62,6 +62,8 @@ export class stplus extends plugin {
             url = `http://ovooa.com/API/meinv/api.php?type=image`;
         } else if (url === 4) {
             url = `http://api.btstu.cn/sjbz/`
+        } else if (url === 5) {
+            url = `http://tfapi.top/API/nypic.php`
         } else {
             url = `https://cdn.seovx.com/ha?mom=302`
         }
@@ -92,18 +94,20 @@ export class stplus extends plugin {
         if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
         let image = []
           for (let i = 0; i < [num]; i++) {
-              let url = Math.floor(Math.random() * 5) + 1;
-              if (url === 1) {
-                  url = `https://tuapi.eees.cc/api.php?category=meinv&type=302`;
-              } else if (url === 2) {
-                  url = `https://cdn.seovx.com/?mom=302`;
-              } else if (url === 3) {
-                  url = `http://ovooa.com/API/meinv/api.php?type=image`;
-              } else if (url === 4) {
-                  url = `http://api.btstu.cn/sjbz/`
-              } else {
-                  url = `https://cdn.seovx.com/ha?mom=302`
-              }
+            let url = Math.floor(Math.random() * 6) + 1;
+            if (url === 1) {
+                url = `https://tuapi.eees.cc/api.php?category=meinv&type=302`;
+            } else if (url === 2) {
+                url = `https://cdn.seovx.com/?mom=302`;
+            } else if (url === 3) {
+                url = `http://ovooa.com/API/meinv/api.php?type=image`;
+            } else if (url === 4) {
+                url = `http://api.btstu.cn/sjbz/`
+            } else if (url === 5) {
+                url = `http://tfapi.top/API/nypic.php`
+            } else {
+                url = `https://cdn.seovx.com/ha?mom=302`
+            }
         let msg = [segment.image(url)]
               image.push(msg)
         console.log('This loop has been executed ' + (i + 1) + ' times.');
