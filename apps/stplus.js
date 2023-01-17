@@ -34,6 +34,7 @@ export class stplus extends plugin {
             ]
         })
     }
+    //铯图单
     async setu(e) {
         let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));//黑名单群
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
@@ -94,6 +95,7 @@ export class stplus extends plugin {
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
        return true
     }
+    //铯图多
     async moresetu(e) {
         let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));//黑名单群
         let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
@@ -140,7 +142,7 @@ export class stplus extends plugin {
         let msg = [segment.image(url)]
         image.push(msg)
         console.log('This loop has been executed ' + (i + 1) + ' times.');
-        await common.sleep(2000);
+        await common.sleep(1000);
         }
             let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'铯图来啦') : image,false,{recallMsg:0})
             if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
@@ -169,10 +171,11 @@ export class stplus extends plugin {
         let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
         console.log('This loop has been executed ' + (i + 1) + ' times.');
-        await common.sleep(2000);
+        await common.sleep(1000);
         }
        return true
     }
+    //原神铯图单
     async setuys(e) {
         let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));//黑名单群
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
@@ -211,6 +214,7 @@ export class stplus extends plugin {
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
         return true
     }
+    //原神铯图多
     async moresetuys(e) {
         let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));//黑名单群
         let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
@@ -244,7 +248,7 @@ export class stplus extends plugin {
                 let msg = [segment.image(url)]
                 image.push(msg)
                 console.log('已获取目标地址 ' + (i + 1) + ' 次.');
-                await common.sleep(2000);
+                await common.sleep(1000);
             }
             let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'原神铯图来啦') : image,false,{recallMsg:0})
             if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
@@ -260,7 +264,7 @@ export class stplus extends plugin {
             let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
             if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
             console.log('已获取目标地址 ' + (i + 1) + ' 次.');
-            await common.sleep(2000);
+            await common.sleep(1000);
         }
         return true
     }

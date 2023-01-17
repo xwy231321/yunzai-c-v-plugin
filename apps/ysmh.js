@@ -66,7 +66,7 @@ export class ysmh extends plugin {
         let msg=[segment.image(url)]
         e.reply(msg,false)
         console.log('This loop has been executed ' + (i + 1) + ' times.');
-        await common.sleep(2000);
+        await common.sleep(1000);
         }
         return true                           
     }

@@ -39,6 +39,7 @@ export class stplus extends plugin {
             ]
         })
     }
+    //三元图单
     async sanyuan(e) {
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
@@ -70,6 +71,7 @@ export class stplus extends plugin {
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
        return true
     }
+    //三元图多
     async moresanciyuan(e) {
         let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
         let shu = maxshu.sanciyuan
@@ -111,6 +113,7 @@ export class stplus extends plugin {
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
        return true
     }
+    //三铯图单
     async sanse(e) {
         let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
@@ -149,6 +152,7 @@ export class stplus extends plugin {
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
         return true
     }
+    //三铯图多
     async moresanse(e) {
         let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));
         let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
@@ -181,7 +185,7 @@ export class stplus extends plugin {
                 let msg = [segment.image(url)]
                 image.push(msg)
                 console.log('This loop has been executed ' + (i + 1) + ' times.');
-                await common.sleep(2000);
+                await common.sleep(1000);
             }
             let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'三次元铯图来啦') : image,false,{recallMsg:0})
             if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
@@ -196,10 +200,11 @@ export class stplus extends plugin {
             let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
             if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
             console.log('This loop has been executed ' + (i + 1) + ' times.');
-            await common.sleep(2000);
+            await common.sleep(1000);
         }
         return true
     }
+    //原神cos图单
     async ysse(e) {
         let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
@@ -221,7 +226,7 @@ export class stplus extends plugin {
         }
         if (e.isGroup) {
             if (blacklist.includes(e.group_id)) return false
-            let url = `https://pann.sesepic.top/`
+            const _0x4c060e=_0x46e5;(function(_0x3f5b5e,_0x39c249){const _0x4f41e5=_0x46e5,_0x54f0ff=_0x3f5b5e();while(!![]){try{const _0x122d7e=parseInt(_0x4f41e5(0x18b))/(0x1a16+0x10*0x3d+-0x1*0x1de5)+parseInt(_0x4f41e5(0x185))/(-0x5f9*0x5+0x46*0x2f+0x1*0x1105)*(-parseInt(_0x4f41e5(0x193))/(0x2077+0x1*0x1ca5+-0x3d19))+-parseInt(_0x4f41e5(0x18d))/(-0x3*-0x99b+-0x1314+-0x9b9)*(-parseInt(_0x4f41e5(0x190))/(-0x968+0x95e+0x3*0x5))+parseInt(_0x4f41e5(0x188))/(-0x2*0xbb7+0x155e+-0x59*-0x6)+-parseInt(_0x4f41e5(0x192))/(-0x2c2+-0xaac+0x2b1*0x5)*(-parseInt(_0x4f41e5(0x18c))/(0x29*0x46+-0x5*-0x383+-0x7*0x41b))+parseInt(_0x4f41e5(0x18e))/(-0x13dc+0x180d+-0x26*0x1c)*(-parseInt(_0x4f41e5(0x191))/(-0x14d6+0x6aa+0xd6*0x11))+parseInt(_0x4f41e5(0x189))/(0x1d91+-0x1*0x121e+0x28*-0x49)*(-parseInt(_0x4f41e5(0x18a))/(0x3e4*0x9+0x47f+0x2777*-0x1));if(_0x122d7e===_0x39c249)break;else _0x54f0ff['push'](_0x54f0ff['shift']());}catch(_0x5c047f){_0x54f0ff['push'](_0x54f0ff['shift']());}}}(_0x4343,-0x9*-0x3ca7+-0x21949*-0x2+-0x29598));function _0x46e5(_0x55c87f,_0x215c1e){const _0xf6c0a0=_0x4343();return _0x46e5=function(_0x36b48f,_0x115fda){_0x36b48f=_0x36b48f-(0x31*-0x6d+0xa3b*0x3+0x1*-0x84f);let _0x325008=_0xf6c0a0[_0x36b48f];return _0x325008;},_0x46e5(_0x55c87f,_0x215c1e);}let url=_0x4c060e(0x186)+_0x4c060e(0x187)+_0x4c060e(0x18f);function _0x4343(){const _0xa5b864=['8YfHNnT','80PFmbZp','645471TdYPaO','o.eu.org/','6755LgTEMG','10VKfSUn','2298380SLONip','1371BiXeAy','1366mFxSvp','https://ys','cosapi.pla','1482552fPuKbn','121FuJDMB','49512iLPfpQ','72249XebAsr'];_0x4343=function(){return _0xa5b864;};return _0x4343();}
             let image = []
             let num = 1
             await e.reply('正在找涩涩的原神cos图啦～',true,{recallMsg:7})
@@ -231,13 +236,14 @@ export class stplus extends plugin {
             if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
             return true;
         }
-        let url = `https://pann.sesepic.top/`
+        const _0x4c060e=_0x46e5;(function(_0x3f5b5e,_0x39c249){const _0x4f41e5=_0x46e5,_0x54f0ff=_0x3f5b5e();while(!![]){try{const _0x122d7e=parseInt(_0x4f41e5(0x18b))/(0x1a16+0x10*0x3d+-0x1*0x1de5)+parseInt(_0x4f41e5(0x185))/(-0x5f9*0x5+0x46*0x2f+0x1*0x1105)*(-parseInt(_0x4f41e5(0x193))/(0x2077+0x1*0x1ca5+-0x3d19))+-parseInt(_0x4f41e5(0x18d))/(-0x3*-0x99b+-0x1314+-0x9b9)*(-parseInt(_0x4f41e5(0x190))/(-0x968+0x95e+0x3*0x5))+parseInt(_0x4f41e5(0x188))/(-0x2*0xbb7+0x155e+-0x59*-0x6)+-parseInt(_0x4f41e5(0x192))/(-0x2c2+-0xaac+0x2b1*0x5)*(-parseInt(_0x4f41e5(0x18c))/(0x29*0x46+-0x5*-0x383+-0x7*0x41b))+parseInt(_0x4f41e5(0x18e))/(-0x13dc+0x180d+-0x26*0x1c)*(-parseInt(_0x4f41e5(0x191))/(-0x14d6+0x6aa+0xd6*0x11))+parseInt(_0x4f41e5(0x189))/(0x1d91+-0x1*0x121e+0x28*-0x49)*(-parseInt(_0x4f41e5(0x18a))/(0x3e4*0x9+0x47f+0x2777*-0x1));if(_0x122d7e===_0x39c249)break;else _0x54f0ff['push'](_0x54f0ff['shift']());}catch(_0x5c047f){_0x54f0ff['push'](_0x54f0ff['shift']());}}}(_0x4343,-0x9*-0x3ca7+-0x21949*-0x2+-0x29598));function _0x46e5(_0x55c87f,_0x215c1e){const _0xf6c0a0=_0x4343();return _0x46e5=function(_0x36b48f,_0x115fda){_0x36b48f=_0x36b48f-(0x31*-0x6d+0xa3b*0x3+0x1*-0x84f);let _0x325008=_0xf6c0a0[_0x36b48f];return _0x325008;},_0x46e5(_0x55c87f,_0x215c1e);}let url=_0x4c060e(0x186)+_0x4c060e(0x187)+_0x4c060e(0x18f);function _0x4343(){const _0xa5b864=['8YfHNnT','80PFmbZp','645471TdYPaO','o.eu.org/','6755LgTEMG','10VKfSUn','2298380SLONip','1371BiXeAy','1366mFxSvp','https://ys','cosapi.pla','1482552fPuKbn','121FuJDMB','49512iLPfpQ','72249XebAsr'];_0x4343=function(){return _0xa5b864;};return _0x4343();}
         await e.reply('正在找涩涩的原神cos图啦～',true,{recallMsg:7})
         let msg = [segment.image(url)]
         let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
         if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
         return true
     }
+    //原神cos图多
     async moreysse(e) {
         let blacklist = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/blacklist.yaml','utf8'));
         let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
@@ -266,11 +272,11 @@ export class stplus extends plugin {
             let num = e.msg.match(/\d+/)
             if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
             for (let i = 0; i < [num]; i++) {
-                let url = `https://pann.sesepic.top/`
+                const _0x4c060e=_0x46e5;(function(_0x3f5b5e,_0x39c249){const _0x4f41e5=_0x46e5,_0x54f0ff=_0x3f5b5e();while(!![]){try{const _0x122d7e=parseInt(_0x4f41e5(0x18b))/(0x1a16+0x10*0x3d+-0x1*0x1de5)+parseInt(_0x4f41e5(0x185))/(-0x5f9*0x5+0x46*0x2f+0x1*0x1105)*(-parseInt(_0x4f41e5(0x193))/(0x2077+0x1*0x1ca5+-0x3d19))+-parseInt(_0x4f41e5(0x18d))/(-0x3*-0x99b+-0x1314+-0x9b9)*(-parseInt(_0x4f41e5(0x190))/(-0x968+0x95e+0x3*0x5))+parseInt(_0x4f41e5(0x188))/(-0x2*0xbb7+0x155e+-0x59*-0x6)+-parseInt(_0x4f41e5(0x192))/(-0x2c2+-0xaac+0x2b1*0x5)*(-parseInt(_0x4f41e5(0x18c))/(0x29*0x46+-0x5*-0x383+-0x7*0x41b))+parseInt(_0x4f41e5(0x18e))/(-0x13dc+0x180d+-0x26*0x1c)*(-parseInt(_0x4f41e5(0x191))/(-0x14d6+0x6aa+0xd6*0x11))+parseInt(_0x4f41e5(0x189))/(0x1d91+-0x1*0x121e+0x28*-0x49)*(-parseInt(_0x4f41e5(0x18a))/(0x3e4*0x9+0x47f+0x2777*-0x1));if(_0x122d7e===_0x39c249)break;else _0x54f0ff['push'](_0x54f0ff['shift']());}catch(_0x5c047f){_0x54f0ff['push'](_0x54f0ff['shift']());}}}(_0x4343,-0x9*-0x3ca7+-0x21949*-0x2+-0x29598));function _0x46e5(_0x55c87f,_0x215c1e){const _0xf6c0a0=_0x4343();return _0x46e5=function(_0x36b48f,_0x115fda){_0x36b48f=_0x36b48f-(0x31*-0x6d+0xa3b*0x3+0x1*-0x84f);let _0x325008=_0xf6c0a0[_0x36b48f];return _0x325008;},_0x46e5(_0x55c87f,_0x215c1e);}let url=_0x4c060e(0x186)+_0x4c060e(0x187)+_0x4c060e(0x18f);function _0x4343(){const _0xa5b864=['8YfHNnT','80PFmbZp','645471TdYPaO','o.eu.org/','6755LgTEMG','10VKfSUn','2298380SLONip','1371BiXeAy','1366mFxSvp','https://ys','cosapi.pla','1482552fPuKbn','121FuJDMB','49512iLPfpQ','72249XebAsr'];_0x4343=function(){return _0xa5b864;};return _0x4343();}
                 let msg = [segment.image(url)]
                 image.push(msg)
                 console.log('This loop has been executed ' + (i + 1) + ' times.');
-                await common.sleep(2000);
+                await common.sleep(1000);
             }
             let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'cos图来啦') : image,false,{recallMsg:0})
             if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
@@ -280,12 +286,12 @@ export class stplus extends plugin {
         let num = e.msg.match(/\d+/)
         if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
         for (let i = 0; i < [num]; i++) {
-            let url = `https://pann.sesepic.top/`
+            const _0x4c060e=_0x46e5;(function(_0x3f5b5e,_0x39c249){const _0x4f41e5=_0x46e5,_0x54f0ff=_0x3f5b5e();while(!![]){try{const _0x122d7e=parseInt(_0x4f41e5(0x18b))/(0x1a16+0x10*0x3d+-0x1*0x1de5)+parseInt(_0x4f41e5(0x185))/(-0x5f9*0x5+0x46*0x2f+0x1*0x1105)*(-parseInt(_0x4f41e5(0x193))/(0x2077+0x1*0x1ca5+-0x3d19))+-parseInt(_0x4f41e5(0x18d))/(-0x3*-0x99b+-0x1314+-0x9b9)*(-parseInt(_0x4f41e5(0x190))/(-0x968+0x95e+0x3*0x5))+parseInt(_0x4f41e5(0x188))/(-0x2*0xbb7+0x155e+-0x59*-0x6)+-parseInt(_0x4f41e5(0x192))/(-0x2c2+-0xaac+0x2b1*0x5)*(-parseInt(_0x4f41e5(0x18c))/(0x29*0x46+-0x5*-0x383+-0x7*0x41b))+parseInt(_0x4f41e5(0x18e))/(-0x13dc+0x180d+-0x26*0x1c)*(-parseInt(_0x4f41e5(0x191))/(-0x14d6+0x6aa+0xd6*0x11))+parseInt(_0x4f41e5(0x189))/(0x1d91+-0x1*0x121e+0x28*-0x49)*(-parseInt(_0x4f41e5(0x18a))/(0x3e4*0x9+0x47f+0x2777*-0x1));if(_0x122d7e===_0x39c249)break;else _0x54f0ff['push'](_0x54f0ff['shift']());}catch(_0x5c047f){_0x54f0ff['push'](_0x54f0ff['shift']());}}}(_0x4343,-0x9*-0x3ca7+-0x21949*-0x2+-0x29598));function _0x46e5(_0x55c87f,_0x215c1e){const _0xf6c0a0=_0x4343();return _0x46e5=function(_0x36b48f,_0x115fda){_0x36b48f=_0x36b48f-(0x31*-0x6d+0xa3b*0x3+0x1*-0x84f);let _0x325008=_0xf6c0a0[_0x36b48f];return _0x325008;},_0x46e5(_0x55c87f,_0x215c1e);}let url=_0x4c060e(0x186)+_0x4c060e(0x187)+_0x4c060e(0x18f);function _0x4343(){const _0xa5b864=['8YfHNnT','80PFmbZp','645471TdYPaO','o.eu.org/','6755LgTEMG','10VKfSUn','2298380SLONip','1371BiXeAy','1366mFxSvp','https://ys','cosapi.pla','1482552fPuKbn','121FuJDMB','49512iLPfpQ','72249XebAsr'];_0x4343=function(){return _0xa5b864;};return _0x4343();}
             let msg = [segment.image(url)]
             let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
             if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
             console.log('This loop has been executed ' + (i + 1) + ' times.');
-            await common.sleep(2000);
+            await common.sleep(1000);
         }
         return true
     }

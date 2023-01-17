@@ -20,7 +20,7 @@ yunzai插件，依赖云崽实现功能。**仅适配V3。** 已支持锅巴，�
 
 #### 插件功能 
 
-V1.2.92
+V1.2.93
 
 | 功能名称                          | 默认启用配置 | 默认单次获取最大数量 |
 |-------------------------------|----|------------|
@@ -92,19 +92,40 @@ QQ：2060403379（高三小白）（有问题提issue）
 
 Q群：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)（交流.外群）
 
-内群只提供给开发者等
+内群只提供给开发者等有贡献/赞助人员
 
 如果可以的话，给本项目个star，来支持本项目，您的支持就是给我的最大的鼓励，谢谢。
 
+#### 访问量
+
+（2023.1.8 16：30开始统计数据）
+
+[![访问量](https://profile-counter.glitch.me/yunzai-c-v-plugin/count.svg)](https://gitee.com/xwy231321/yunzai-c-v-plugin)
+
 #### 支持与赞助
 
-鸣谢
+鸣谢（排名不分先后）
 
 | 名单  | 主要贡献      |
 |-----|-----------|
 | 小飞  | 消息风控处理等   |
 | 无解  | Linux清理内存 |
 
+#### 赞助名单
+
+仅接受为爱赞助
+
+微信和支付宝方式赞助请加作者qq(**推荐**,无.第.三.方.赚.差.价，让爱不打折)
+
+[爱发电](https://afdian.net/a/yunzai-c-v-plugin)https://afdian.net/a/yunzai-c-v-plugin (**不**.**推**.**荐**，平.台.有.抽.成)
+
+以下名单仅按时间顺序排名，谢谢支持~
+
+| 名单  | 赞助金额 | 备注 |
+|-----|-----|-----|
+| 倾听 | 20 | 无 |
+| 维拉 | 100 | 无 |
+| 青骢 | 8.88 | 我好喜欢xwy |
 
 #### 其他
 
@@ -124,24 +145,4 @@ Yunzai-Bot（V2）：[☞Github](https://github.com/yoimiya-kokomi/Yunzai-Bot)/[
 
 yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/[☞Gitee](https://gitee.com/xwy231321/yunzai-c-v-plugin)
 
-#### 访问量
 
-（2023.1.8 16：30开始统计数据）
-
-[![访问量](https://profile-counter.glitch.me/yunzai-c-v-plugin/count.svg)](https://gitee.com/xwy231321/yunzai-c-v-plugin)
-
-#### 赞助名单
-
-仅接受为爱赞助哦
-
-微信和支付宝方式赞助请加作者qq(**推荐**,无.第.三.方.赚.差.价，让爱不打折)
-
-[爱发电](https://afdian.net/a/yunzai-c-v-plugin)https://afdian.net/a/yunzai-c-v-plugin (**不**.**推**.**荐**，平.台.有.抽.成)
-
-以下名单仅按时间顺序排名，谢谢支持~
-
-| 名单  | 赞助金额 | 备注 |
-|-----|-----|-----|
-| 倾听 | 20 | 无 |
-| 维拉 | 100 | 无 |
-| 青骢 | 8.88 | 我好喜欢xwy |

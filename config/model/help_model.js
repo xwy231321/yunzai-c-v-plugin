@@ -14,6 +14,19 @@ export const helpList = [{
       icon: 88,
       title: "#清凉图 #3张清凉图",
       desc: "随机清凉图（可设置图片类型）"
+    },{
+      icon:88,
+      title: "#发大图 #转大图",
+      desc: "#将图片(回复或消息携带)转为卡片发送"
+    },{
+      icon: 14,
+      title: '#体力',
+      desc: '大图卡片体力（需要开启）'
+    },
+    {
+      icon: 3,
+      title: "#云溪图 #3张云溪图",
+      desc: "云溪院的图片"
     },
     {
       icon: 61,
@@ -49,14 +62,6 @@ export const helpList = [{
       icon: 71,
       title: "#清凉图更新 #清凉图强制更新",
       desc: "#清凉图(强制)更新"
-    },{
-      icon:88,
-      title: "#发大图 #转大图",
-      desc: "#将图片(回复或消息携带)转为卡片发送"
-    },{
-      icon: 14,
-      title: '#体力',
-      desc: '大图卡片体力（需要开启）'
     }
   ]
 },{
@@ -75,6 +80,10 @@ export const helpList = [{
     title: '#开启/关闭转大图',
     desc: '配置是否开启转大图'
   }, {
+    icon: 3,
+    title: '#开启/关闭云溪图',
+    desc: '配置是否启用'
+  },{
     icon: 35,
     title: '#开启/关闭随机漫画',
     desc: '配置是否启用'
@@ -149,10 +158,6 @@ export const helpList = [{
     icon: 92,
     title: '#检查仓库更新',
     desc: '检查是否有更新'
-  },{
-    icon: 71,
-    title: '#订阅清凉图',
-    desc: '一键添加本插件(切勿多次执行)'
   },]
 }
 ]
