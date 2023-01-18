@@ -305,7 +305,7 @@ export class api extends plugin {
     } else if (i === 17) {
         url = `https://ranpic.sesepic.top`//三铯图
     } else if (i === 18) {
-        url = `https://pann.sesepic.top/`//原神cos图
+        url = `https://yscosapi.sesepic.top`//原神cos图
     } else if (i === 19) {
         url = `http://tfapi.top/API/nypic.php`//三元图6
     }
