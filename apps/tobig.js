@@ -6,7 +6,7 @@ import fs from 'fs';
 import YAML from 'yaml'
 import common from "../../../lib/common/common.js";
 
-let cdtime = 0
+let cdtime = 0//勿修改
 
 export class tobig extends plugin {
     constructor() {
@@ -23,18 +23,68 @@ export class tobig extends plugin {
                     reg: '^#?(体力|树脂|查询体力)$',
                     fnc: 'notebig'
                 },{
-                    reg: '^#?三元图卡片$',
+                    reg: '^#?三次元卡片$',
                     fnc: 'tobigthree'
                 },{
                     reg: '^#?铯图卡片$',
                     fnc: 'tobigstplus'
+                },{
+                    reg: '^#?云溪图卡片$',
+                    fnc: 'tobigyxy'
                 },
+
             ]
         })
     }
     async tobig(e) {
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/tobig.yaml','utf8'));
         let isopen = set.tobigset
+        //判断开启状态
+        if (!isopen) {
+            return false
+        } else {
+            isopen = false;
+            setTimeout(async () => {
+                isopen = true;
+            }, cdtime);
+        }
+        //获取回复/携带图片链接
+        await common.sleep(20);
+        let img = []
+        if (e.source) {
+            let source;
+            if (e.isGroup) {
+                source = (await e.group.getChatHistory(e.source.seq, 1)).pop();
+            } else {
+                source = (await e.friend.getChatHistory(e.source.time, 1)).pop();
+            }
+            for (let i of source.message) {
+                if (i.type == 'image') {
+                    img.push(i.url)
+                }
+            }
+        } else {
+            img = e.img
+        }
+        //json卡片编辑
+        let a = {"app":"com.tencent.imagetextbot", "desc":"", "view":"index", "ver":"1.0.0.11", "prompt":"[图片]", "appID":"", "sourceName":"", "actionData":"", "actionData_A":"", "sourceUrl":"",
+            "meta":{"robot":{"cover":(img[0]), "jump_url":"", "subtitle":"", "title":""}},
+            "config":{"ctime":1672809516, "menuMode":0, "showSender":0, "token":"c1d20633e301ada3f6026f40ecce0587", "type":"normal"},
+            "text":"",
+            "sourceAd":"",
+            }
+            //prompt为外部显示信息内容
+            //cover为展示图片得内容
+            //jump_url为跳转链接
+            //subtitle为标题
+            //title为标题
+        await ArkMsg.Share(JSON.stringify(a), e)
+        //share方法发送
+        return true
+    }
+    async notebig(e) {
+        let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/tobig.yaml','utf8'));
+        let isopen = set.tobignote
         if (!isopen) {
             return false
         } else {
@@ -44,12 +94,39 @@ export class tobig extends plugin {
             }, cdtime);
         }
         await common.sleep(20);
-        function _0x5760(_0x2e0470,_0x32bf2b){const _0x53634e=_0x5b21();return _0x5760=function(_0x40b9f9,_0x2a1dca){_0x40b9f9=_0x40b9f9-(0x93b*0x1+0x13cf+-0x1c33);let _0x111d54=_0x53634e[_0x40b9f9];return _0x111d54;},_0x5760(_0x2e0470,_0x32bf2b);}const _0x194569=_0x5760;(function(_0x43d85b,_0x3bf668){const _0x1467a8=_0x5760,_0x35c944=_0x43d85b();while(!![]){try{const _0xa136f8=-parseInt(_0x1467a8(0xdc))/(0xdc+-0xc82+0xba7)+parseInt(_0x1467a8(0xf0))/(-0x2166+0x1*-0x16ab+0x3813)+parseInt(_0x1467a8(0xea))/(-0x39*0x7f+0x3*-0x1e5+0x29d*0xd)*(parseInt(_0x1467a8(0xdd))/(-0x5e7*0x3+-0x4*-0x254+0x869))+-parseInt(_0x1467a8(0xf2))/(0x10be+0x2545+-0x35fe)+parseInt(_0x1467a8(0xf4))/(-0x1d*0x3d+-0x1124+0x1813)+-parseInt(_0x1467a8(0xd8))/(0x36f*-0x4+0xcf*0x1+0xcf4)+parseInt(_0x1467a8(0xed))/(0xd8a*0x1+0x1f5e+-0x1*0x2ce0)*(parseInt(_0x1467a8(0xf7))/(-0xfda+0x1baa+-0x9*0x14f));if(_0xa136f8===_0x3bf668)break;else _0x35c944['push'](_0x35c944['shift']());}catch(_0xad88c4){_0x35c944['push'](_0x35c944['shift']());}}}(_0x5b21,-0x6a18*-0x8+-0x15c36+0x5*0x556f));let img=[];if(e[_0x194569(0xf5)]){let source;e[_0x194569(0xe1)]?source=(await e[_0x194569(0xde)][_0x194569(0xf8)+_0x194569(0xee)](e[_0x194569(0xf5)][_0x194569(0xeb)],0x16*0x13+0xb3*-0x29+0x1b0a))[_0x194569(0xd9)]():source=(await e[_0x194569(0xe7)][_0x194569(0xf8)+_0x194569(0xee)](e[_0x194569(0xf5)][_0x194569(0xf6)],0x335*-0x1+-0xe9a+0x11d*0x10))[_0x194569(0xd9)]();for(let i of source[_0x194569(0xdf)]){i[_0x194569(0xf1)]==_0x194569(0xe9)&&img[_0x194569(0xe0)](i[_0x194569(0xe8)]);}}else img=e[_0x194569(0xe4)];let a={'app':_0x194569(0xe2)+_0x194569(0xda)+_0x194569(0xef),'desc':'','view':_0x194569(0xe6),'ver':_0x194569(0xd7),'prompt':_0x194569(0xdb),'appID':'','sourceName':'','actionData':'','actionData_A':'','sourceUrl':'','meta':{'robot':{'cover':img[-0x1b4*0x1+-0x1a15+0x1bc9],'jump_url':'','subtitle':'','title':''}},'config':{'ctime':0x63b50c2c,'menuMode':0x0,'showSender':0x0,'token':_0x194569(0xec)+_0x194569(0xf3)+_0x194569(0xe5)+'87','type':_0x194569(0xe3)},'text':'','sourceAd':''};function _0x5b21(){const _0x210d0b=['tory','tbot','704660CLeBFA','type','2178625pgpujH','01ada3f602','598752BJhTdR','source','time','263601UJcfFS','getChatHis','1.0.0.11','623385tdGioD','pop','t.imagetex','[图片]','429524VNUOVu','1318516doCVMX','group','message','push','isGroup','com.tencen','normal','img','6f40ecce05','index','friend','url','image','3aTxWSi','seq','c1d20633e3','112QvvoBe'];_0x5b21=function(){return _0x210d0b;};return _0x5b21();}
-        await ArkMsg.Share(JSON.stringify(a), e)
-        return true
-    }
-    async notebig(e) {
-        const _0x1a1eb1=_0x9d06;(function(_0x5666c2,_0x485f12){const _0x42ac2a=_0x9d06,_0x1ecdd3=_0x5666c2();while(!![]){try{const _0x2423ca=parseInt(_0x42ac2a(0x115))/(-0x4*-0x93d+0x3f9*0x3+0x9*-0x56e)+-parseInt(_0x42ac2a(0x12f))/(0x2258+-0xf82+0xa*-0x1e2)+parseInt(_0x42ac2a(0x139))/(-0x1c99*0x1+-0xca*0x15+0x2d2e)+parseInt(_0x42ac2a(0x137))/(-0x1768+0x3c+0x1730)+-parseInt(_0x42ac2a(0x134))/(0x1d92+-0x88*-0x3d+0x33*-0x137)+parseInt(_0x42ac2a(0x131))/(0x164c+-0x187d+0x237)+-parseInt(_0x42ac2a(0x119))/(-0x25d3+0x40b+0x21cf);if(_0x2423ca===_0x485f12)break;else _0x1ecdd3['push'](_0x1ecdd3['shift']());}catch(_0x5062af){_0x1ecdd3['push'](_0x1ecdd3['shift']());}}}(_0x1aed,0x2287f*0x1+0x81c2a+-0x87*-0xc9));let set=await YAML[_0x1a1eb1(0x13e)](fs[_0x1a1eb1(0x118)+'nc'](_0x1a1eb1(0x13b)+_0x1a1eb1(0x126)+_0x1a1eb1(0x132)+_0x1a1eb1(0x127)+_0x1a1eb1(0x135),_0x1a1eb1(0x13a))),isopen=set[_0x1a1eb1(0x11c)];if(!isopen)return![];else isopen=![],setTimeout(async()=>{isopen=!![];},cdtime);await common[_0x1a1eb1(0x13c)](0x201d*0x1+0x221e+0x469*-0xf);let data=await Note[_0x1a1eb1(0x13d)](this['e']);if(!data)return;let imgs=await puppeteer[_0x1a1eb1(0x123)](_0x1a1eb1(0x11a),data);e[_0x1a1eb1(0x130)](imgs),await common[_0x1a1eb1(0x13c)](0xd8*0x4+0x1*-0x158d+0x19fd);function _0x1aed(){const _0x32d61d=['nfig/tobig','tbot','group','getChatHis','friend','6f40ecce05','pop','[图片]','1531872WDyepT','reply','4050678WvHHQw','-plugin/co','01ada3f602','4546975caQotq','.yaml','seq','3810968bBanOJ','img','3438357TclYPM','utf8','./plugins/','sleep','get','parse','time','com.tencen','1.0.0.11','c1d20633e3','145670XFAIPF','url','tory','readFileSy','3809687BCWtQb','dailyNote','type','tobignote','push','normal','log','isGroup','index','image','screenshot','message','t.imagetex','yunzai-c-v'];_0x1aed=function(){return _0x32d61d;};return _0x1aed();}let img=[];if(e[_0x1a1eb1(0x130)]){let source;e[_0x1a1eb1(0x120)]?source=(await e[_0x1a1eb1(0x129)][_0x1a1eb1(0x12a)+_0x1a1eb1(0x117)](e[_0x1a1eb1(0x130)][_0x1a1eb1(0x136)],-0x1567+0x2414+-0xeac))[_0x1a1eb1(0x12d)]():source=(await e[_0x1a1eb1(0x12b)][_0x1a1eb1(0x12a)+_0x1a1eb1(0x117)](e[_0x1a1eb1(0x130)][_0x1a1eb1(0x13f)],-0xd*0x21e+0x1e06+0x9*-0x47))[_0x1a1eb1(0x12d)]();for(let i of source[_0x1a1eb1(0x124)]){i[_0x1a1eb1(0x11b)]==_0x1a1eb1(0x122)&&img[_0x1a1eb1(0x11d)](i[_0x1a1eb1(0x116)]);}}else img=e[_0x1a1eb1(0x138)];console[_0x1a1eb1(0x11f)](img),await common[_0x1a1eb1(0x13c)](-0x1117+0x1bfe+-0xad3);function _0x9d06(_0x45c0a0,_0x2bd06e){const _0x48dca7=_0x1aed();return _0x9d06=function(_0x970339,_0xaea894){_0x970339=_0x970339-(-0x1375+0x46e+-0x7*-0x24d);let _0xe3543b=_0x48dca7[_0x970339];return _0xe3543b;},_0x9d06(_0x45c0a0,_0x2bd06e);}let a={'app':_0x1a1eb1(0x140)+_0x1a1eb1(0x125)+_0x1a1eb1(0x128),'desc':'','view':_0x1a1eb1(0x121),'ver':_0x1a1eb1(0x141),'prompt':_0x1a1eb1(0x12e),'appID':'','sourceName':'','actionData':'','actionData_A':'','sourceUrl':'','meta':{'robot':{'cover':img[-0xce5+0xe+0xcd7*0x1],'jump_url':'','subtitle':'','title':''}},'config':{'ctime':0x63b50c2c,'menuMode':0x0,'showSender':0x0,'token':_0x1a1eb1(0x114)+_0x1a1eb1(0x133)+_0x1a1eb1(0x12c)+'87','type':_0x1a1eb1(0x11e)},'text':'','sourceAd':''};
+
+        let data = await Note.get(this.e)
+        if (!data) return
+        let imgs = await puppeteer.screenshot('dailyNote', data)
+        e.reply(imgs)
+        //米游社体力块
+        await common.sleep(2000);
+
+        //获取上一条图片记录，并获取图片链接
+        let img = []
+        if (e.reply) {
+            let source;
+            if (e.isGroup) {
+                source = (await e.group.getChatHistory(e.reply.seq, 1)).pop();
+            } else {
+                source = (await e.friend.getChatHistory(e.reply.time, 1)).pop();
+            }
+            for (let i of source.message) {
+                if (i.type == 'image') {
+                    img.push(i.url)
+                }
+            }
+        } else {
+            img = e.img
+        }
+        console.log(img)
+        await common.sleep(20);
+        let a = {"app":"com.tencent.imagetextbot", "desc":"", "view":"index", "ver":"1.0.0.11", "prompt":"[图片]", "appID":"", "sourceName":"", "actionData":"", "actionData_A":"", "sourceUrl":"",
+            "meta":{"robot":{"cover":(img[0]), "jump_url":"", "subtitle":"", "title":""}},
+            "config":{"ctime":1672809516, "menuMode":0, "showSender":0, "token":"c1d20633e301ada3f6026f40ecce0587", "type":"normal"},
+            "text":"",
+            "sourceAd":"",
+        }
         await ArkMsg.Share(JSON.stringify(a), e)
 
         return true
@@ -67,7 +144,21 @@ export class tobig extends plugin {
                 isopen = true;
             }, cdtime);
         }
-        const _0x1f0408=_0x3677;(function(_0x5cfeda,_0x4db812){const _0x5cce14=_0x3677,_0x2d73d3=_0x5cfeda();while(!![]){try{const _0x5991da=-parseInt(_0x5cce14(0xfd))/(0x1*0x1583+0x12*-0x8e+-0xb86)+-parseInt(_0x5cce14(0x110))/(0x338+-0x1b7a*0x1+0x1844*0x1)+-parseInt(_0x5cce14(0xff))/(-0xb90+0x501+0x692)+parseInt(_0x5cce14(0x112))/(-0x16f*0x5+-0x10f1+0x1820)+-parseInt(_0x5cce14(0x10b))/(-0x2394+-0x23*-0xb5+0x56d*0x2)+-parseInt(_0x5cce14(0x100))/(-0x18fa+-0x1*-0xbb2+0xd4e)+parseInt(_0x5cce14(0x122))/(0x25*0xe1+-0x117f+0x1*-0xeff);if(_0x5991da===_0x4db812)break;else _0x2d73d3['push'](_0x2d73d3['shift']());}catch(_0x2cc147){_0x2d73d3['push'](_0x2d73d3['shift']());}}}(_0x23b1,0x1fda0+-0x121cf+0x588c1));function _0x23b1(){const _0x48df66=['floor','http://ovo','10526306pURINU','https://ap','c/api.php?','category=m','302','一样哦','https://tu','com.tencen','einv&type=','/meinv/api','76517DeaGqt','m/?mom=302','805743zETkHM','2206542PLcLId','t.imagetex','6,\x22msg_seq','9c9953583d','/api/rand.','1.0.0.11','n.seovx.co','\x22:1,\x22appid','random','uin\x22:12202','i.uomg.com','1936365oeDOQq','api.eees.c','22744603,\x22','.php?type=','oa.com/API','1243646vRpQsY','m/ha?mom=3','2548620zvQoMP','\x22:16715126','https://cd','image','f2c8b3456e','[图片]','tbot','65539}','每次打开聊天记录都不','bbd9261b17','img3','index','\x22:10095177','{\x22app_type'];_0x23b1=function(){return _0x48df66;};return _0x23b1();}function _0x3677(_0x4c12c3,_0xa5040c){const _0x14e3ce=_0x23b1();return _0x3677=function(_0x337f69,_0x47f4c5){_0x337f69=_0x337f69-(-0xcd3+-0x1*0xf35+0xe7f*0x2);let _0x4dbf2b=_0x14e3ce[_0x337f69];return _0x4dbf2b;},_0x3677(_0x4c12c3,_0xa5040c);}let url=Math[_0x1f0408(0x120)](Math[_0x1f0408(0x108)]()*(-0x1*-0xb98+0x264+-0xdf7))+(0x1*-0x25ab+-0x1d9e+-0x3a*-0x129);if(url===0x887+0x2*-0x1257+0x1c28)url=_0x1f0408(0xf9)+_0x1f0408(0x10c)+_0x1f0408(0x124)+_0x1f0408(0xf6)+_0x1f0408(0xfb)+_0x1f0408(0xf7);else{if(url===-0x3f4+0x1bd6+-0x4*0x5f8)url=_0x1f0408(0x114)+_0x1f0408(0x106)+_0x1f0408(0xfe);else{if(url===0xb15*-0x1+-0x3d9+-0x3*-0x4fb)url=_0x1f0408(0x121)+_0x1f0408(0x10f)+_0x1f0408(0xfc)+_0x1f0408(0x10e)+_0x1f0408(0x115);else url===-0x1f*0x23+-0xddf+-0x50*-0x3a?url=_0x1f0408(0x123)+_0x1f0408(0x10a)+_0x1f0408(0x104)+_0x1f0408(0x11c):url=_0x1f0408(0x114)+_0x1f0408(0x106)+_0x1f0408(0x111)+'02';}}let a={'app':_0x1f0408(0xfa)+_0x1f0408(0x101)+_0x1f0408(0x118),'desc':'','view':_0x1f0408(0x11d),'ver':_0x1f0408(0x105),'prompt':_0x1f0408(0x117),'appID':'','sourceName':'','actionData':'','actionData_A':'','sourceUrl':'','meta':{'robot':{'cover':url,'jump_url':'','subtitle':'','title':_0x1f0408(0x11a)+_0x1f0408(0xf8)}},'config':{'ctime':0x63a1422e,'showSender':0x1,'token':_0x1f0408(0x11b)+_0x1f0408(0x103)+_0x1f0408(0x116)+'74'},'text':'','extraApps':[],'sourceAd':'','extra':_0x1f0408(0x11f)+_0x1f0408(0x107)+_0x1f0408(0x11e)+_0x1f0408(0x102)+_0x1f0408(0x113)+_0x1f0408(0x10d)+_0x1f0408(0x109)+_0x1f0408(0x119)};
+        //随机选取一条链接
+        let url = Math.floor(Math.random() * 5) + 1;
+        if (url === 1) {
+            url = `https:\/\/tuapi.eees.cc\/api.php?category=meinv&type=302`;
+        } else if (url === 2) {
+            url = `https:\/\/cdn.seovx.com\/?mom=302`;
+        } else if (url === 3) {
+            url = `http:\/\/ovooa.com\/API\/meinv\/api.php?type=image`;
+        } else if (url === 4) {
+            url = `https:\/\/api.uomg.com\/api\/rand.img3`
+        } else {
+            url = `https:\/\/cdn.seovx.com\/ha?mom=302`
+        }
+        let a = {"app":"com.tencent.imagetextbot","desc":"","view":"index","ver":"1.0.0.11","prompt":"[图片]","appID":"","sourceName":"","actionData":"","actionData_A":"","sourceUrl":"","meta":{"robot":{"cover":(url),"jump_url":"","subtitle":"","title":"每次打开聊天记录都不一样哦"}},"config":{"ctime":1671512622,"showSender":1,"token":"bbd9261b179c9953583df2c8b3456e74"},"text":"","extraApps":[],"sourceAd":"","extra":"{\"app_type\":1,\"appid\":100951776,\"msg_seq\":1671512622744603,\"uin\":1220265539}"}
+
         await ArkMsg.Share(JSON.stringify(a), e)
         return true
     }
@@ -89,8 +180,19 @@ export class tobig extends plugin {
         if (ismaster) {
             if(!e.isMaster) return false
         }
-
-        const _0x2010d6=_0x2544;(function(_0x425bf8,_0x5d4bba){const _0x279fc6=_0x2544,_0x501a70=_0x425bf8();while(!![]){try{const _0x63de47=parseInt(_0x279fc6(0x7c))/(0x1214+-0x1dcf+0xbbc)*(-parseInt(_0x279fc6(0x80))/(0x1a*-0xa6+-0x30*0xab+0x2*0x1877))+parseInt(_0x279fc6(0x9e))/(-0x1*0x1847+-0x4a8+0x9a6*0x3)+parseInt(_0x279fc6(0x96))/(-0x1668+-0xe8d+0x24f9)+parseInt(_0x279fc6(0x98))/(-0x146a+-0x1*0x10db+-0x637*-0x6)+-parseInt(_0x279fc6(0x9d))/(0x3ca+0x549+-0x90d)*(parseInt(_0x279fc6(0x91))/(-0x3a7+0xe9e+-0xaf0))+parseInt(_0x279fc6(0x84))/(0x2*0x8ad+0x125b+-0x23ad)+-parseInt(_0x279fc6(0x99))/(-0x9cc+0x53b*-0x4+0x1ec1);if(_0x63de47===_0x5d4bba)break;else _0x501a70['push'](_0x501a70['shift']());}catch(_0x367877){_0x501a70['push'](_0x501a70['shift']());}}}(_0x1a10,-0x5806f+-0x6*-0x193bd+0x8a7a*0xa));function _0x2544(_0x2c8a41,_0x3ccd1c){const _0x4e2340=_0x1a10();return _0x2544=function(_0x3ea2c9,_0x1add92){_0x3ea2c9=_0x3ea2c9-(-0xf7a+0xb22+0x4d2);let _0x4aad50=_0x4e2340[_0x3ea2c9];return _0x4aad50;},_0x2544(_0x2c8a41,_0x3ccd1c);}function _0x1a10(){const _0x5a2f11=['=small&typ','top/pixiv/','e=302','1732184iHxDCO','p/api/?sor','4286975ATLShj','15811542BEQslg','\x22:10095177','random','uin\x22:12202','1254738gtzVkV','2160999DVjwDd','https://ww','t.imagetex','f2c8b3456e','floor','.ashking.l','pact','\x22:1,\x22appid','https://im','一样哦','=genshinim','bbd9261b17','65539}','tbot','=1&keyword','2797kTPQZV','[图片]','index','t=r18&size','454yVcJPn','9c9953583d','\x22:16715126','22744603,\x22','9633512zeEuYb','api/r18','direct?r18','com.tencen','1.0.0.11','https://mo','{\x22app_type','每次打开聊天记录都不','e.jitsu.to','w.acy.moe/','td/18.php','age.anosu.','6,\x22msg_seq','7qdqFaN','http://www'];_0x1a10=function(){return _0x5a2f11;};return _0x1a10();}let url=Math[_0x2010d6(0xa2)](Math[_0x2010d6(0x9b)]()*(0x2452+-0xa6+-0x23a7))+(-0x1550+0xd79+-0x3ec*-0x2);if(url===-0xf3a+-0x26b5+-0x4*-0xd7c)url=_0x2010d6(0xa6)+_0x2010d6(0x8f)+_0x2010d6(0x94)+_0x2010d6(0x86)+'=1';else{if(url===0x96*0xd+-0x1d55+0x15b9*0x1)url=_0x2010d6(0xa6)+_0x2010d6(0x8f)+_0x2010d6(0x94)+_0x2010d6(0x86)+_0x2010d6(0x7b)+_0x2010d6(0xa8)+_0x2010d6(0xa4);else{if(url===-0x1*0xc89+-0x5*-0x47d+-0x1*0x9e4)url=_0x2010d6(0x92)+_0x2010d6(0xa3)+_0x2010d6(0x8e);else url===0x119d+-0x50b+-0xc8f?url=_0x2010d6(0x9f)+_0x2010d6(0x8d)+_0x2010d6(0x85):url=_0x2010d6(0x89)+_0x2010d6(0x8c)+_0x2010d6(0x97)+_0x2010d6(0x7f)+_0x2010d6(0x93)+_0x2010d6(0x95);}}let a={'app':_0x2010d6(0x87)+_0x2010d6(0xa0)+_0x2010d6(0x7a),'desc':'','view':_0x2010d6(0x7e),'ver':_0x2010d6(0x88),'prompt':_0x2010d6(0x7d),'appID':'','sourceName':'','actionData':'','actionData_A':'','sourceUrl':'','meta':{'robot':{'cover':url,'jump_url':'','subtitle':'','title':_0x2010d6(0x8b)+_0x2010d6(0xa7)}},'config':{'ctime':0x63a1422e,'showSender':0x1,'token':_0x2010d6(0xa9)+_0x2010d6(0x81)+_0x2010d6(0xa1)+'74'},'text':'','extraApps':[],'sourceAd':'','extra':_0x2010d6(0x8a)+_0x2010d6(0xa5)+_0x2010d6(0x9a)+_0x2010d6(0x90)+_0x2010d6(0x82)+_0x2010d6(0x83)+_0x2010d6(0x9c)+_0x2010d6(0xaa)};
+        let url = Math.floor(Math.random() * 5) + 1;
+        if (url === 1) {
+            url = `https:\/\/image.anosu.top\/pixiv\/direct?r18=1`;
+        } else if (url === 2) {
+            url = `https:\/\/image.anosu.top\/pixiv\/direct?r18=1&keyword=genshinimpact`;
+        } else if (url === 4) {
+            url = `http:\/\/www.ashking.ltd\/18.php`;
+        } else if (url === 3) {
+            url = `https:\/\/www.acy.moe\/api\/r18`
+        } else {
+            url = `https:\/\/moe.jitsu.top\/api\/?sort=r18&size=small&type=302`
+        }
+        let a = {"app":"com.tencent.imagetextbot","desc":"","view":"index","ver":"1.0.0.11","prompt":"[图片]","appID":"","sourceName":"","actionData":"","actionData_A":"","sourceUrl":"","meta":{"robot":{"cover":(url),"jump_url":"","subtitle":"","title":"每次打开聊天记录都不一样哦"}},"config":{"ctime":1671512622,"showSender":1,"token":"bbd9261b179c9953583df2c8b3456e74"},"text":"","extraApps":[],"sourceAd":"","extra":"{\"app_type\":1,\"appid\":100951776,\"msg_seq\":1671512622744603,\"uin\":1220265539}"}
 
         await ArkMsg.Share(JSON.stringify(a), e)
         return true
@@ -110,10 +212,16 @@ export class tobig extends plugin {
                 isopen = true;
             }, cdtime);
         }
+        //判断是否开启进主人生效
         if (ismaster) {
             if(!e.isMaster)
                 return false
         }
+
+        let url = `https://api.yunxiyuan.xyz/yxy.php`
+        let a = {"app":"com.tencent.imagetextbot","desc":"","view":"index","ver":"1.0.0.11","prompt":"[图片]","appID":"","sourceName":"","actionData":"","actionData_A":"","sourceUrl":"","meta":{"robot":{"cover":(url),"jump_url":"","subtitle":"","title":"每次打开聊天记录都不一样哦"}},"config":{"ctime":1671512622,"showSender":1,"token":"bbd9261b179c9953583df2c8b3456e74"},"text":"","extraApps":[],"sourceAd":"","extra":"{\"app_type\":1,\"appid\":100951776,\"msg_seq\":1671512622744603,\"uin\":1220265539}"}
+        await ArkMsg.Share(JSON.stringify(a), e)
+
         return true
     }
 }
