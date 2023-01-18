@@ -76,7 +76,7 @@ export class mh extends plugin {
         let msga=[segment.image(url)]
         e.reply(msga,false)
         console.log('This loop has been executed ' + (i + 1) + ' times.');
-        await common.sleep(1000);
+        await common.sleep(500);
         }
         return true                           
     }

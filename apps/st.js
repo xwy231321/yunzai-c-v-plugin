@@ -107,7 +107,7 @@ export class St extends plugin {
         console.log(obj);
               image.push(segment.image(obj.data[0].urls.original))
         console.log('This loop has been executed ' + (i + 1) + ' times.');
-        await common.sleep(1000);
+        await common.sleep(500);
          }
             let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'清凉图来啦') : image,false,{recallMsg:0});//群聊撤回间隔
             if (!abc) {
@@ -128,7 +128,7 @@ export class St extends plugin {
             return e.reply('好、好涩(//// ^ ////)……不、不行啦……被、被吞啦o(≧口≦)o',true,{recallMsg:60});
         }
         console.log('This loop has been executed ' + (i + 1) + ' times.');
-        await common.sleep(1000);
+        await common.sleep(500);
          }
         return true;
     }
