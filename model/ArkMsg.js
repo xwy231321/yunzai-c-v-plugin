@@ -74,6 +74,7 @@ async function Sign(json, client_info = null) {
 				} catch (err) { }
 
 				if (extra && extra.msg_seq == msg_seq) {
+					//Bot.off('message.private', json_handle);
 					clearTimeout(timer);
 					clearTimeout(timer1);
 					delete json['extra'];
@@ -105,6 +106,7 @@ async function Sign(json, client_info = null) {
 
 		let timer = setTimeout(async function () {
 			if (await get_json()) return;
+			//Bot.off('message.private', json_handle);
 			result.code = -1;
 			result.msg = '签名失败，请稍后再试！';
 			resolve(result);
@@ -117,6 +119,7 @@ async function Sign(json, client_info = null) {
 					let data = await result.result;
 					data = core.pb.decode(data);
 					if (data[3] != 0) {
+						//Bot.off('message.private', json_handle);
 						result.code = -1;
 						result.msg = '签名失败，请稍后再试！';
 						clearTimeout(timer);
@@ -132,9 +135,20 @@ async function Sign(json, client_info = null) {
 		};
 		let timer1 = setTimeout(timer1_fun, 100);
 
+		//Bot.on('message.private', json_handle);
 		result.result = Bot.sendOidb("OidbSvc.0xb77_9", core.pb.encode(body));
 	});
 }
+
+/**
+ * 作者喊这个叫"互联分享"
+ * @param {string} json 要发送的json信息
+ * @param {*} e 携带上的相关信息, 如isGroup
+ * @param {*} to_uin 
+ * @param {*} client_info 
+ * @param {*} get_message 
+ * @returns -1: 不是有效json
+ */
 async function Share(json, e, to_uin = null, client_info = null, get_message = false) {
 	let result = { code: -1 };
 	let json_data = null;
@@ -147,22 +161,26 @@ async function Share(json, e, to_uin = null, client_info = null, get_message = f
 		result.msg = '分享失败，不是有效的json！';
 		return result;
 	}
+	// 这里删去json参数中携带的extra字段, 因为要重新生成
 	delete json_data['extra'];
+
+
+	// 来源ID, 如果是群就是群号, 如果是频道就是频道号, 如果是私聊就是对方的QQ号
 	let recv_uin = 0;
 	let send_type = 0;
 	let recv_guild_id = 0;
 
-	if (e.isGroup && to_uin == null) {
+	if (e.isGroup && to_uin == null) {//群聊
 		recv_uin = e.group.gid;
 		send_type = 1;
-	} else if (e.guild_id) {
+	} else if (e.guild_id) {//频道
 		recv_uin = Number(e.channel_id);
 		recv_guild_id = BigInt(e.guild_id);
 		send_type = 3;
-	} else if (to_uin == null) {
+	} else if (to_uin == null) {//私聊
 		recv_uin = e.friend.uid;
 		send_type = 0;
-	} else {
+	} else {//指定号码私聊
 		recv_uin = to_uin;
 		send_type = 0;
 	}
@@ -211,6 +229,12 @@ async function Share(json, e, to_uin = null, client_info = null, get_message = f
 		},
 		19: recv_guild_id
 	};
+
+
+	/**
+	 * 这里的OidbSvc.0xb77_9是发送卡片的核心要点
+	 * 详见: https://github.com/mamoe/mirai/issues/682
+	 */
 	let payload = await Bot.sendOidb("OidbSvc.0xb77_9", core.pb.encode(body));
 	result.data = core.pb.decode(payload);
 	if (result.data[3] == 0) {
@@ -282,6 +306,13 @@ export default {
 	Sign,
 	Share
 }
+//ark打包方法来源于小飞
+/**
+ * 获取[min,max)范围内的随机数(内部方法)
+ * @param {*} min 随机数最小值
+ * @param {*} max 随机数最大值
+ * @returns 
+ */
 function random(min, max) {
 	const range = max - min;
 	const random = Math.random();
