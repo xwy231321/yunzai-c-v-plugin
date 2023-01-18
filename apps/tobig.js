@@ -218,7 +218,7 @@ export class tobig extends plugin {
                 return false
         }
 
-        let url = `https://api.yunxiyuan.xyz/yxy.php`
+        let url = `https://yunxi.peterliangaaa.repl.co`
         let a = {"app":"com.tencent.imagetextbot","desc":"","view":"index","ver":"1.0.0.11","prompt":"[图片]","appID":"","sourceName":"","actionData":"","actionData_A":"","sourceUrl":"","meta":{"robot":{"cover":(url),"jump_url":"","subtitle":"","title":"每次打开聊天记录都不一样哦"}},"config":{"ctime":1671512622,"showSender":1,"token":"bbd9261b179c9953583df2c8b3456e74"},"text":"","extraApps":[],"sourceAd":"","extra":"{\"app_type\":1,\"appid\":100951776,\"msg_seq\":1671512622744603,\"uin\":1220265539}"}
         await ArkMsg.Share(JSON.stringify(a), e)
 

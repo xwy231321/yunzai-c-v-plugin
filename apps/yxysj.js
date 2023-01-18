@@ -25,7 +25,6 @@ export class stplus extends plugin {
         })
     }
     async yunxi(e) {
-        await e.reply('注：当前仅为临时恢复')
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
         let masters = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/mastercfg.yaml','utf8'));
         let cdset = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cd.yaml','utf8'));
@@ -43,7 +42,7 @@ export class stplus extends plugin {
         if (ismaster) {
         if(!e.isMaster) return false
         }
-        let url = `https://api.yunxiyuan.xyz/yxy.php`
+        let url = `https://yunxi.peterliangaaa.repl.co`
         await e.reply('正在给你找云溪院的图片啦～',true,{recallMsg:7})
         let image = []
         let num = 1
@@ -55,7 +54,6 @@ export class stplus extends plugin {
        
     }
     async yxy(e) {
-        await e.reply('注：当前仅为临时恢复')
         let maxshu = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/number.yaml','utf8'));
         let shu = maxshu.yunxiyuan
         let set = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
@@ -76,7 +74,7 @@ export class stplus extends plugin {
         if(!e.isMaster) 
         return false
         }
-        let url = `https://api.yunxiyuan.xyz/yxy.php`
+        let url = `https://yunxi.peterliangaaa.repl.co`
         await e.reply('正在给你找云溪院的图片啦～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)
         if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
