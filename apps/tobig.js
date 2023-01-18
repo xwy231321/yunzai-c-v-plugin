@@ -23,7 +23,7 @@ export class tobig extends plugin {
                     reg: '^#?(体力|树脂|查询体力)$',
                     fnc: 'notebig'
                 },{
-                    reg: '^#?三次元卡片$',
+                    reg: '^#?三元图卡片$',
                     fnc: 'tobigthree'
                 },{
                     reg: '^#?铯图卡片$',
