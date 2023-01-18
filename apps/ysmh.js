@@ -65,7 +65,7 @@ export class ysmh extends plugin {
           for (let i = 0; i < [num]; i++) {
         let msg=[segment.image(url)]
         e.reply(msg,false)
-        console.log('This loop has been executed ' + (i + 1) + ' times.');
+        console.log('已获取图片链接 ' + (i + 1) + ' 个');
         await common.sleep(500);
         }
         return true                           

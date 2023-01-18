@@ -84,7 +84,7 @@ export class stplus extends plugin {
           for (let i = 0; i < [num]; i++) {
         let msg = segment.image(url)
               image.push(msg)
-        console.log('This loop has been executed ' + (i + 1) + ' times.');
+        console.log('已获取图片链接 ' + (i + 1) + ' 个');
         await common.sleep(500);
         }
         let abc =  await e.reply(num > 1 ? await co.makeForwardMsg(e,image,'云溪图来啦') : image,false,{recallMsg:0});//私聊撤回间隔

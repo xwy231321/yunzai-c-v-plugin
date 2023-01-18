@@ -75,7 +75,7 @@ export class mh extends plugin {
               }
         let msga=[segment.image(url)]
         e.reply(msga,false)
-        console.log('This loop has been executed ' + (i + 1) + ' times.');
+        console.log('已获取图片链接 ' + (i + 1) + ' 个');
         await common.sleep(500);
         }
         return true                           
