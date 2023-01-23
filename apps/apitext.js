@@ -303,13 +303,13 @@ export class api extends plugin {
     } else if (i === 16) {
         url = `https://cdn.seovx.com/ha?mom=302`//三元图5
     } else if (i === 17) {
-        url = `https://ranpic.sesepic.top`//三铯图
+        url = `https://api.peterliangaaa.repl.co/3r18`//三铯图
     } else if (i === 18) {
-        url = `https://yscosapi.sesepic.top`//原神cos图
+        url = `https://api.peterliangaaa.repl.co/cos`//原神cos图
     } else if (i === 19) {
         url = `http://tfapi.top/API/nypic.php`//三元图6
     } else if (i === 20) {
-        url = `https://yunxi.peterliangaaa.repl.co`//云溪图
+        url = `https://api.peterliangaaa.repl.co/yxy`//云溪图
     }
     
             let ii = i + 1
