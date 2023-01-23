@@ -42,7 +42,7 @@ export class stplus extends plugin {
         if (ismaster) {
         if(!e.isMaster) return false
         }
-        let url = `https://yunxi.peterliangaaa.repl.co`
+        let url = `https://api.peterliangaaa.repl.co/yxy`
         await e.reply('正在给你找云溪院的图片啦～',true,{recallMsg:7})
         let image = []
         let num = 1
@@ -74,7 +74,7 @@ export class stplus extends plugin {
         if(!e.isMaster) 
         return false
         }
-        let url = `https://yunxi.peterliangaaa.repl.co`
+        let url = `https://api.peterliangaaa.repl.co/yxy`
         await e.reply('正在给你找云溪院的图片啦～',true,{recallMsg:7})
         let num = e.msg.match(/\d+/)
         if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
