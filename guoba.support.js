@@ -4,6 +4,9 @@ export function supportGuoba () {
     return {
         configInfo: {
             schemas: [{
+                component: 'Divider',
+                label: '启用状态',
+              },{
                 field: 'tobig.tobigset',
                 label: '转大图',
                 bottomHelpMessage: '是否启用该功能',
@@ -19,9 +22,19 @@ export function supportGuoba () {
                 bottomHelpMessage: '是否启用该功能',
                 component: 'Switch'
             },{
+                field: 'mastercfg.ssttooocmaster',
+                label: '仅主人生效',
+                bottomHelpMessage: '清凉图是否仅主人生效',
+                component: 'Switch'
+            },{
                 field: 'cfg.seettuuplus',
                 label: '铯图',
                 bottomHelpMessage: '是否启用该功能',
+                component: 'Switch'
+            },{
+                field: 'mastercfg.seettuuplusmaster',
+                label: '仅主人生效',
+                bottomHelpMessage: '铯图是否仅主人生效',
                 component: 'Switch'
             },{
                 field: 'cfg.one',
@@ -29,14 +42,29 @@ export function supportGuoba () {
                 bottomHelpMessage: '是否启用该功能',
                 component: 'Switch'
             },{
+                field: 'mastercfg.one',
+                label: '仅主人生效',
+                bottomHelpMessage: '三铯图是否仅主人生效',
+                component: 'Switch'
+            },{
                 field: 'cfg.two',
                 label: '原神cos图18+',
                 bottomHelpMessage: '是否启用该功能',
                 component: 'Switch'
             },{
+                field: 'mastercfg.two',
+                label: '仅主人生效',
+                bottomHelpMessage: '原神cos图是否仅主人生效',
+                component: 'Switch'
+            },{
                 field: 'cfg.yunxiyuan',
                 label: '云溪图',
                 bottomHelpMessage: '是否启用该功能',
+                component: 'Switch'
+            },{
+                field: 'mastercfg.yunxiyuanmaster',
+                label: '仅主人生效',
+                bottomHelpMessage: '云溪图是否仅主人生效',
                 component: 'Switch'
             },{
                 field: 'cfg.sanciyuan',
@@ -73,7 +101,118 @@ export function supportGuoba () {
                 label: '消息风控处理',
                 bottomHelpMessage: '是否启用该功能',
                 component: 'Switch'
-            }],
+            },{
+                component: 'Divider',
+                label: '单次获取最大数量',
+              },{
+                field: 'number.sanciyuan',
+                label: '三元图',
+                helpMessage: '修改后直接生效',
+                bottomHelpMessage: '单次获取最大数量 默认20',
+                component: 'InputNumber',
+                required: true,
+                componentProps: {
+                  min: 1,
+                  max: 100,
+                  placeholder: '请输入数字',
+                },
+              },{
+                field: 'number.sanse',
+                label: '三铯图',
+                helpMessage: '修改后直接生效',
+                bottomHelpMessage: '单次获取最大数量 默认20',
+                component: 'InputNumber',
+                required: true,
+                componentProps: {
+                  min: 1,
+                  max: 100,
+                  placeholder: '请输入数字',
+                },
+              },{
+                field: 'number.ysse',
+                label: '原神cos图',
+                helpMessage: '修改后直接生效',
+                bottomHelpMessage: '单次获取最大数量 默认20',
+                component: 'InputNumber',
+                required: true,
+                componentProps: {
+                  min: 1,
+                  max: 100,
+                  placeholder: '请输入数字',
+                },
+              },{
+                field: 'number.seettuuplus',
+                label: '铯图 原神铯图',
+                helpMessage: '修改后直接生效',
+                bottomHelpMessage: '单次获取最大数量 默认20',
+                component: 'InputNumber',
+                required: true,
+                componentProps: {
+                  min: 1,
+                  max: 100,
+                  placeholder: '请输入数字',
+                },
+              },{
+                field: 'number.ssttoooc',
+                label: '清凉图',
+                helpMessage: '修改后直接生效',
+                bottomHelpMessage: '单次获取最大数量 默认20',
+                component: 'InputNumber',
+                required: true,
+                componentProps: {
+                  min: 1,
+                  max: 100,
+                  placeholder: '请输入数字',
+                },
+              },{
+                field: 'number.yifensuijimanghe',
+                label: '盲盒',
+                helpMessage: '修改后直接生效',
+                bottomHelpMessage: '单次获取最大数量 默认20',
+                component: 'InputNumber',
+                required: true,
+                componentProps: {
+                  min: 1,
+                  max: 100,
+                  placeholder: '请输入数字',
+                },
+              },{
+                field: 'number.asuijimanhua',
+                label: 'b站404随即漫画',
+                helpMessage: '修改后直接生效',
+                bottomHelpMessage: '单次获取最大数量 默认20',
+                component: 'InputNumber',
+                required: true,
+                componentProps: {
+                  min: 1,
+                  max: 100,
+                  placeholder: '请输入数字',
+                },
+              },{
+                field: 'number.yuanmangheshen',
+                label: '原神盲盒',
+                helpMessage: '修改后直接生效',
+                bottomHelpMessage: '单次获取最大数量 默认20',
+                component: 'InputNumber',
+                required: true,
+                componentProps: {
+                  min: 1,
+                  max: 100,
+                  placeholder: '请输入数字',
+                },
+              },{
+                field: 'number.yunxiyuan',
+                label: '云溪图',
+                helpMessage: '修改后直接生效',
+                bottomHelpMessage: '单次获取最大数量 默认20',
+                component: 'InputNumber',
+                required: true,
+                componentProps: {
+                  min: 1,
+                  max: 100,
+                  placeholder: '请输入数字',
+                },
+              },],
             getConfigData () {
                 return setting.merge()
             },
