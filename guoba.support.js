@@ -214,7 +214,7 @@ export function supportGuoba () {
                 },
               },{
                 component: 'Divider',
-                label: '黑名单群配置',
+                label: '黑名单群配置，输入后可点击周围，以继续添加其他群',
               },{
                 field: 'blacklist.groups',
                 label: '黑名单群',
