@@ -46,7 +46,7 @@ export class St extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
-            if (blacklist.includes(e.group_id)) return false
+            if (blacklist.groups.includes(e.group_id)) return false
         await e.reply('正在给你找图片啦～',true,{recallMsg:7});
         let image = []
             let num = 1
@@ -95,7 +95,7 @@ export class St extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
-            if (blacklist.includes(e.group_id)) return false
+            if (blacklist.groups.includes(e.group_id)) return false
         await e.reply('正在给你找图片啦～',true,{recallMsg:7});
         let num = e.msg.match(/\d+/)
             if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }

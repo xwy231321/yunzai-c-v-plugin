@@ -55,7 +55,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
-            if (blacklist.includes(e.group_id)) return false
+            if (blacklist.groups.includes(e.group_id)) return false
             let url = Math.floor(Math.random() * 5) + 1;
             if (url === 1) {
                 url = `https://image.anosu.top/pixiv/direct?r18=1`;
@@ -118,7 +118,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
-            if (blacklist.includes(e.group_id)) return false
+            if (blacklist.groups.includes(e.group_id)) return false
         //let url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
         await e.reply('正在给你找涩涩的图片啦～',true,{recallMsg:7})
         let image = []
@@ -196,7 +196,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
-            if (blacklist.includes(e.group_id)) return false
+            if (blacklist.groups.includes(e.group_id)) return false
             let url = `https://image.anosu.top/pixiv/direct?r18=1&keyword=genshinimpact`;
             let image = []
             let num = 1
@@ -237,7 +237,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
-            if (blacklist.includes(e.group_id)) return false
+            if (blacklist.groups.includes(e.group_id)) return false
             //let url = `https://moe.jitsu.top/api/?sort=r18&size=small&type=302`
             await e.reply('正在给你找原神涩涩的图片啦～',true,{recallMsg:7})
             let image = []

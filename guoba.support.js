@@ -212,6 +212,19 @@ export function supportGuoba () {
                   max: 100,
                   placeholder: '请输入数字',
                 },
+              },{
+                component: 'Divider',
+                label: '黑名单群配置',
+              },{
+                field: 'blacklist.groups',
+                label: '黑名单群',
+                bottomHelpMessage: '黑名单群',
+                component: 'GTags',
+                required: true,
+                componentProps: {
+                  placeholder: '请输入数字',
+                  valueFormatter: ((value) => Number.parseInt(value)).toString(),
+                },
               },],
             getConfigData () {
                 return setting.merge()

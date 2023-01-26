@@ -138,7 +138,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
-            if (blacklist.includes(e.group_id)) return false
+            if (blacklist.groups.includes(e.group_id)) return false
             let url = `https://api.peterliangaaa.repl.co/3r18`
             let image = []
             let num = 1
@@ -179,7 +179,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
-            if (blacklist.includes(e.group_id)) return false
+            if (blacklist.groups.includes(e.group_id)) return false
             await e.reply('正在找三次元涩涩的图片啦～',true,{recallMsg:7})
             let image = []
             let num = e.msg.match(/\d+/)
@@ -229,7 +229,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
-            if (blacklist.includes(e.group_id)) return false
+            if (blacklist.groups.includes(e.group_id)) return false
             let url = `https://api.peterliangaaa.repl.co/cos`
             let image = []
             let num = 1
@@ -270,7 +270,7 @@ export class stplus extends plugin {
             if(!e.isMaster) return false
         }
         if (e.isGroup) {
-            if (blacklist.includes(e.group_id)) return false
+            if (blacklist.groups.includes(e.group_id)) return false
             await e.reply('正在找涩涩的原神cos图啦～',true,{recallMsg:7})
             let image = []
             let num = e.msg.match(/\d+/)

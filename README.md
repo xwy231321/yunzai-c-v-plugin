@@ -21,7 +21,7 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 
 #### 插件功能 
 
-[V1.2.96](./CHANGELOG.md)
+[V1.2.97](./CHANGELOG.md)
 
 | 功能名称                          | 默认启用配置 | 默认单次获取最大数量 |
 |-------------------------------|----|------------|
