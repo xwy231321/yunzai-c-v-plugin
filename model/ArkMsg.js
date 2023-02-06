@@ -138,7 +138,7 @@ async function Sign(json, client_info = null) {
 		//Bot.on('message.private', json_handle);
 		result.result = Bot.sendOidb("OidbSvc.0xb77_9", core.pb.encode(body));
 	});
-
+}
 async function Share(json, e, to_uin = null, client_info = null, get_message = false) {
 	let result = { code: -1 };
 	let json_data = null;
