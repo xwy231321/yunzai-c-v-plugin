@@ -17,7 +17,7 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 |------|------|
 | #清凉图帮助 | #清凉图更新 |
 
-
+感谢大家对本插件的支持与赞助，本插件将于6.9（即高考结束后）开启重构，如有新功能的想法与现有功能的改进，可以提issues，我会尽最大努力去实现
 
 #### 插件功能 
 
