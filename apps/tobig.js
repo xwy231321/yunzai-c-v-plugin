@@ -29,7 +29,7 @@ export class tobig extends plugin {
                     reg: '^#?铯图卡片$',
                     fnc: 'tobigstplus'
                 },{
-                    reg: '^#?云溪图卡片$',
+                    reg: '^#?小冰图卡片$',
                     fnc: 'tobigyxy'
                 },
 
