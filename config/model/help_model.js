@@ -25,7 +25,7 @@ export const helpList = [{
     },
     {
       icon: 3,
-      title: "#云溪图(卡片) #3张云溪图",
+      title: "#小冰图(卡片) #3张小冰图",
       desc: "云溪院的图片"
     },
     {
@@ -81,7 +81,7 @@ export const helpList = [{
     desc: '配置是否开启转大图'
   }, {
     icon: 3,
-    title: '#开启/关闭云溪图',
+    title: '#开启/关闭小冰图',
     desc: '配置是否启用'
   },{
     icon: 35,
