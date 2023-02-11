@@ -25,8 +25,8 @@ export const helpList = [{
     },
     {
       icon: 3,
-      title: "#小冰图(卡片) #3张小冰图",
-      desc: "云溪院的图片"
+      title: "#小冰图 #3张小冰图",
+      desc: "p..站的图片"
     },
     {
       icon: 61,
