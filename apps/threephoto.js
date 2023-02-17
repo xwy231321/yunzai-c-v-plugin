@@ -139,7 +139,7 @@ export class stplus extends plugin {
         }
         if (e.isGroup) {
             if (blacklist.groups.includes(e.group_id)) return false
-            let url = `https://api.peterliangaaa.repl.co/3r18`
+            let url = `https://imagesapi.sesepic.top/3r18`
             let image = []
             let num = 1
             await e.reply('正在找三次元涩涩的图片啦～',true,{recallMsg:7})
@@ -149,7 +149,7 @@ export class stplus extends plugin {
             if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
             return true;
         }
-        let url = `https://api.peterliangaaa.repl.co/3r18`
+        let url = `https://imagesapi.sesepic.top/3r18`
         await e.reply('正在找三次元涩涩的图片啦～',true,{recallMsg:7})
         let msg = [segment.image(url)]
         let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
@@ -185,7 +185,7 @@ export class stplus extends plugin {
             let num = e.msg.match(/\d+/)
             if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
             for (let i = 0; i < [num]; i++) {
-                let url = `https://api.peterliangaaa.repl.co/3r18`
+                let url = `https://imagesapi.sesepic.top/3r18`
                 let msg = [segment.image(url)]
                 image.push(msg)
                 console.log('已获取图片链接 ' + (i + 1) + ' 个');
@@ -199,7 +199,7 @@ export class stplus extends plugin {
         let num = e.msg.match(/\d+/)
         if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
         for (let i = 0; i < [num]; i++) {
-            let url = `https://api.peterliangaaa.repl.co/3r18`
+            let url = `https://imagesapi.sesepic.top/3r18`
             let msg = [segment.image(url)]
             let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
             if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
@@ -230,7 +230,7 @@ export class stplus extends plugin {
         }
         if (e.isGroup) {
             if (blacklist.groups.includes(e.group_id)) return false
-            let url = `https://api.peterliangaaa.repl.co/cos`
+            let url = `https://imagesapi.sesepic.top/cos`
             let image = []
             let num = 1
             await e.reply('正在找涩涩的原神cos图啦～',true,{recallMsg:7})
@@ -240,7 +240,7 @@ export class stplus extends plugin {
             if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
             return true;
         }
-        let url = `https://api.peterliangaaa.repl.co/cos`        
+        let url = `https://imagesapi.sesepic.top/cos`        
         await e.reply('正在找涩涩的原神cos图啦～',true,{recallMsg:7})
         let msg = [segment.image(url)]
         let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
@@ -276,7 +276,7 @@ export class stplus extends plugin {
             let num = e.msg.match(/\d+/)
             if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
             for (let i = 0; i < [num]; i++) {
-               let url = `https://api.peterliangaaa.repl.co/cos`
+               let url = `https://imagesapi.sesepic.top/cos`
                 let msg = [segment.image(url)]
                 image.push(msg)
                 console.log('已获取图片链接 ' + (i + 1) + ' 个');
@@ -290,7 +290,7 @@ export class stplus extends plugin {
         let num = e.msg.match(/\d+/)
         if (num > shu) {num = shu;await e.reply('一次最多'+ shu +'张哦')}else {num = e.msg.match(/\d+/) }
         for (let i = 0; i < [num]; i++) {
-            let url = `https://api.peterliangaaa.repl.co/cos`
+            let url = `https://imagesapi.sesepic.top/cos`
             let msg = [segment.image(url)]
             let abc =  await e.reply(msg,false,{recallMsg:0})//私聊撤回间隔
             if (!abc) return e.reply('好、好铯(//// ^ ////)……被、被吞啦o(≧口≦)o',true,{recallMsg:60})
