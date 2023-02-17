@@ -264,7 +264,7 @@ export class api extends plugin {
         //屎山罢了，想看我也拦不住
 
 
-        let num = 21
+        let num = 20
 
         for (let i = 0; i < [num]; i++) {
             let url 
@@ -303,13 +303,13 @@ export class api extends plugin {
     } else if (i === 16) {
         url = `https://cdn.seovx.com/ha?mom=302`//三元图5
     } else if (i === 17) {
-        url = `https://api.peterliangaaa.repl.co/3r18`//三铯图
+        url = `https://imagesapi.sesepic.top/3r18`//三铯图
     } else if (i === 18) {
-        url = `https://api.peterliangaaa.repl.co/cos`//原神cos图
+        url = `https://imagesapi.sesepic.top/cos`//原神cos图
     } else if (i === 19) {
         url = `http://tfapi.top/API/nypic.php`//三元图6
     } else if (i === 20) {
-        url = `https://api.peterliangaaa.repl.co/yxy`//云溪图
+        url = ``//云溪图
     }
     
             let ii = i + 1
