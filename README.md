@@ -173,6 +173,12 @@ gitee仓库：[☞Windows](https://gitee.com/xwy231321/cv-plugins-in-resources/b
 
 </details>
 
+# 免责声明
+
+1. 功能仅限内部交流与小范围使用，请勿将ql-plugin及yunzai-c-v-plugin用于以盈利为目的的场景
+2. 本插件仅供交流学习使用，如有侵权请联系，会立即删除
+3. 使用本插件造成的一切损失，以及不良影响，由使用者承担
+
 Yunzai-Bot插件库：[☞Github](https://github.com/yhArcadia/Yunzai-Bot-plugins-index)/[☞Gitee](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
 
 Yunzai-Bot（V3）：[☞Github](https://github.com/Le-niao/Yunzai-Bot)/[☞Gitee](https://gitee.com/Le-niao/Yunzai-Bot) 
