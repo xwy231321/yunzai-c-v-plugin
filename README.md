@@ -6,7 +6,7 @@
 
 ## 安装教程
 
-使用前请先阅读并同意本插件用户协议：[（点击查看）清凉/清凉图插件用户协议](https://gitee.com/xwy231321/ql-plugin/blob/master/%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.txt)
+#### 使用前请先阅读并同意本插件用户协议：[（点击查看）清凉/清凉图插件用户协议](https://gitee.com/xwy231321/ql-plugin/blob/master/%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.txt)
 
 Yunzai-Bot目录下执行
 
