@@ -34,7 +34,7 @@ export class gitupdate extends plugin{
             ]
         })
         this.task = {
-            cron: "0 0,15,30,45 8,9,10,11,12,13,14,15,16,17,18,19,20 * * ?",//定时每天早8点到晚8点，每15分钟检测一次
+            cron: "0 0 18 * * ?",//定时每天晚8点检测一次
             name:'检测仓库推送',
             fnc: () => this.checkupdata(),
             log: false,//定时任务日志，true为显示日志可能会使日志变乱,默认值false
