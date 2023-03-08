@@ -1,9 +1,5 @@
 # yunzai-c-v-plugin<a href='https://gitee.com/xwy231321/yunzai-c-v-plugin/stargazers'><img src='https://gitee.com/xwy231321/yunzai-c-v-plugin/badge/star.svg?theme=dark' alt='star'></img></a>
 
-#### 访问量:2023.1.8 16：30开始
-
-[![访问量](https://profile-counter.glitch.me/yunzai-c-v-plugin/count.svg)](https://gitee.com/xwy231321/yunzai-c-v-plugin)
-
 ## 安装教程
 
 #### 使用前请先阅读并同意本插件用户协议：[（点击查看）清凉/清凉图插件用户协议](https://gitee.com/xwy231321/ql-plugin/blob/master/%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.txt)
@@ -72,6 +68,8 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 QQ：2060403379（高三小白）
 
 Q群：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)（交流.外群）
+
+爱发电：[点我前往爱发电页面](https://afdian.net/a/yunzai-c-v-plugin/plan)
 
 如果可以的话，给本项目个star，来支持本项目，您的支持就是给我的最大的鼓励，谢谢。
 
