@@ -1,7 +1,7 @@
 # yunzai-c-v-plugin<a href='https://gitee.com/xwy231321/yunzai-c-v-plugin/stargazers'><img src='https://gitee.com/xwy231321/yunzai-c-v-plugin/badge/star.svg?theme=dark' alt='star'></img></a>
 
 
-[![访问量](https://profile-counter.glitch.me/yunzai-c-v-plugin/count.svg)](https://gitee.com/xwy231321/yunzai-c-v-plugin)
+[![](https://profile-counter.glitch.me/yunzai-c-v-plugin/count.svg)](https://gitee.com/xwy231321/yunzai-c-v-plugin)
 
 ## 安装教程
 
@@ -88,7 +88,7 @@ Q群：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)（交流.外群）
 
 以下为部分计划信息
 
-清凉图插件更名为清凉插件
+清凉图插件更名为清凉插件（ql-plugin）
 
 清凉图设置更改为清凉设置+功能名称+配置名称+其他，例如#清凉设置原神cos图开启
 
@@ -98,7 +98,6 @@ Q群：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)（交流.外群）
 
 计划增加清凉设置，将文字更改为图片，一个功能做一个单独的图片，合并的将只显示开启状态
 
-对config文件夹重新编排，按一个功能一个yaml文件
 
 计划修复聊天记录必报错的问题
 
@@ -114,11 +113,7 @@ Q群：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)（交流.外群）
 
 计划url分离到config配置项，便于更改url源
 
-计划更改小冰图为p18图
-
-计划更改三铯图为三18图（可能会有所变动）
-
-计划添加部分说明
+计划更改小冰图触发指令
 
 计划与其他图源服务器管理员取得联系
 
