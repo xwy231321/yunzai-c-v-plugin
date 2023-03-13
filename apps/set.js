@@ -6,7 +6,7 @@ import co from '../../../lib/common/common.js'
 import fs from 'fs'
 import YAML from 'yaml'
 const settings = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/cfg.yaml','utf8'));
-const settobig = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/tobig.yaml','utf8'));
+//const settobig = await YAML.parse(fs.readFileSync('./plugins/yunzai-c-v-plugin/config/tobig.yaml','utf8'));
 export class St extends plugin {
     constructor() {
         super({
