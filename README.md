@@ -22,7 +22,7 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 
 #### 插件功能 
 
-[V1.2.98](./CHANGELOG.md)
+[V1.2.99](./CHANGELOG.md)
 
 | 功能名称                          | 默认启用配置 | 默认单次获取最大数量 |
 |-------------------------------|----|------------|
@@ -39,8 +39,6 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 | 铯图(二次元，18 +)  | **关闭** | 20         |
 | 小冰图（p.站的图 二次元 18 +）                       | 开启 | 20          |
 | 消息风控处理                        | 开启 | 无          |
-| 发大图/转大图                       | 开启 | 无          |
-| 体力（较大图片仅支持原生样式）              | **关闭** | 无          |
 | 仓库更新检测              | -- | --          |
 | 清凉图api检测              | -- | --          |
 
