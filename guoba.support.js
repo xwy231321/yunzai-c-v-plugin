@@ -7,16 +7,6 @@ export function supportGuoba () {
                 component: 'Divider',
                 label: '启用状态',
               },{
-                field: 'tobig.tobigset',
-                label: '转大图',
-                bottomHelpMessage: '是否启用该功能',
-                component: 'Switch'
-            },{
-                field: 'tobig.tobignote',
-                label: '卡片体力(原版)',
-                bottomHelpMessage: '是否启用该功能',
-                component: 'Switch'
-            },{
                 field: 'cfg.ssttoooc',
                 label: '清凉图',
                 bottomHelpMessage: '是否启用该功能',
