@@ -48,7 +48,7 @@ export function supportGuoba () {
                 component: 'Switch'
             },{
                 field: 'cfg.yunxiyuan',
-                label: '云溪图',
+                label: '小冰图',
                 bottomHelpMessage: '是否启用该功能',
                 component: 'Switch'
             },{
