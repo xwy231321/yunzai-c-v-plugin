@@ -16,13 +16,6 @@ export class St extends plugin {
             priority: 5000,
             rule: [
                 {
-                    reg: '^#?(开启|关闭)转大图$',
-                    fnc: 'settobig'
-                }, {
-                    reg: '^#?(开启|关闭)体力大图$',
-                    fnc: 'setnote'
-                },
-                {
                     reg: "#?(开启|关闭)铯图$",
                     fnc: "setstplus",
                     permission: "master",
@@ -98,7 +91,7 @@ export class St extends plugin {
             ],
         });
     }
-    async settobig(e) {
+    /*async settobig(e) {
         let set
         if (/开启转大图/.test(e.msg)) {
             set = true
@@ -120,7 +113,7 @@ export class St extends plugin {
         fs.writeFileSync('./plugins/yunzai-c-v-plugin/config/tobig.yaml',YAML.stringify(settobig),'utf8')
         e.reply('成功' + e.msg + ',已生效啦')
     }
-
+*/
     async setstplus(e) {
         let set
         if (/开启铯图/.test(e.msg)) {
