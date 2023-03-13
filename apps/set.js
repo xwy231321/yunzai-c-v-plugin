@@ -293,10 +293,10 @@ export class St extends plugin {
 
     async set(e) {
         let msg = [
-            `体力状态：${settobig.tobignote ? '大图' : '正常'}\n`,
+            //`体力状态：${settobig.tobignote ? '大图' : '正常'}\n`,
             `铯图状态：${settings.seettuuplus ? '开启' : '关闭'}\n`,
             `盲盒状态：${settings.yifensuijimanghe ? '开启' : '关闭'}\n`,
-            `转大图状态：${settobig.tobigset ? '开启' : '关闭'}\n`,
+           // `转大图状态：${settobig.tobigset ? '开启' : '关闭'}\n`,
             `清凉图状态：${settings.ssttoooc ? '开启' : '关闭'}\n`,
             `三元图状态：${settings.sanciyuan ? '开启' : '关闭'}\n`,
             `云溪图状态：${settings.yunxiyuan ? '开启' : '关闭'}\n`,
