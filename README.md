@@ -41,7 +41,7 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 | 消息风控处理                        | 开启 | 无          |
 | 仓库更新检测              | -- | --          |
 | 清凉图api检测              | -- | --          |
-| 清凉图升级              | -- | --          |
+| 清凉图升级（恢复某功能）              | -- | --          |
 
 
 <details><summary>注意事项</summary>
