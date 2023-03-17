@@ -9,10 +9,10 @@ import plugin from '../../../lib/plugins/plugin.js';
 export class up extends plugin {
     constructor() {
         super({
-            name: 'up',
-            dsc: 'up',
+            name: 'up to V2',
+            dsc: '清凉图升级',
             event: 'message',
-            priority: 49,//优先级，数越小优先度越高
+            priority: 10,//优先级，数越小优先度越高
             rule: [
                 {
                     reg: '^#?清凉图升级$',
