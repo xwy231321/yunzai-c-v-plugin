@@ -16,7 +16,8 @@ export class up extends plugin {
             rule: [
                 {
                     reg: '^#?清凉图升级$',
-                    fnc: 'up'
+                    fnc: 'up',
+                    permission: "master",
                 },
             ]
         })
