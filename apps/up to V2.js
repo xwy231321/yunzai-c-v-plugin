@@ -33,13 +33,13 @@ async up(e){
     })
   }
  await e.reply('即将安装清凉插件（ql-plugin），转大图已于清凉插件恢复，大小＜1MB')
-  await common.sleep(1000);
- await e.reply('以下为用户协议，请您仔细阅读并同意改协议，协议链接：https://gitee.com/xwy231321/ql-plugin/blob/master/%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.txt')
-  await common.sleep(1000);
+  await common.sleep(2000);
+ await e.reply('以下为用户协议，若您继续使用本插件，则代表您同意本协议，协议链接：https://gitee.com/xwy231321/ql-plugin/blob/master/%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.txt')
+  await common.sleep(2000);
  let cmd = `git clone https://gitee.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/`
  execSync(cmd)
-  await common.sleep(1000);
-  e.reply('安装完毕，勿重复安装，请手动重启，若安装失败，请检查是否正确安装git，转大图指令和之前保持一致，消息携带图片或对图片回复：#转/发大图')
+  await common.sleep(2000);
+  e.reply('安装指令完毕，勿重复安装，请手动重启，若安装失败，请检查是否正确安装git，转大图指令和之前保持一致，消息携带图片或对图片回复：#转/发大图')
  
     return true
     }
