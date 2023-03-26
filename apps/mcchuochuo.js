@@ -1,5 +1,4 @@
 //mc酱戳一戳（记得关喵喵戳一戳）
-import { segment } from "oicq";
 import fetch from "node-fetch";
 import cfg from'../../../lib/config/config.js'
 import plugin from '../../../lib/plugins/plugin.js';

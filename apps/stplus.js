@@ -1,5 +1,4 @@
 //插件setuplus（铯图）
-import { segment } from "oicq";
 import fetch from "node-fetch";
 import plugin from '../../../lib/plugins/plugin.js';
 import co from '../../../lib/common/common.js'

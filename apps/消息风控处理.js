@@ -1,5 +1,4 @@
 //此js插件来源小飞插件，已获得原作者许可
-import { segment } from "oicq";
 import fetch from "node-fetch";
 import plugin from '../../../lib/plugins/plugin.js';
 import fs from 'fs'
@@ -9,7 +8,6 @@ export class xiaofei extends plugin {
 		super({
 			name: '消息风控处理-小飞',
 			dsc: '检测到消息发送失败时，自动使用特殊处理的转发消息再次发送',
-			/** https://oicqjs.github.io/oicq/#events */
 			event: 'message',
 			priority: 2,
 		});

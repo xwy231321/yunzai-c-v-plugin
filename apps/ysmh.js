@@ -1,5 +1,4 @@
 //插件：原神盲盒
-import { segment } from "oicq";
 import fetch from "node-fetch";
 import plugin from '../../../lib/plugins/plugin.js';
 import common from'../../../lib/common/common.js'

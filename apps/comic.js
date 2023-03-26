@@ -1,5 +1,4 @@
 //插件：B站404随机漫画
-import { segment } from "oicq";
 import fetch from "node-fetch";
 import plugin from '../../../lib/plugins/plugin.js';
 import common from'../../../lib/common/common.js'
