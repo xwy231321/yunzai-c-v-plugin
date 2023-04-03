@@ -14,7 +14,7 @@ export const helpList = [{
       icon: 88,
       title: "#清凉图 #3张清凉图",
       desc: "随机清凉图（可设置图片类型）"
-    },{
+    },/*{
       icon:88,
       title: "#发大图 #转大图",
       desc: "#将图片(回复或消息携带)转为卡片发送"
@@ -22,7 +22,7 @@ export const helpList = [{
       icon: 14,
       title: '#体力',
       desc: '大图卡片体力（需要开启）'
-    },
+    },*/
     {
       icon: 3,
       title: "#小冰图 #3张小冰图",
@@ -30,7 +30,7 @@ export const helpList = [{
     },
     {
       icon: 61,
-      title: "#铯图(卡片) #原神铯图",
+      title: "#铯图 #原神铯图",
       desc: "随机漏•图片"
     },
     {
@@ -45,7 +45,7 @@ export const helpList = [{
     },
     {
       icon: 65,
-      title: "#三元图(卡片) #三铯图",
+      title: "#三元图 #三铯图",
       desc: "随机三次元图片 随机三次元铯图"
     },
     {
@@ -71,7 +71,7 @@ export const helpList = [{
     icon: 32,
     title: '#开启/关闭铯图',
     desc: '配置是否启用'
-  },{
+  },/*{
     icon: 14,
     title: '#开启/关闭体力大图',
     desc: '体力形式：默认/卡片'
@@ -79,7 +79,7 @@ export const helpList = [{
     icon: 48,
     title: '#开启/关闭转大图',
     desc: '配置是否开启转大图'
-  }, {
+  }, */{
     icon: 3,
     title: '#开启/关闭小冰图',
     desc: '配置是否启用'
@@ -137,7 +137,7 @@ export const helpList = [{
     desc: '检测当前网络无法访问的api'
   },{
     title: '补充',
-    desc: '转大图，体力大图，戳一戳清理内存需要单独指令开启'
+    desc: '戳一戳清理内存需要单独指令开启'
   }]
 },{
   group: '仓库动态检测(仅主人生效)',
