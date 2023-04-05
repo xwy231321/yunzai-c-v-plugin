@@ -1,7 +1,6 @@
 # yunzai-c-v-plugin<a href='https://gitee.com/xwy231321/yunzai-c-v-plugin/stargazers'><img src='https://gitee.com/xwy231321/yunzai-c-v-plugin/badge/star.svg?theme=dark' alt='star'></img></a>
 
 
-#### 3月23日中午，转大图被和谐
 
 [![](https://profile-counter.glitch.me/yunzai-c-v-plugin/count.svg)](https://gitee.com/xwy231321/yunzai-c-v-plugin)
 
@@ -43,8 +42,13 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 | 消息风控处理                        | 开启 | 无          |
 | 仓库更新检测              | -- | --          |
 | 清凉图api检测              | -- | --          |
-| 清凉图升级（恢复某功能）              | -- | --          |
+| 清凉图升级（快捷下载V2版）              | -- | --          |
 
+
+| [v2清凉插件](https://gitee.com/xwy231321/ql-plugin)功能           | 默认启用配置 | 默认单次获取最大数量 |
+|-------------------------------|----|------------|
+| 清秀图 | 开启 | 10 |
+| 重构计划中 | 咕咕咕 | 咕咕咕 |
 
 <details><summary>注意事项</summary>
 
