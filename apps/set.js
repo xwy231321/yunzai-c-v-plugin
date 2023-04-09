@@ -298,7 +298,7 @@ export class St extends plugin {
            // `转大图状态：${settobig.tobigset ? '开启' : '关闭'}\n`,
             `清凉图状态：${settings.ssttoooc ? '开启' : '关闭'}\n`,
             `三元图状态：${settings.sanciyuan ? '开启' : '关闭'}\n`,
-            `云溪图状态：${settings.yunxiyuan ? '开启' : '关闭'}\n`,
+            `小冰图状态：${settings.yunxiyuan ? '开启' : '关闭'}\n`,
             `三铯图状态：${settings.one ? '开启' : '关闭'}\n`,
             `随机漫画状态：${settings.asuijimanhua ? '开启' : '关闭'}\n`,
             `mc戳一戳状态：${settings.cchuoyichuom ? '开启' : '关闭'}\n`,
