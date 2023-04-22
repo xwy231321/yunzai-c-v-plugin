@@ -15,6 +15,11 @@ git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v
 
 ```
 
+```
+git clone https://github.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v-plugin/
+
+```
+
 | 食用方法 | 更新方法 |
 |------|------|
 | #清凉图帮助 | #清凉图更新 |
