@@ -53,6 +53,11 @@ git clone https://github.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-
 | [v2清凉插件](https://gitee.com/xwy231321/ql-plugin)功能           | 默认启用配置 | 默认单次获取最大数量 |
 |-------------------------------|----|------------|
 | 清秀图 | 开启 | 10 |
+| 铯图 | 开启 | 10 |
+| 二元图 | 开启 | 10 |
+| 三元图 | 开启 | 10 |
+| 清凉图 | 开启 | 10 |
+| p18图 | 开启 | 10 |
 | 重构计划中 | 咕咕咕 | 咕咕咕 |
 
 <details><summary>注意事项</summary>
