@@ -39,7 +39,7 @@ async up(e){
  let cmd = `git clone https://gitee.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/`
  execSync(cmd)
   await common.sleep(2000);
-  e.reply('安装指令完毕，勿重复安装，请手动重启，若安装失败，请检查是否正确安装git')
+  e.reply('安装指令完毕，勿重复安装，请手动重启，若安装失败，请检查是否正确安装git，当前测试内容：铯图二元图三元图清秀图p18图清凉图')
  
     return true
     }
