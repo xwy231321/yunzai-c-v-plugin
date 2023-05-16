@@ -20,6 +20,13 @@ git clone https://github.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-
 
 ```
 
+V2版
+
+```
+git clone https://gitee.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/
+
+```
+
 | 食用方法 | 更新方法 |
 |------|------|
 | #清凉图帮助 | #清凉图更新 |
