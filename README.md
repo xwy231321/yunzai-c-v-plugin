@@ -93,7 +93,7 @@ git clone https://gitee.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/
 
 #### 反馈
 
-QQ：2060403379（高三小白）
+QQ：2060403379（准大一小白）
 
 Q群：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)（交流.外群）
 
