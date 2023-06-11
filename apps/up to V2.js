@@ -39,10 +39,15 @@ async up(e){
  let cmd = `git clone https://gitee.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/`
  execSync(cmd)
   await common.sleep(2000);
-  let cmd1 = `pnpm install -P`
- execSync(cmd1)
-  await common.sleep(2000);
+  //let cmd1 = `pnpm install -P`
+ //execSync(cmd1)
+ // await common.sleep(2000);
   e.reply('指令执行完毕，请手动重启，帮助指令：#清凉菜单  ，若报错请检查git是否正确安装')
+  e.reply('请手动安装axios和cheerio，下面是从别的作者那看到的安装依赖的方法，一共3种，作者本人并不知道依赖应该如何安装，请自行辨别 \n' + 
+'pnpm install -P \n' + 
+'pnpm i \n' + 
+'pnpm install --filter=ql-plugin \n' + 
+'此依赖只影响bt搜索，其他不影响')
  
     return true
     }
