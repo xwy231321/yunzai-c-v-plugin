@@ -64,7 +64,10 @@ git clone https://gitee.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/
 | 二元图 | 开启 | 10 |
 | 三元图 | 开启 | 10 |
 | 清凉图 | 开启 | 10 |
-| p18图 | 开启 | 10 |
+| 铯p图 | 开启 | 10 |
+| 清凉菜单 |  |  |
+| 清凉版本 |  |  |
+| 清凉更新 |  |  |
 | 重构计划中 | 咕咕咕 | 咕咕咕 |
 
 <details><summary>注意事项</summary>
