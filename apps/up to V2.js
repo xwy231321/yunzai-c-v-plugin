@@ -39,7 +39,7 @@ async up(e){
  let cmd = `git clone https://gitee.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/`
  execSync(cmd)
   await common.sleep(2000);
-  let cmd1 = `pnpm i`
+  let cmd1 = `pnpm install -P`
  execSync(cmd1)
   await common.sleep(2000);
   e.reply('指令执行完毕，请手动重启，帮助指令：#清凉菜单  ，若报错请检查git是否正确安装')
