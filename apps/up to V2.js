@@ -32,14 +32,14 @@ async up(e){
       })
     })
   }
- await e.reply('即将安装清凉插件（ql-plugin），共2MB')
+ await e.reply('即将安装v2版先行版 新版更名为清凉插件（ql-plugin）')
   await common.sleep(2000);
- await e.reply('以下为用户协议，若您继续使用本插件，则代表您同意本协议，协议链接：https://gitee.com/xwy231321/ql-plugin/blob/master/%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.txt')
+ await e.reply('以下为用户协议，请仔细阅读https://gitee.com/xwy231321/ql-plugin/blob/master/%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.txt')
   await common.sleep(2000);
  let cmd = `git clone https://gitee.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/`
  execSync(cmd)
   await common.sleep(2000);
-  e.reply('安装指令完毕，勿重复安装，请手动重启，若安装失败，请检查是否正确安装git，当前测试内容：铯图二元图三元图清秀图p18图清凉图')
+  e.reply('指令执行完毕，请手动重启，帮助指令：#清凉菜单  ，若报错请检查git是否正确安装')
  
     return true
     }
