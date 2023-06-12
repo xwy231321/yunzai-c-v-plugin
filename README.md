@@ -31,12 +31,21 @@ git clone https://gitee.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/
 git clone https://github.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/
 
 ```
+### v2版需手动安装axios和cheerio，下面是从别的作者那看到的安装依赖的方法，一共3种，本人并不知道依赖应该如何安装，请自行辨别
+```
+pnpm install -P
+```
+```
+pnpm i
+```
+```
+pnpm install --filter=ql-plugin
+```
 
 | 食用方法 | 更新方法 |
 |------|------|
 | #清凉图帮助 | #清凉图更新 |
 
-感谢大家对本插件的支持与赞助，本插件将于6.9（即高考结束后）开启重构，如有新功能的想法与现有功能的改进，可以提issues，我会尽最大努力去实现
 
 #### 插件功能 
 
@@ -62,7 +71,7 @@ git clone https://github.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/
 | 清凉图升级（快捷下载V2版）              | -- | --          |
 
 
-| [v2清凉插件](https://gitee.com/xwy231321/ql-plugin)功能           | 默认启用配置 | 默认单次获取最大数量 |
+| v2清凉插件[gitee](https://gitee.com/xwy231321/ql-plugin)/[github](https://github.com/xwy231321/ql-plugin)功能           | 默认启用配置 | 默认单次获取最大数量 |
 |-------------------------------|----|------------|
 | 清秀图 | 开启 | 10 |
 | 铯图 | 开启 | 10 |
