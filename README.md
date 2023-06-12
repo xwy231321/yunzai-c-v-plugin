@@ -9,6 +9,7 @@
 #### 使用前请先阅读并同意本插件用户协议：[（点击查看）清凉/清凉图插件用户协议](https://gitee.com/xwy231321/ql-plugin/blob/master/%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.txt)
 
 Yunzai-Bot目录下执行（任选其一，推荐第一个）
+v1版(yunzai-c-v-plugin)
 
 ```
 git clone https://gitee.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-v-plugin/
@@ -20,10 +21,14 @@ git clone https://github.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-
 
 ```
 
-V2版
+V2先行版(ql-plugin) （任选其一，推荐第一个）
 
 ```
 git clone https://gitee.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/
+
+```
+```
+git clone https://github.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/
 
 ```
 
@@ -101,48 +106,6 @@ Q群：[597427372](https://jq.qq.com/?_wv=1027&k=rPN5Kmfx)（交流.外群）
 
 如果可以的话，给本项目个star，来支持本项目，您的支持就是给我的最大的鼓励，谢谢。
 
-<details><summary>重构计划</summary>
-
-6月10开启插件重构工作
-
-重构后，配置文件将按一个功能所有的配置整合至一个yaml文件内，方便管理
-
-将对apps、config、锅巴适配文件进行重构，部分指令正则可能做细微调整
-
-届时会出现冲突情况，删除config文件夹再更新即可
-
-以下为部分计划信息
-
-清凉图插件更名为清凉插件（ql-plugin）
-
-清凉图设置更改为清凉设置+功能名称+配置名称+其他，例如#清凉设置原神cos图开启
-
-菜单将会重写，重新布局，按年龄区分，管理员一栏做简化，管理菜单分离
-
-计划增加清凉版本，以快速查看更新内容
-
-计划增加清凉设置，将文字更改为图片，一个功能做一个单独的图片，合并的将只显示开启状态
-
-
-计划修复聊天记录必报错的问题
-
-计划增加自动撤回配置项
-
-18以上一致更改为全聊天记录发送，取消群私聊分离，18以下单张出图，多少整合聊天记录
-
-计划增加白名单配置，当白名单有群聊号时，黑名单配置将失效
-
-大图将做部分挑整
-
-锅巴配置将修改布局，按一个功能分一个区块
-
-计划url分离到config配置项，便于更改url源
-
-计划更改小冰图部分内容
-
-计划与其他图源服务器管理员取得联系
-
-</details>
 
 <details><summary>赞助与支持</summary>
 
@@ -209,6 +172,8 @@ Yunzai-Bot（V3）：[☞Github](https://github.com/Le-niao/Yunzai-Bot)/[☞Gite
 Yunzai-Bot（V2）：[☞Github](https://github.com/yoimiya-kokomi/Yunzai-Bot)/[☞Gitee](https://gitee.com/yoimiya-kokomi/Yunzai-Bot) 
 
 yunzai-c-v-plugin：[☞Github](https://github.com/xwy231321/yunzai-c-v-plugin)/[☞Gitee](https://gitee.com/xwy231321/yunzai-c-v-plugin)
+
+ql-plugin：[☞Gitee](https://gitee.com/xwy231321/ql-plugin)/[☞Github](https://github.com/xwy231321/ql-plugin)
 
 
 
