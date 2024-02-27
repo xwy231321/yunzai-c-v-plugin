@@ -4,7 +4,7 @@
 
 [![](https://profile-counter.glitch.me/yunzai-c-v-plugin/count.svg)](https://gitee.com/xwy231321/yunzai-c-v-plugin)
 
-## 安装教程
+## 安装教程 [当前本插件已停止更新和支持，请更新至v2版本的清凉插件](https://gitee.com/xwy231321/ql-plugin)
 
 #### 使用前请先阅读并同意本插件用户协议：[（点击查看）清凉/清凉图插件用户协议](https://gitee.com/xwy231321/ql-plugin/blob/master/%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.txt)
 
@@ -21,26 +21,6 @@ git clone https://github.com/xwy231321/yunzai-c-v-plugin.git ./plugins/yunzai-c-
 
 ```
 
-V2先行版(ql-plugin) （任选其一，推荐第一个）
-
-```
-git clone https://gitee.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/
-
-```
-```
-git clone https://github.com/xwy231321/ql-plugin.git ./plugins/ql-plugin/
-
-```
-### v2版需手动安装axios和cheerio，下面是从别的作者那看到的安装依赖的方法，一共3种，本人并不知道依赖应该如何安装，请自行辨别
-```
-pnpm install -P
-```
-```
-pnpm i
-```
-```
-pnpm install --filter=ql-plugin
-```
 
 | 食用方法 | 更新方法 |
 |------|------|
