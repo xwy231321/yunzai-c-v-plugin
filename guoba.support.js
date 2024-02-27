@@ -5,6 +5,21 @@ export function supportGuoba () {
         configInfo: {
             schemas: [{
                 component: 'Divider',
+                label: '猜角色',
+              },{
+                field: 'guess.maxtime',
+                label: '猜角色等待时间',
+                helpMessage: '修改后直接生效',
+                bottomHelpMessage: '单位秒',
+                component: 'InputNumber',
+                required: true,
+                componentProps: {
+                  min: 0,
+                  max: 99999999,
+                  placeholder: '请输入数字',
+                },
+            },{
+                component: 'Divider',
                 label: '启用状态',
               },{
                 field: 'cfg.ssttoooc',
