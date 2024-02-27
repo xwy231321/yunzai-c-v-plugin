@@ -18,11 +18,11 @@ export const helpList = [{
       icon:88,
       title: "#发大图 #转大图",
       desc: "#将图片(回复或消息携带)转为卡片发送"
-    },{
+    },*/{
       icon: 14,
-      title: '#体力',
-      desc: '大图卡片体力（需要开启）'
-    },*/
+      title: '#猜角色',
+      desc: '原神，截至闲云'
+    },
     {
       icon: 3,
       title: "#小冰图 #3张小冰图",
